@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D3C1AEBB-B3B2-4BD8-829C-0954D9BAD384}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bidvalet.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BidvaletiOS</AssemblyName>
+    <NuGetPackageImportStamp>a3120d01</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>True</MtouchDebug>
+    <CodesignKey>Apple Development: francis vimal (TVW829A2JK)</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchSdkVersion>15.0</MtouchSdkVersion>
+    <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>Apple Distribution: WBID, LLC (44J23FC632)</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>west</MtouchI18n>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n>west</MtouchI18n>
+    <CodesignKey>Apple Distribution: WBID, LLC (44J23FC632)</CodesignKey>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>WBidValetDist</CodesignProvision>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>west</MtouchI18n>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+<MtouchSdkVersion>15.0</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\App Store</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="HtmlAgilityPackiOs">
+      <HintPath>ThirdParty\HtmlAgilityPackiOs.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\packages\Microsoft.AppCenter.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.6.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="LZStringCSharp">
+      <HintPath>..\packages\LZStringCSharp.1.4.0\lib\netstandard1.0\LZStringCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Check.imageset\Check.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Check.imageset\Check%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Check.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\uncheck.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\uncheck.imageset\uncheck.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\uncheck.imageset\uncheck%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\320x480.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\640x960.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\640x1336.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1242x2208.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\750x1334.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\29x29.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\58x58.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\87.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\80x80.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\120x120.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\57.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\180x180.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\40x40.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\50x50.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\100x100.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\72x72.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\144x144.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\76x76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\152x152.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Background.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\bg.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\bg.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage-1.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\1024x1024.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\closeIcon.imageset\closeIcon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\closeIcon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\closeIcon.imageset\closeIcon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\uncheck-new.imageset\blank-check-box-2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\uncheck-new.imageset\blank-check-box-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\uncheck-new.imageset\blank-check-box.png" />
+    <ImageAsset Include="Resources\Images.xcassets\uncheck-new.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\checkbox-2.png" />
+    <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\checkbox-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\ITunesArtwork" />
+    <ITunesArtwork Include="Resources\ITunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Shared\Picker\PickerView.xib" />
+    <InterfaceDefinition Include="Shared\Cell\AMPMCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\BlankReserveCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\CommutableLinesCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\DaysOfMonthCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\DaysOfWeekAllCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\DaysOfWeekSomeCell.xib" />
+    <InterfaceDefinition Include="Resources\ViewControllers\TestView\TestViewController.xib" />
+    <InterfaceDefinition Include="Shared\Cell\DHFirstLastCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\EquipmentCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\LinesTypeCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\OvernightsCityCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\RestCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\StartDayOfWeekCell.xib" />
+    <InterfaceDefinition Include="Shared\Cell\TripBlockLengthCell.xib" />
+    <InterfaceDefinition Include="Resources\Shared\Cell\BlankReserveCell2.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CityCell.xib" />
+    <InterfaceDefinition Include="Resources\Shared\ConstraintView\NoConstraitV.xib" />
+    <InterfaceDefinition Include="Resources\Shared\ConstraintView\NoConstraintVC.xib" />
+    <InterfaceDefinition Include="Resources\Shared\ConstraintView\NoConstraintView.xib" />
+    <InterfaceDefinition Include="Shared\Picker\CitiesPicker\CitiesPickerCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\ConstraintView\ConstraintItemsView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalView.xib" />
+    <InterfaceDefinition Include="ViewControllers\User Account Difference\UserAccountDifferenceCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Scrap\webView.xib" />
+    <InterfaceDefinition Include="Shared\Picker\Commutable picker\CommutablePickerView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\CommutableTimeViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\ConnectTimeView.xib" />
+    <InterfaceDefinition Include="ViewControllers\License View\WebViewForLicence.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="ViewControllers\Admin Area\AdminArea.xib" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Shared\Picker\Calender picker\CalenderPopCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\LinePropertyCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\LineViewControllerCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\MiniCalenderCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\Calender View\LineDetailedCalenderView.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\Calender View\TripDetailsView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Side bar\SideMenuViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Side bar\HelpCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\LineView\BidListCustomHeader.xib" />
+    <InterfaceDefinition Include="ViewControllers\Scrap\ContractorEmpScrap.xib" />
+    <InterfaceDefinition Include="ViewControllers\Bid Award\BidAwardView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Bid Award\BidAwardCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\File Viewer\webPrint.xib" />
+    <InterfaceDefinition Include="ViewControllers\BidDataHomePage\BidDataHomePageView.xib" />
+    <InterfaceDefinition Include="ViewControllers\BidDataHomePage\BidDataHomeCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\MonthToMonthAlertView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Admin Area\MultipleBidsViewController.xib" />
+    <InterfaceDefinition Include="Resources\HistoryBidDomicilesCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\HistoryBidData\HistoryBidDataRetrieve.xib" />
+    <InterfaceDefinition Include="ViewControllers\HistoryBidData\HistoryCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Entitlements.plist" />
+    <BundleResource Include="Resources\Column Headings.pdf" />
+    <None Include="ThirdParty\HtmlAgilityPackiOs.dll" />
+    <None Include="packages.config" />
+    <None Include="Resources\HelpItems.plist" />
+    <BundleResource Include="Resources\down-arrow.png" />
+    <BundleResource Include="Resources\up-arrow.png" />
+    <BundleResource Include="Resources\Bidvalet.iOS.entitlements" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Utility\BidAutoCalculateCommuteTimes.cs" />
+    <Compile Include="Utility\BidAutomatorCalculations.cs" />
+    <Compile Include="Utility\CommonClass.cs" />
+    <Compile Include="Utility\RegXHandler.cs" />
+    <Compile Include="ViewControllers\Base\BaseViewController.cs" />
+    <Compile Include="ViewControllers\Subscription\SubScriptionViewController.cs" />
+    <Compile Include="ViewControllers\Subscription\SubScriptionViewController.designer.cs">
+      <DependentUpon>SubScriptionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\First\FirstViewController.cs" />
+    <Compile Include="ViewControllers\First\FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Colors.cs" />
+    <Compile Include="Shared\UIHelpers.cs" />
+    <Compile Include="ViewControllers\Expired\ExpiredViewController.cs" />
+    <Compile Include="ViewControllers\Expired\ExpiredViewController.designer.cs">
+      <DependentUpon>ExpiredViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SelectBase\SelectBaseViewController.cs" />
+    <Compile Include="ViewControllers\SelectBase\SelectBaseViewController.designer.cs">
+      <DependentUpon>SelectBaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SelectBase\BaseDateSource.cs" />
+    <Compile Include="ViewControllers\SeatRound\SeatAndRoundSources.cs" />
+    <Compile Include="ViewControllers\SeatRound\SelectSeatAndRoundViewController.cs" />
+    <Compile Include="ViewControllers\SeatRound\SelectSeatAndRoundViewController.designer.cs">
+      <DependentUpon>SelectSeatAndRoundViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Login\LoginViewController.cs" />
+    <Compile Include="ViewControllers\Login\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\InputTextValidator.cs" />
+    <Compile Include="ViewControllers\AuthorizationService\AuthorizationServiceViewController.cs" />
+    <Compile Include="ViewControllers\AuthorizationService\AuthorizationServiceViewController.designer.cs">
+      <DependentUpon>AuthorizationServiceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\AuthorizationService\AuthorizationTestCaseViewController.cs" />
+    <Compile Include="ViewControllers\AuthorizationService\AuthorizationTestCaseViewController.designer.cs">
+      <DependentUpon>AuthorizationTestCaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Sort\SortViewController.cs" />
+    <Compile Include="ViewControllers\Sort\SortViewController.designer.cs">
+      <DependentUpon>SortViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CreateAccount\CreateAccountTableViewController.cs" />
+    <Compile Include="ViewControllers\CreateAccount\CreateAccountTableViewController.designer.cs">
+      <DependentUpon>CreateAccountTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Sort\SortDataSource.cs" />
+    <Compile Include="ViewControllers\Sort\SubSortViewController.cs" />
+    <Compile Include="ViewControllers\Sort\SubSortViewController.designer.cs">
+      <DependentUpon>SubSortViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Submittal\BidChoicesViewController.cs" />
+    <Compile Include="ViewControllers\Submittal\BidChoicesViewController.designer.cs">
+      <DependentUpon>BidChoicesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Submittal\PositionsAvoidanceViewController.cs" />
+    <Compile Include="ViewControllers\Submittal\PositionsAvoidanceViewController.designer.cs">
+      <DependentUpon>PositionsAvoidanceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Submittal\PostionsPrioritiesViewController.cs" />
+    <Compile Include="ViewControllers\Submittal\PostionsPrioritiesViewController.designer.cs">
+      <DependentUpon>PostionsPrioritiesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CalculateBid\CalculateBidViewController.cs" />
+    <Compile Include="ViewControllers\CalculateBid\CalculateBidViewController.designer.cs">
+      <DependentUpon>CalculateBidViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CalculateBid\SubmitBidViewController.cs" />
+    <Compile Include="ViewControllers\CalculateBid\SubmitBidViewController.designer.cs">
+      <DependentUpon>SubmitBidViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CalculateBid\BidReceiptViewController.cs" />
+    <Compile Include="ViewControllers\CalculateBid\BidReceiptViewController.designer.cs">
+      <DependentUpon>BidReceiptViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CalculateBid\EmailSentViewController.cs" />
+    <Compile Include="ViewControllers\CalculateBid\EmailSentViewController.designer.cs">
+      <DependentUpon>EmailSentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\ConstraintDaysMonthViewController.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\ConstraintDaysMonthViewController.designer.cs">
+      <DependentUpon>ConstraintDaysMonthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\PickerView.cs" />
+    <Compile Include="Shared\Picker\CalendarButton.cs" />
+    <Compile Include="Shared\Cell\AMPMCell.cs" />
+    <Compile Include="Shared\Cell\AMPMCell.designer.cs">
+      <DependentUpon>AMPMCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\BlankReserveCell.cs" />
+    <Compile Include="Shared\Cell\BlankReserveCell.designer.cs">
+      <DependentUpon>BlankReserveCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\CommutableLinesCell.cs" />
+    <Compile Include="Shared\Cell\CommutableLinesCell.designer.cs">
+      <DependentUpon>CommutableLinesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\DaysOfMonthCell.cs" />
+    <Compile Include="Shared\Cell\DaysOfMonthCell.designer.cs">
+      <DependentUpon>DaysOfMonthCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\DaysOfWeekAllCell.cs" />
+    <Compile Include="Shared\Cell\DaysOfWeekAllCell.designer.cs">
+      <DependentUpon>DaysOfWeekAllCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\DaysOfWeekSomeCell.cs" />
+    <Compile Include="Shared\Cell\DaysOfWeekSomeCell.designer.cs">
+      <DependentUpon>DaysOfWeekSomeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\DHFirstLastCell.cs" />
+    <Compile Include="Shared\Cell\DHFirstLastCell.designer.cs">
+      <DependentUpon>DHFirstLastCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\EquipmentCell.cs" />
+    <Compile Include="Shared\Cell\EquipmentCell.designer.cs">
+      <DependentUpon>EquipmentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\LinesTypeCell.cs" />
+    <Compile Include="Shared\Cell\LinesTypeCell.designer.cs">
+      <DependentUpon>LinesTypeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\OvernightsCityCell.cs" />
+    <Compile Include="Shared\Cell\OvernightsCityCell.designer.cs">
+      <DependentUpon>OvernightsCityCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\RestCell.cs" />
+    <Compile Include="Shared\Cell\RestCell.designer.cs">
+      <DependentUpon>RestCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\StartDayOfWeekCell.cs" />
+    <Compile Include="Shared\Cell\StartDayOfWeekCell.designer.cs">
+      <DependentUpon>StartDayOfWeekCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Cell\TripBlockLengthCell.cs" />
+    <Compile Include="Shared\Cell\TripBlockLengthCell.designer.cs">
+      <DependentUpon>TripBlockLengthCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CitiesOvernightsViewController.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CitiesOvernightsViewController.designer.cs">
+      <DependentUpon>CitiesOvernightsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CitiesOvernightSource.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CityCell.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CitiesOvernights\CityCell.designer.cs">
+      <DependentUpon>CityCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\CommuteLinesViewController.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\CommuteLinesViewController.designer.cs">
+      <DependentUpon>CommuteLinesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\CitiesPicker\CitiesPickerVC.cs" />
+    <Compile Include="Shared\Picker\CitiesPicker\CitiesPickerVC.designer.cs">
+      <DependentUpon>CitiesPickerVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\CitiesPicker\CitiesPickerCell.cs" />
+    <Compile Include="Shared\Picker\CitiesPicker\CitiesPickerCell.designer.cs">
+      <DependentUpon>CitiesPickerCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\CitiesPicker\CitiesPickerSource.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintView\ConstraintItemsView.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintView\ConstraintItemsView.designer.cs">
+      <DependentUpon>..\..\..\Shared\ConstraintView\ConstraintItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\ConstraintView\NoConstraintVC.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintView\NoConstraintVC.designer.cs">
+      <DependentUpon>..\..\..\Shared\ConstraintView\NoConstraintVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\ConstraintsChangeViewController.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintsChangeViewController.designer.cs">
+      <DependentUpon>ConstraintsChangeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalCell.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalCell.designer.cs">
+      <DependentUpon>..\..\..\Shared\ConstraintModalView\ConstraintModalCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalView.cs" />
+    <Compile Include="ViewControllers\Constraints\ConstraintModalView\ConstraintModalView.designer.cs">
+      <DependentUpon>..\..\..\Shared\ConstraintModalView\ConstraintModalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\ConstraintModalView\ConstraintTableSource.cs" />
+    <Compile Include="Utility\InternetHelper.cs" />
+    <Compile Include="Utility\LoadingOverlay.cs" />
+    <Compile Include="Utility\Reachability.cs" />
+    <Compile Include="ThirdParty\KeychainHelpers.cs" />
+    <Compile Include="Utility\WBidHelper.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+    <Compile Include="Utility\RestHelper.cs" />
+    <Compile Include="Utility\NavigationHelper.cs" />
+    <Compile Include="ViewControllers\User Account Difference\UserAccountDifferenceScreen.cs" />
+    <Compile Include="ViewControllers\User Account Difference\UserAccountDifferenceScreen.designer.cs">
+      <DependentUpon>UserAccountDifferenceScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Bid Download\DownloadBidDataViewController.cs" />
+    <Compile Include="ViewControllers\Bid Download\DownloadBidDataViewController.designer.cs">
+      <DependentUpon>DownloadBidDataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\User Account Difference\UserAccountDifferenceCell.cs" />
+    <Compile Include="ViewControllers\User Account Difference\UserAccountDifferenceCell.designer.cs" />
+    <Compile Include="ViewControllers\User Account Difference\UserDifferenceTableDataSource.cs" />
+    <Compile Include="Utility\FileOperations.cs" />
+    <Compile Include="ViewControllers\Scrap\webView.cs" />
+    <Compile Include="ViewControllers\Scrap\webView.designer.cs" />
+    <Compile Include="Utility\PraseScrapedTripDetails.cs" />
+    <Compile Include="Vacation\VacationCorrectionBL.cs" />
+    <Compile Include="Utility\WBidMail.cs" />
+    <Compile Include="Shared\Picker\Commutable picker\CommutablePickerView.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\CommutableTimeViewController.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\CommutableTimeViewController.designer.cs">
+      <DependentUpon>CommutableTimeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\ConnectTimeView.cs" />
+    <Compile Include="ViewControllers\Constraints\SubviewsConstraint\CommuteLines\ConnectTimeView.designer.cs">
+      <DependentUpon>ConnectTimeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="In app purchase\PurchaseManager.cs">
+      <Link>In-app purchase\PurchaseManager.cs</Link>
+    </Compile>
+    <Compile Include="In app purchase\InAppPurchaseManager.cs">
+      <Link>In-app purchase\InAppPurchaseManager.cs</Link>
+    </Compile>
+    <Compile Include="In app purchase\CustomPaymentObserver.cs">
+      <Link>In-app purchase\CustomPaymentObserver.cs</Link>
+    </Compile>
+    <Compile Include="In app purchase\SKProductExtension.cs">
+      <Link>In-app purchase\SKProductExtension.cs</Link>
+    </Compile>
+    <Compile Include="ViewControllers\License View\WebViewForLicence.cs" />
+    <Compile Include="ViewControllers\License View\WebViewForLicence.designer.cs">
+      <DependentUpon>WebViewForLicence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Admin Area\AdminArea.cs" />
+    <Compile Include="ViewControllers\Admin Area\AdminArea.designer.cs">
+      <DependentUpon>AdminArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\Calender picker\CalenderPopCell.designer.cs" />
+    <Compile Include="Shared\Picker\Calender picker\CalenderPopCell.cs" />
+    <Compile Include="Shared\Picker\Calender picker\TripPopListViewCell.cs" />
+    <Compile Include="Shared\Picker\Calender picker\TripPopListViewController.cs" />
+    <Compile Include="Shared\Picker\Calender picker\TripPopListViewSource.cs" />
+    <Compile Include="ViewControllers\LineView\LinePropertyCell.cs" />
+    <Compile Include="ViewControllers\LineView\LinePropertyCell.designer.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewController.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewControllerCell.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewControllerCell.designer.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewControllerSource.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewLinePropertySource.cs" />
+    <Compile Include="ViewControllers\LineView\LineViewMiniCalenderSource.cs" />
+    <Compile Include="ViewControllers\LineView\MiniCalenderCell.cs" />
+    <Compile Include="ViewControllers\LineView\MiniCalenderCell.designer.cs" />
+    <Compile Include="ViewControllers\LineView\Calender View\LineDetailedCalenderView.cs" />
+    <Compile Include="ViewControllers\LineView\Calender View\LineDetailedCalenderView.designer.cs">
+      <DependentUpon>LineDetailedCalenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorClass.cs" />
+    <Compile Include="ViewControllers\LineView\Calender View\TripDetailsView.cs" />
+    <Compile Include="ViewControllers\LineView\Calender View\TripDetailsView.designer.cs">
+      <DependentUpon>TripDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Picker\Calender picker\calenderPopListViewSource.cs" />
+    <Compile Include="ViewControllers\LineProperty\LinePropertyListControllerCell.cs" />
+    <Compile Include="ViewControllers\LineProperty\LinePropertyListControllerController.cs" />
+    <Compile Include="ViewControllers\LineProperty\LinePropertyListControllerSource.cs" />
+    <Compile Include="ViewControllers\Side bar\SideMenuViewController.cs" />
+    <Compile Include="ViewControllers\Side bar\SideMenuViewController.designer.cs">
+      <DependentUpon>SideMenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Side bar\HelpMenuSource.cs" />
+    <Compile Include="ViewControllers\Side bar\HelpCell.cs" />
+    <Compile Include="ViewControllers\Side bar\HelpCell.designer.cs">
+      <DependentUpon>HelpCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\LineView\BidListCustomHeader.cs" />
+    <Compile Include="ViewControllers\LineView\BidListCustomHeader.designer.cs">
+      <DependentUpon>BidListCustomHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Scrap\ContractorEmpScrap.cs" />
+    <Compile Include="ViewControllers\Scrap\ContractorEmpScrap.designer.cs">
+      <DependentUpon>ContractorEmpScrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Bid Award\BidAwardView.cs" />
+    <Compile Include="ViewControllers\Bid Award\BidAwardView.designer.cs">
+      <DependentUpon>BidAwardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Bid Award\BidAwardSource.cs" />
+    <Compile Include="ViewControllers\Bid Award\BidAwardCell.cs" />
+    <Compile Include="ViewControllers\Bid Award\BidAwardCell.designer.cs">
+      <DependentUpon>BidAwardCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\File Viewer\webPrint.cs" />
+    <Compile Include="ViewControllers\File Viewer\webPrint.designer.cs" />
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomePageView.cs" />
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomePageView.designer.cs">
+      <DependentUpon>BidDataHomePageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomeCell.cs" />
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomeCell.designer.cs">
+      <DependentUpon>BidDataHomeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomeSouce.cs" />
+    <Compile Include="ViewControllers\Bid Download\DownloadBidDataViewControllerNew.cs" />
+    <Compile Include="Utility\ServiceUtility.cs" />
+    <Compile Include="ViewControllers\BidDataHomePage\BidDataHomeSouceViewController.cs" />
+    <Compile Include="ViewControllers\MonthToMonthAlertView.cs" />
+    <Compile Include="ViewControllers\MonthToMonthAlertView.designer.cs">
+      <DependentUpon>MonthToMonthAlertView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Admin Area\MultipleBidsViewController.cs" />
+    <Compile Include="ViewControllers\Admin Area\MultipleBidsViewController.designer.cs">
+      <DependentUpon>MultipleBidsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryBidDomicilesCell.cs" />
+    <Compile Include="HistoryBidDomicilesCell.designer.cs">
+      <DependentUpon>HistoryBidDomicilesCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectHistoryViewController.cs" />
+    <Compile Include="SelectHistoryViewController.designer.cs">
+      <DependentUpon>SelectHistoryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\HistoryBidData\HistoryBidDataRetrieve.cs" />
+    <Compile Include="ViewControllers\HistoryBidData\HistoryBidDataRetrieve.designer.cs">
+      <DependentUpon>HistoryBidDataRetrieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\HistoryBidData\HistoryCell.cs" />
+    <Compile Include="ViewControllers\HistoryBidData\HistoryCell.designer.cs">
+      <DependentUpon>HistoryCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\HistoryBidData\HistoryBidDataSource.cs" />
+    <Compile Include="ViewControllers\HistoryBidData\HistoryMonthSource.cs" />
+    <Compile Include="PushService.cs" />
+  </ItemGroup>
+  <Import Project="..\Bidvalet.Shared\Bidvalet.Shared.projitems" Label="Shared" Condition="Exists('..\Bidvalet.Shared\Bidvalet.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="In-app purchase\" />
+    <Folder Include="ViewControllers\Bid Award\" />
+    <Folder Include="ViewControllers\File Viewer\" />
+    <Folder Include="Resources\Shared\ConstraintModalView\" />
+    <Folder Include="ViewControllers\DownloadedBidDataView\" />
+    <Folder Include="ViewControllers\BidDataHomePage\" />
+    <Folder Include="ViewControllers\HistoryBidData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Drawable\info.png" />
+    <BundleResource Include="Resources\Drawable\Help-icon.png" />
+    <BundleResource Include="Resources\Drawable\marked%402x.png" />
+    <BundleResource Include="Resources\X_icon.png" />
+    <BundleResource Include="Resources\X_icon%402x.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\ic_drag.png" />
+    <BundleResource Include="Resources\info_icon.png" />
+    <BundleResource Include="Resources\ Privacy Policy.pdf" />
+    <BundleResource Include="Resources\License.pdf" />
+    <BundleResource Include="Resources\bg.png" />
+    <BundleResource Include="Resources\wbid-word.png" />
+    <BundleResource Include="Resources\1024x1024.png" />
+    <BundleResource Include="WBidValetLaunchScreen.xib" />
+    <BundleResource Include="Resources\ColumnDefinitions.xml" />
+    <BundleResource Include="Resources\CellSelectionCircle-off.png" />
+    <BundleResource Include="Resources\CellSelectionCircle-off%402x.png" />
+    <BundleResource Include="Resources\CellSelectionCircle-on.png" />
+    <BundleResource Include="Resources\CellSelectionCircle-on%402x.png" />
+    <BundleResource Include="Resources\arrowDown.png" />
+    <BundleResource Include="Resources\arrowDown%402x.png" />
+    <BundleResource Include="Resources\arrowUp.png" />
+    <BundleResource Include="Resources\arrowUp%402x.png" />
+    <BundleResource Include="Resources\Filters.pdf" />
+    <BundleResource Include="Resources\How to User WBidValet.pdf" />
+    <BundleResource Include="Resources\Logic of WBidValet.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="fmcalendar">
+      <Version>1.5.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bidvalet.Business\Bidvalet.Business.csproj">
+      <Project>{76A76218-4C8F-422A-8813-9E0EC2D38BEC}</Project>
+      <Name>Bidvalet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bidvalet.Model\Bidvalet.Model.csproj">
+      <Project>{B77DC3AF-47FE-415F-A61C-6DDEF6BBA9CF}</Project>
+      <Name>Bidvalet.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

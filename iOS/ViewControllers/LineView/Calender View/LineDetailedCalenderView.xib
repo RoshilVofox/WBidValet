@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineDetailedCalenderView">
+            <connections>
+                <outlet property="CalenderColletionView" destination="LHa-rj-b8Y" id="uS5-ha-Sj6"/>
+                <outlet property="SegBaseView" destination="ZoR-nO-bnB" id="ol4-gk-V5y"/>
+                <outlet property="SegweekView" destination="neG-iR-sDb" id="Q39-Im-1Ng"/>
+                <outlet property="baseViewCollection" destination="Exg-zT-DI4" id="hNy-RP-OEE"/>
+                <outlet property="btnArrowDown" destination="AzN-ss-cJC" id="ZHG-LA-3UL"/>
+                <outlet property="btnArrowUp" destination="mE8-H3-Za1" id="O7i-ZW-gTs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoR-nO-bnB">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="neG-iR-sDb">
+                            <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="409" id="KZY-dC-H2p"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Sun"/>
+                                <segment title="Mon"/>
+                                <segment title="Tue"/>
+                                <segment title="Wed"/>
+                                <segment title="Thu"/>
+                                <segment title="Fri"/>
+                                <segment title="Sat"/>
+                            </segments>
+                            <color key="tintColor" red="0.46274509800000002" green="0.74509803919999995" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="KZY-dC-H2p"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <exclude reference="KZY-dC-H2p"/>
+                                </mask>
+                            </variation>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" red="0.46274509800000002" green="0.74509803919999995" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="30C-U9-Qje"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="4DY-WL-q9D"/>
+                        <constraint firstItem="neG-iR-sDb" firstAttribute="leading" secondItem="ZoR-nO-bnB" secondAttribute="leading" constant="-2" id="czS-GD-aDf">
+                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="neG-iR-sDb" secondAttribute="trailing" constant="-1" id="dcu-io-9ho">
+                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                        </constraint>
+                        <constraint firstItem="neG-iR-sDb" firstAttribute="top" secondItem="ZoR-nO-bnB" secondAttribute="top" id="uw1-5v-gma"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="neG-iR-sDb"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="30C-U9-Qje"/>
+                            <exclude reference="4DY-WL-q9D"/>
+                            <exclude reference="czS-GD-aDf"/>
+                            <exclude reference="dcu-io-9ho"/>
+                            <exclude reference="uw1-5v-gma"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="neG-iR-sDb"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="30C-U9-Qje"/>
+                            <include reference="4DY-WL-q9D"/>
+                            <include reference="czS-GD-aDf"/>
+                            <include reference="dcu-io-9ho"/>
+                            <include reference="uw1-5v-gma"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exg-zT-DI4">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h1-t8-qkD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem image="arrowUp.png" id="mE8-H3-Za1">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="UpArrowClicked:" destination="-1" id="KoV-xY-VuQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3vF-PV-E5X"/>
+                        <barButtonItem image="arrowDown.png" id="AzN-ss-cJC">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="DownArrowClicked:" destination="-1" id="LyO-qZ-Zo7"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LHa-rj-b8Y">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qzd-GL-J6M">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ymw-Eo-SEK"/>
+                        <outlet property="delegate" destination="-1" id="Ce9-C5-lNi"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LHa-rj-b8Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3Zd-Yl-5zR"/>
+                <constraint firstItem="Exg-zT-DI4" firstAttribute="leading" secondItem="ZoR-nO-bnB" secondAttribute="leading" id="422-P3-dCn"/>
+                <constraint firstItem="LHa-rj-b8Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="6B8-N8-o88"/>
+                <constraint firstItem="ZoR-nO-bnB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="7cQ-9t-hOL">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="ZoR-nO-bnB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CjG-qS-DVL"/>
+                <constraint firstAttribute="trailing" secondItem="ZoR-nO-bnB" secondAttribute="trailing" constant="-6" id="U0n-JM-I3h">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="Exg-zT-DI4" firstAttribute="top" secondItem="ZoR-nO-bnB" secondAttribute="bottom" id="UG3-2A-Qbl">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-1"/>
+                </constraint>
+                <constraint firstItem="Exg-zT-DI4" firstAttribute="trailing" secondItem="4h1-t8-qkD" secondAttribute="trailing" id="Xr6-zT-tQH"/>
+                <constraint firstAttribute="trailing" secondItem="Exg-zT-DI4" secondAttribute="trailing" id="Ybc-qA-j1V"/>
+                <constraint firstItem="Exg-zT-DI4" firstAttribute="leading" secondItem="4h1-t8-qkD" secondAttribute="leading" id="bPA-ud-Tdg"/>
+                <constraint firstItem="Exg-zT-DI4" firstAttribute="bottom" secondItem="4h1-t8-qkD" secondAttribute="top" id="hrk-xm-8yx"/>
+                <constraint firstAttribute="bottom" secondItem="Exg-zT-DI4" secondAttribute="bottom" constant="44" id="ldM-12-Lnp"/>
+                <constraint firstItem="4h1-t8-qkD" firstAttribute="top" secondItem="LHa-rj-b8Y" secondAttribute="bottom" id="lvN-Y3-dQC"/>
+                <constraint firstAttribute="trailing" secondItem="LHa-rj-b8Y" secondAttribute="trailing" id="z8S-SB-ttC"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ZoR-nO-bnB"/>
+                    <exclude reference="Exg-zT-DI4"/>
+                    <exclude reference="4h1-t8-qkD"/>
+                    <exclude reference="LHa-rj-b8Y"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="lvN-Y3-dQC"/>
+                    <exclude reference="422-P3-dCn"/>
+                    <exclude reference="UG3-2A-Qbl"/>
+                    <exclude reference="Xr6-zT-tQH"/>
+                    <exclude reference="Ybc-qA-j1V"/>
+                    <exclude reference="bPA-ud-Tdg"/>
+                    <exclude reference="hrk-xm-8yx"/>
+                    <exclude reference="ldM-12-Lnp"/>
+                    <exclude reference="3Zd-Yl-5zR"/>
+                    <exclude reference="6B8-N8-o88"/>
+                    <exclude reference="z8S-SB-ttC"/>
+                    <exclude reference="7cQ-9t-hOL"/>
+                    <exclude reference="CjG-qS-DVL"/>
+                    <exclude reference="U0n-JM-I3h"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="ZoR-nO-bnB"/>
+                    <include reference="Exg-zT-DI4"/>
+                    <include reference="4h1-t8-qkD"/>
+                    <include reference="LHa-rj-b8Y"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="lvN-Y3-dQC"/>
+                    <include reference="422-P3-dCn"/>
+                    <include reference="UG3-2A-Qbl"/>
+                    <include reference="Xr6-zT-tQH"/>
+                    <include reference="Ybc-qA-j1V"/>
+                    <include reference="bPA-ud-Tdg"/>
+                    <include reference="hrk-xm-8yx"/>
+                    <include reference="ldM-12-Lnp"/>
+                    <include reference="3Zd-Yl-5zR"/>
+                    <include reference="6B8-N8-o88"/>
+                    <include reference="z8S-SB-ttC"/>
+                    <include reference="7cQ-9t-hOL"/>
+                    <include reference="CjG-qS-DVL"/>
+                    <include reference="U0n-JM-I3h"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="340" y="447"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowDown.png" width="30" height="30"/>
+        <image name="arrowUp.png" width="30" height="30"/>
+    </resources>
+</document>

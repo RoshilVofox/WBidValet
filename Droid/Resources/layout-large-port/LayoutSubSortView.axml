@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/BidToolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/p10dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/BidText"
+                android:id="@+id/tvTitleSubSort"
+                android:gravity="center"
+                android:text="@string/label_sub_single_sort_title"
+                android:textSize="@dimen/text_sz_22sp" />
+            <TextView
+                style="@style/BidText"
+                android:id="@+id/tvSortSubKey"
+                android:gravity="center"
+                android:textColor="@color/primaryDarkColor_700"
+                android:textSize="@dimen/text_sz_22sp" />
+            <TextView
+                style="@style/BidText"
+                android:gravity="center"
+                android:id="@+id/tvTitleCorrect"
+                android:text="@string/label_correct_title"
+                android:textSize="@dimen/text_sz_22sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <Button
+                style="@style/BidButton"
+                android:id="@+id/btnDelete"
+                android:textColor="@color/colorButtonRed"
+                android:text="@string/button_delete"
+                android:layout_marginBottom="@dimen/p10dp"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/text_sz_22sp" />
+            <Button
+                style="@style/BidButton"
+                android:id="@+id/btnContinue"
+                android:textColor="@color/white"
+                android:text="@string/button_continue"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/text_sz_22sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

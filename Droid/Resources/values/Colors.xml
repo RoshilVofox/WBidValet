@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+    <color name="background">#FFE495</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF4081</color>
+	<color name="colorHomeButton">#0082FF</color>
+	<color name="colorGreenHomeDateTitle">#379B00</color>
+	<color name="colorRedHomeDateTitle">#DE0000</color>
+
+	<color name="BidRed">#ff0000</color>
+	<color name="BidProgressBackground">#B9B0A0</color>
+	<color name="borderExpired">#757067</color>
+	<color name="colorExpired">#9E9E9E</color>
+	<color name="colorSort">#EC4C1B</color>
+	<color name="colorSelectBase">#F5F5F5</color>
+	<color name="colorSelectSeat">#EBEBF0</color>
+	<color name="colorRowGreen">#B6F3B7</color>
+	<color name="colorBidEmail">#3CFF0A</color>
+	<color name="colorBidPrint">#F5C00E</color>
+	<color name="colorButtonRed">#BE000A</color>
+	<color name="colorButtonGreen">#2AB20B</color>
+
+    <color name="primaryColor_500">#03a9f4</color>
+    <color name="primaryDarkColor_700">#0288d1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="gray_background">#e5e5e5</color>
+    <color name="dark_divider">#32000000</color>
+    <color name="red">#f00</color>
+    <color name="green">#0f0</color>
+    <color name="blue">#00f</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="translucent">#80000000</color>
+	<color name="blue_extra_light">#c8eefc</color>
+    <!-- (not in handbook) -->
+    <color name="blue_light">#78c8e6</color>
+    <!-- "light blue" -->
+    <color name="blue_new_kid">#2EA2CC</color>
+    <!-- "new kid on the block blue" -->
+    <color name="blue_medium">#1e8cbe</color>
+    <!-- "base lighter blue" -->
+    <color name="blue_dark">#0074a2</color>
+    <!-- "base darker blue" -->
+    <color name="blue_extra_dark">#005684</color>
+    <!-- "midnight blue" -->
+    <color name="orange_medium">#f8971d</color>
+    <color name="orange_red">#e0483e</color>
+
+    <!-- "jazzy orange" -->
+    <color name="orange_dark">#d54e21</color>
+    <!-- "fire orange" -->
+    <color name="grey_extra_light">#eeeeee</color>
+    <!-- "it's everywhere grey" -->
+    <color name="grey_light">#dddddd</color>
+    <!-- "read grey" -->
+    <color name="grey_medium_light">#bbbbbb</color>
+    <color name="grey_medium">#999999</color>
+    <!-- "all T, all shade grey" -->
+    <color name="grey_medium_dark">#666666</color>
+    <!-- "whisper grey" -->
+    <color name="grey_dark">#333333</color>
+    <!-- "little eddie grey" -->
+    <color name="grey_extra_dark">#222222</color>
+       
+</resources>

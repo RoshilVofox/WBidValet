@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-en-3Yh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="846"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.82352941176470584" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                                <rect key="frame" x="147.5" y="255" width="80" height="80"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Vxv-3R-82w"/>
+                                    <constraint firstAttribute="height" constant="80" id="WqO-xH-bl6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wbid-word.png" translatesAutoresizingMaskIntoConstraints="NO" id="TLZ-69-i47">
+                                <rect key="frame" x="37.5" y="341" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KCO-ZP-Wgg"/>
+                                    <constraint firstAttribute="height" constant="60" id="PL5-zY-SKJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The premiere bidding software for Pilots and Flight Attendants of Southwest Airlines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-DW-ZXv">
+                                <rect key="frame" x="12.5" y="399" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e07-fM-Y1w"/>
+                                    <constraint firstAttribute="width" constant="350" id="fdo-Bh-fwV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.50588235294117645" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hi1-en-3Yh" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="top" id="3a1-et-vQD"/>
+                            <constraint firstItem="TLZ-69-i47" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="-35" id="8wF-yc-23i"/>
+                            <constraint firstItem="Hi1-en-3Yh" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leading" id="AFU-NI-4JE"/>
+                            <constraint firstItem="VAs-DW-ZXv" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="15" id="Chz-pn-loR"/>
+                            <constraint firstItem="9ZL-r4-8FZ" firstAttribute="top" secondItem="Hi1-en-3Yh" secondAttribute="bottom" constant="-34" id="HlA-2u-BXS"/>
+                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" id="K8O-PE-N0p"/>
+                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="-111" id="NZt-gT-Uhr"/>
+                            <constraint firstItem="TLZ-69-i47" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" id="chr-KZ-LSY"/>
+                            <constraint firstItem="VAs-DW-ZXv" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" id="ddm-mc-7FH"/>
+                            <constraint firstAttribute="trailing" secondItem="Hi1-en-3Yh" secondAttribute="trailing" id="rPB-45-DrW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346.4" y="337.6847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1024x1024.png" width="1024" height="1024"/>
+        <image name="bg.png" width="1242" height="2208"/>
+        <image name="wbid-word.png" width="918" height="185"/>
+        <image name="Check" width="24" height="24"/>
+        <image name="uncheck" width="24" height="24"/>
+        <image name="Image" width="1242" height="2208"/>
+        <image name="down-arrow.png" width="150" height="150"/>
+        <image name="up-arrow.png" width="150" height="150"/>
+        <image name="Drawable/info.png" width="160" height="160"/>
+        <image name="Drawable/Help-icon.png" width="256" height="256"/>
+        <image name="Drawable/marked.png" width="256" height="256"/>
+        <image name="X_icon.png" width="23" height="23"/>
+        <image name="check.png" width="24" height="24"/>
+        <image name="ic_drag.png" width="24" height="24"/>
+        <image name="info_icon.png" width="1024" height="1024"/>
+        <image name="CellSelectionCircle-off.png" width="22" height="22"/>
+        <image name="CellSelectionCircle-on.png" width="22" height="22"/>
+        <image name="arrowDown.png" width="30" height="30"/>
+        <image name="arrowUp.png" width="30" height="30"/>
+    </resources>
+</document>

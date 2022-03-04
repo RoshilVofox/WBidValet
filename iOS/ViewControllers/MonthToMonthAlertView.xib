@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthToMonthAlertView">
+            <connections>
+                <outlet property="btnLink1" destination="l4H-UD-yFs" id="uWw-ej-7VC"/>
+                <outlet property="btnLink2" destination="K5e-EG-nUv" id="f7x-ey-DUa"/>
+                <outlet property="lblAlert" destination="wHl-AY-Ue3" id="HhU-tV-KVH"/>
+                <outlet property="view" destination="beA-7U-mAY" id="LFb-0z-mqW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="beA-7U-mAY">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Fa-dQ-b9m">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="barTintColor" red="0.58431372550000005" green="0.80170255899999998" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <items>
+                        <navigationItem title="Month To Month Vacation Alert" id="eqx-oS-hPN"/>
+                    </items>
+                </navigationBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="l4H-UD-yFs">
+                    <rect key="frame" x="10" y="168.33333333333334" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnLink1Tap:" destination="-1" eventType="touchUpInside" id="ngo-CG-Gca"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K5e-EG-nUv">
+                    <rect key="frame" x="10" y="218.33333333333334" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnLink2Tap:" destination="-1" eventType="touchUpInside" id="MOM-Aq-MTc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-dG-JFY">
+                    <rect key="frame" x="157" y="278.33333333333331" width="100" height="30"/>
+                    <color key="backgroundColor" red="0.58431372550000005" green="0.80170255899999998" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="29N-Ft-vOJ"/>
+                        <constraint firstAttribute="height" constant="30" id="2Nb-HX-EWq"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="linkColor"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnOkTap:" destination="-1" eventType="touchUpInside" id="HOR-tf-EaJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHl-AY-Ue3">
+                    <rect key="frame" x="10" y="127.99999999999999" width="394" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fs4-zD-RWs"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wHl-AY-Ue3" firstAttribute="top" secondItem="9Fa-dQ-b9m" secondAttribute="bottom" constant="40" id="4PR-uJ-Q1V"/>
+                <constraint firstItem="l4H-UD-yFs" firstAttribute="leading" secondItem="fs4-zD-RWs" secondAttribute="leading" constant="10" id="7t7-Nk-is3"/>
+                <constraint firstItem="fs4-zD-RWs" firstAttribute="trailing" secondItem="wHl-AY-Ue3" secondAttribute="trailing" constant="10" id="A63-or-2KT"/>
+                <constraint firstItem="K5e-EG-nUv" firstAttribute="leading" secondItem="fs4-zD-RWs" secondAttribute="leading" constant="10" id="ce4-H3-2Jt"/>
+                <constraint firstItem="0pp-dG-JFY" firstAttribute="centerX" secondItem="fs4-zD-RWs" secondAttribute="centerX" id="dJL-qb-MVB"/>
+                <constraint firstItem="0pp-dG-JFY" firstAttribute="top" secondItem="K5e-EG-nUv" secondAttribute="bottom" constant="30" id="ePJ-EE-Yqy"/>
+                <constraint firstItem="fs4-zD-RWs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K5e-EG-nUv" secondAttribute="trailing" constant="10" id="iET-bp-A3j"/>
+                <constraint firstItem="9Fa-dQ-b9m" firstAttribute="top" secondItem="fs4-zD-RWs" secondAttribute="top" id="onY-gf-9HV"/>
+                <constraint firstItem="wHl-AY-Ue3" firstAttribute="leading" secondItem="fs4-zD-RWs" secondAttribute="leading" constant="10" id="rkP-iZ-D56"/>
+                <constraint firstItem="fs4-zD-RWs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l4H-UD-yFs" secondAttribute="trailing" constant="10" id="sSh-m9-Lip"/>
+                <constraint firstItem="l4H-UD-yFs" firstAttribute="top" secondItem="wHl-AY-Ue3" secondAttribute="bottom" constant="20" id="wlK-ss-5Nv"/>
+                <constraint firstAttribute="trailing" secondItem="9Fa-dQ-b9m" secondAttribute="trailing" id="yF4-mU-FgO"/>
+                <constraint firstItem="9Fa-dQ-b9m" firstAttribute="leading" secondItem="beA-7U-mAY" secondAttribute="leading" id="yMA-QD-JqP"/>
+                <constraint firstItem="K5e-EG-nUv" firstAttribute="top" secondItem="l4H-UD-yFs" secondAttribute="bottom" constant="20" id="yNw-dp-cBz"/>
+            </constraints>
+            <point key="canvasLocation" x="121" y="1"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

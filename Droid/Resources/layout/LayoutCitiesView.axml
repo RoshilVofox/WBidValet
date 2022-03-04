@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/BidText"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="lower case = no overnights" />
+    <TextView
+        style="@style/BidText"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="1st touch is green YES. 2nd touch is red NO. 3rd touch is off." />
+    <LinearLayout
+        android:layout_marginTop="@dimen/p10dp"
+        android:padding="@dimen/p10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnDone"
+            style="@style/BidButton"
+            android:layout_marginRight="@dimen/p20dp"
+            android:textColor="@color/white"
+            android:text="@string/button_done" />
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/BidButton"
+            android:layout_marginLeft="@dimen/p20dp"
+            android:text="@string/button_clear" />
+    </LinearLayout>
+    <GridView
+        android:id="@+id/grdCityPicker"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="10" />
+</LinearLayout>

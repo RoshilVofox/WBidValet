@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="Bid.Theme" parent="BidTheme.Base">
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/background</item>
+	</style>
+	<style name="Bid.ThemeTitle" parent="BidTheme.Base">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/background</item>
+	</style>
+	<style name="BidTheme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="colorControlHighlight">#FF4081</item>
+		<item name="colorPrimary">@android:color/white</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+	<style name="BidTheme.Splash" parent="android:Theme.Holo.Light">
+		<item name="android:windowBackground">@color/background</item>
+		<item name="windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	<style name="BidHeader">
+		<item name="android:textSize">@dimen/text_sz_18sp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginTop">@dimen/p4dp</item>
+		<item name="android:layout_marginBottom">@dimen/p4dp</item>
+		<item name="android:padding">@dimen/p8dp</item>
+		<item name="android:text">@string/app_name</item>
+	</style>
+	<style name="BidFillableLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">12dp</item>
+		<item name="android:gravity">center</item>
+	</style>
+	<style name="BidSmallCircle">
+		<item name="android:layout_width">26dp</item>
+		<item name="android:layout_height">26dp</item>
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:background">@drawable/bidvalet_buttonstates</item>
+	</style>
+	<style name="BidNumberLayout">
+		<item name="android:layout_margin">12dp</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="BidText" parent="BidHeader">
+		<item name="android:gravity">left</item>
+		<item name="android:lineSpacingExtra">@dimen/p8dp</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+	</style>
+	<style name="BidText.CreateAccount" parent="BidHeader">
+		<item name="android:gravity">left</item>
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_weight">2</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+	</style>
+	<style name="BidText.CellConstraint" parent="BidText">
+		<item name="android:gravity">left</item>
+		<item name="android:layout_width">@dimen/width_80dp</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">@dimen/text_sz_10sp</item>
+	</style>
+	<style name="BidText.CellSmall" parent="BidText.CellConstraint">
+		<item name="android:gravity">left</item>
+		<item name="android:layout_width">@dimen/width_60dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">@dimen/text_sz_10sp</item>
+	</style>
+	<style name="BidInputText" parent="BidText">
+		<item name="android:background">@drawable/bidvalet_login_roundededittext</item>
+		<item name="android:paddingLeft">@dimen/p20dp</item>
+		<item name="android:paddingRight">@dimen/p20dp</item>
+		<item name="android:paddingTop">@dimen/p8dp</item>
+		<item name="android:paddingBottom">@dimen/p8dp</item>
+		<item name="android:text">""</item>
+	</style>
+	<style name="BidInputText.CreateAccount">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_weight">3</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:background">@drawable/bidvalet_login_roundededittext</item>
+		<item name="android:paddingLeft">@dimen/p20dp</item>
+		<item name="android:paddingRight">@dimen/p20dp</item>
+		<item name="android:paddingTop">@dimen/p8dp</item>
+		<item name="android:paddingBottom">@dimen/p8dp</item>
+		<item name="android:text">""</item>
+	</style>
+	<style name="Button">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">@dimen/p4dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:background">@drawable/bidvalet_buttonstates</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+	</style>
+	<style name="Button.StartState" parent="Button">
+		<item name="android:paddingLeft">@dimen/p20dp</item>
+		<item name="android:paddingRight">@dimen/p20dp</item>
+		<item name="android:paddingTop">@dimen/p4dp</item>
+		<item name="android:paddingBottom">@dimen/p4dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_sz_16sp</item>
+	</style>
+
+	<style name="Button.Submital">
+		<item name="android:layout_width">50dp</item>
+		<item name="android:layout_height">50dp</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">@dimen/p4dp</item>
+		<item name="android:layout_margin">@dimen/p8dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:background">@drawable/bidvalet_buttonstates</item>
+		<item name="android:textSize">@dimen/text_sz_12sp</item>
+	</style>
+	<style name="BidButton">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">@dimen/p4dp</item>
+		<item name="android:background">@drawable/bidvalet_buttonstates</item>
+		<item name="android:textColor">@drawable/bidvalet_buttoncolors</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+	</style>
+	<style name="BidButton.CellConstraint" parent="BidButton">
+		<item name="android:gravity">center</item>
+		<item name="android:layout_width">@dimen/width_30dp</item>
+		<item name="android:layout_height">@dimen/width_30dp</item>
+		<item name="android:padding">@dimen/p4dp</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:layout_margin">@dimen/p4dp</item>
+		<item name="android:background">@drawable/bidvalet_submital_green_rectangebutton</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">9sp</item>
+	</style>
+	<style name="BidButton.Cancel">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginRight">@dimen/p8dp</item>
+		<item name="android:paddingLeft">@dimen/p20dp</item>
+		<item name="android:paddingRight">@dimen/p20dp</item>
+		<item name="android:paddingTop">@dimen/p8dp</item>
+		<item name="android:paddingBottom">@dimen/p8dp</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+		<item name="android:background">@drawable/bidvalet_cancel_roundedbutton</item>
+	</style>
+	<style name="BidButton.Create">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginLeft">@dimen/p8dp</item>
+		<item name="android:paddingLeft">@dimen/p40dp</item>
+		<item name="android:paddingRight">@dimen/p40dp</item>
+		<item name="android:paddingTop">@dimen/p8dp</item>
+		<item name="android:paddingBottom">@dimen/p8dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+		<item name="android:background">@drawable/bidvalet_create_roundedbutton</item>
+	</style>
+	<style name="BidButton.Sort">
+		<item name="android:layout_width">@dimen/height_120dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:paddingTop">@dimen/p8dp</item>
+		<item name="android:paddingBottom">@dimen/p8dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">@dimen/text_sz_12sp</item>
+		<item name="android:background">@drawable/bidvalet_sort_roundedbutton</item>
+	</style>
+	<style name="BidDeleteButton" parent="@style/BidButton">
+		<item name="android:layout_width">@dimen/height_40dp</item>
+		<item name="android:layout_height">@dimen/height_40dp</item>
+		<item name="android:text">@null</item>
+		<item name="android:textColor">@null</item>
+	</style>
+
+	<style name="BidCommutButton">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_margin">@dimen/p8dp</item>
+		<item name="android:padding">@dimen/p4dp</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:background">@drawable/bidvalet_commute_black</item>
+		<item name="android:textSize">@dimen/text_sz_14sp</item>
+	</style>
+	<style name="BidCommutButton.Info" parent="@style/BidCommutButton">
+		<item name="android:layout_width">@dimen/height_30dp</item>
+		<item name="android:layout_height">@dimen/height_30dp</item>
+		<item name="android:background">@null</item>
+	</style>
+</resources>

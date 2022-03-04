@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/BidToolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/p10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="@dimen/p30dp"
+            android:layout_marginBottom="@dimen/p20dp"
+            style="@style/BidText"
+            android:id="@+id/tvTitleChoices"
+            android:gravity="center"
+            android:text="@string/label_submital_choices"
+            android:textSize="@dimen/text_sz_28sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="@dimen/p20dp"
+                android:layout_marginBottom="@dimen/p20dp"
+                style="@style/BidText"
+                android:gravity="center"
+                android:id="@+id/tvSenioryCount"
+                android:text="@string/label_your_seniority"
+                android:textSize="@dimen/text_sz_28sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/BidButton"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/height_120dp"
+                    android:background="@drawable/bidvalet_button_standard_pressed"
+                    android:text="@string/button_all"
+                    android:textColor="@color/white"
+                    android:id="@+id/btnAll"
+                    android:textSize="@dimen/text_sz_28sp" />
+                <Button
+                    android:layout_gravity="center_vertical"
+                    style="@style/BidButton"
+                    android:layout_width="@dimen/height_120dp"
+                    android:textColor="@color/colorHomeButton"
+                    android:background="@drawable/bidvalet_button_block_normal"
+                    android:text="@string/button_seniority"
+                    android:id="@+id/btnSeniority"
+                    android:textSize="@dimen/text_sz_28sp" />
+                <EditText
+                    android:hint="@string/label_bid_hint"
+                    style="@style/BidInputText"
+                    android:layout_marginLeft="@dimen/p20dp"
+                    android:layout_width="@dimen/height_80dp"
+                    android:inputType="number"
+                    android:id="@+id/edtSeniority"
+                    android:textSize="@dimen/text_sz_28sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:layout_gravity="center_vertical"
+            style="@style/Button"
+            android:layout_alignParentBottom="true"
+            android:text="@string/button_calculate_bid"
+            android:id="@+id/btnCalculate"
+            android:textSize="@dimen/text_sz_28sp" />
+    </RelativeLayout>
+</LinearLayout>

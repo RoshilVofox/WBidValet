@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rlBlockSort"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_above="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/p10dp">
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_am_pm"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockAMPM"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_days_off"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockDayOff"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_pay"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockPay"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_block_pay_dutty"
+                android:layout_margin="@dimen/p4dp"
+                android:paddingBottom="@dimen/p8dp"
+                android:paddingTop="@dimen/p8dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:id="@+id/btnBlockPayDutty"
+                android:textSize="@dimen/text_sz_28sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/p10dp"
+            android:paddingRight="@dimen/p10dp"
+            android:paddingBottom="@dimen/p10dp">
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_per_diem"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockPerDiem"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_pm_am"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockPMAM"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_vac_pay"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockVacPay"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                android:layout_weight="1"
+                style="@style/BidButton.Sort"
+                android:text="@string/button_weekday"
+                android:layout_margin="@dimen/p4dp"
+                android:id="@+id/btnBlockWeekday"
+                android:textSize="@dimen/text_sz_28sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_order_sort_key"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/p10dp"
+            android:paddingRight="@dimen/p10dp"
+            style="@style/BidText"
+            android:textSize="@dimen/text_sz_28sp" />
+        <Bidvalet.Droid.SortView.DraggableListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp"
+            android:paddingLeft="@dimen/p10dp"
+            android:paddingRight="@dimen/p10dp"
+            android:background="@color/white"
+            android:id="@+id/lvBlockSort" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:gravity="center"
+        style="@style/BidButton"
+        android:text="@string/button_done"
+        android:layout_margin="@dimen/p10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnDone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_sz_28sp" />
+</RelativeLayout>

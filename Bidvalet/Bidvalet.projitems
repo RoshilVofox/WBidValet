@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{38772BB7-9BCC-4EDF-B571-B022C62480F7}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Bidvalet</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AMPMConstriants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Cx3Parameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Cx3Parameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DaysOfMonthCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Times.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CxCommutableLine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Cx2Parameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\SharedObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BlankReserveConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DaysOfWeekSome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DHFristLastConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EquirementConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LineTypeConstraint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\OvernightCitiesCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RestCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DaysOfWeekCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DaysOfWeekAll.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StartDayOfWeek.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TripBlockLenghtCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CommutableLineCx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CitiesButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ServiceModels\AuthServiceResponseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ClientRequestModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ServiceModels\CustomServiceResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\GlobalMessages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DownloadInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BidRound.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Position.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BidPeriod.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\ServiceModels\" />
+  </ItemGroup>
+</Project>

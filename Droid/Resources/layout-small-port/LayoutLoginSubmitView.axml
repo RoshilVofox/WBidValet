@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/BidToolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/p10dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="@dimen/p20dp"
+                style="@style/BidText"
+                android:gravity="center"
+                android:padding="@dimen/p10dp"
+                android:id="@+id/tvTitleLoginSubmit"
+                android:text="@string/label_submit_title"
+                android:textSize="@dimen/text_sz_12sp" />
+            <TextView
+                android:layout_marginTop="@dimen/p20dp"
+                style="@style/BidText"
+                android:gravity="center"
+                android:id="@+id/tvTitleUsePsd"
+                android:textColor="@color/colorRedHomeDateTitle"
+                android:text="@string/label_enter_credentials"
+                android:textSize="@dimen/text_sz_12sp" />
+            <TableLayout
+                android:layout_marginTop="@dimen/p20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        style="@style/BidText"
+                        android:id="@+id/tvUserId"
+                        android:text="@string/label_user_id"
+                        android:textSize="@dimen/text_sz_12sp" />
+                    <EditText
+                        style="@style/BidInputText"
+                        android:id="@+id/edtUserID"
+                        android:hint="@string/input_emp_number"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:inputType="text"
+                        android:textSize="@dimen/text_sz_12sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/BidText"
+                        android:id="@+id/tvCWAPsd"
+                        android:text="@string/label_password"
+                        android:textSize="@dimen/text_sz_12sp" />
+                    <EditText
+                        style="@style/BidInputText"
+                        android:id="@+id/edtPassword"
+                        android:hint="@string/input_cwa_password"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/text_sz_12sp" />
+                </TableRow>
+            </TableLayout>
+            <Button
+                android:layout_gravity="center_vertical"
+                style="@style/Button"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_login_submit"
+                android:id="@+id/btnLogin" />
+            <TextView
+                android:layout_marginTop="@dimen/p20dp"
+                style="@style/BidText"
+                android:id="@+id/tvBidShowNext"
+                android:gravity="center"
+                android:text="@string/label_bid_show_next"
+                android:textSize="@dimen/text_sz_12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

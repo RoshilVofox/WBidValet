@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlAmPmCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellAmPm" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlCmutLineCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellCommutableLines" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlDaysOfMonthCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellDayOfMonth" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlDayWeekAllCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellDayWeekAll" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlDayWeelSomeCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellDayWeekSome" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlDHFirstLastCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellDHFirstLast" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlEquipmentCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellEquipment" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlLineTypeCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellLineType" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlOvernightCityCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellOvernightCity" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlRestCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellRest" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlStartDayWeekCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellStartDayWeek" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlTripBlockLengthCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/CellTripBlockLength" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B77DC3AF-47FE-415F-A61C-6DDEF6BBA9CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bidvalet.Model</RootNamespace>
+    <AssemblyName>Bidvalet.Model</AssemblyName>
+    <TargetFrameworkProfile>Profile24</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BidAutoGroup.cs" />
+    <Compile Include="BidAutoItem.cs" />
+    <Compile Include="BidAutomator.cs" />
+    <Compile Include="BidLineIcon.cs" />
+    <Compile Include="CalendarData.cs" />
+    <Compile Include="CommuteTime.cs" />
+    <Compile Include="CorrectionParams.cs" />
+    <Compile Include="DaysOfMonth.cs" />
+    <Compile Include="FtCommutableLine.cs" />
+    <Compile Include="HistoricalBidDetails.cs" />
+    <Compile Include="MailInformation.cs" />
+    <Compile Include="OffLineHelper.cs" />
+    <Compile Include="PaymentUpdateModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BidDetails.cs" />
+    <Compile Include="DownloadedFileInfo.cs" />
+    <Compile Include="GlobalSettings.cs" />
+    <Compile Include="QuickFilterInfo.cs" />
+    <Compile Include="StateSync.cs" />
+    <Compile Include="State\Constraints\CxDays.cs" />
+    <Compile Include="State\Constraints\CxLine.cs" />
+    <Compile Include="State\Constraints\CxTripBlockLength.cs" />
+    <Compile Include="SubmitBid.cs" />
+    <Compile Include="TripData.cs" />
+    <Compile Include="UserInformation.cs" />
+    <Compile Include="WBidINI.cs" />
+    <Compile Include="INIUpdates.cs" />
+    <Compile Include="Domicile.cs" />
+    <Compile Include="DataColumn.cs" />
+    <Compile Include="AmPmConfigure.cs" />
+    <Compile Include="Equipment.cs" />
+    <Compile Include="EquipType.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Hotel.cs" />
+    <Compile Include="AvoidanceBids.cs" />
+    <Compile Include="BuddyBids.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="SourceHotel.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="WBidUpdate.cs" />
+    <Compile Include="BaseUpdates.cs" />
+    <Compile Include="Updates.cs" />
+    <Compile Include="Trip.cs" />
+    <Compile Include="DutyPeriod.cs" />
+    <Compile Include="Flight.cs" />
+    <Compile Include="Sip.cs" />
+    <Compile Include="SipDutyPeriod.cs" />
+    <Compile Include="Core\Defines.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="BidLineTemplate.cs" />
+    <Compile Include="LineSip.cs" />
+    <Compile Include="WorkDaysOfBidLine.cs" />
+    <Compile Include="DeadheadCity.cs" />
+    <Compile Include="RestPeriod.cs" />
+    <Compile Include="WorkBlockDetails.cs" />
+    <Compile Include="Day.cs" />
+    <Compile Include="ConstraintPoints.cs" />
+    <Compile Include="WeightPoints.cs" />
+    <Compile Include="VacationStateLine.cs" />
+    <Compile Include="VacationStateTrip.cs" />
+    <Compile Include="VacationStateDutyPeriod.cs" />
+    <Compile Include="VacationStateFlight.cs" />
+    <Compile Include="SeniorityListMember.cs" />
+    <Compile Include="CityPair.cs" />
+    <Compile Include="LineProperties.cs" />
+    <Compile Include="Week.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="SeniorityListItem.cs" />
+    <Compile Include="WBidIntialState.cs" />
+    <Compile Include="SortDetails.cs" />
+    <Compile Include="State\Constraints\Cx2Parameters.cs" />
+    <Compile Include="State\Constraints\Cx4Parameters.cs" />
+    <Compile Include="State\Constraints\CxCommutableLine.cs" />
+    <Compile Include="State\Times.cs" />
+    <Compile Include="State\Constraints\Cx3Parameters.cs" />
+    <Compile Include="State\Constraints\DaysOfMonthCx.cs" />
+    <Compile Include="State\Constraints\BulkOvernightCityCx.cs" />
+    <Compile Include="State\Constraints\Constraints.cs" />
+    <Compile Include="State\Weights\Weights.cs" />
+    <Compile Include="State\Weights\Wt3Parameter.cs" />
+    <Compile Include="State\Weights\Wt2Parameter.cs" />
+    <Compile Include="State\Weights\WtCommutableLine.cs" />
+    <Compile Include="State\Weights\DaysOfMonthWt.cs" />
+    <Compile Include="State\Weights\Wt.cs" />
+    <Compile Include="State\Weights\WtDaysOfWeek.cs" />
+    <Compile Include="State\Weights\Wt4Parameters.cs" />
+    <Compile Include="State\Weights\WtPDOFS.cs" />
+    <Compile Include="State\CxWtState.cs" />
+    <Compile Include="State\Constraints\AMPMConstriants.cs" />
+    <Compile Include="State\Constraints\PostionConstraint.cs" />
+    <Compile Include="State\Constraints\TripLengthConstraints.cs" />
+    <Compile Include="State\Constraints\EmptyCDaysOfWeekConstraintslass.cs" />
+    <Compile Include="Theme.cs" />
+    <Compile Include="MenuBarButtonStatus.cs" />
+    <Compile Include="LogInformation.cs" />
+    <Compile Include="ServiceModels\AuthServiceResponseModel.cs" />
+    <Compile Include="ServiceModels\CustomServiceResponse.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="GlobalMessages.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="SharedObject.cs" />
+    <Compile Include="BidPeriod.cs" />
+    <Compile Include="BidRound.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="ClientRequestModel.cs" />
+    <Compile Include="State\Constraints\BlankReserveConstraint.cs" />
+    <Compile Include="State\Constraints\CommutableLineCx.cs" />
+    <Compile Include="State\Constraints\DaysOfWeekCx.cs" />
+    <Compile Include="State\Constraints\DaysOfWeekAll.cs" />
+    <Compile Include="State\Constraints\DaysOfWeekSome.cs" />
+    <Compile Include="State\Constraints\DHFristLastConstraint.cs" />
+    <Compile Include="State\Constraints\EquirementConstraint.cs" />
+    <Compile Include="State\Constraints\LineTypeConstraint.cs" />
+    <Compile Include="State\Constraints\OvernightCitiesCx.cs" />
+    <Compile Include="State\Constraints\RestCx.cs" />
+    <Compile Include="State\Constraints\StartDayOfWeek.cs" />
+    <Compile Include="State\Constraints\TripBlockLenghtCx.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="Vacation\VacationCorrectionParams.cs" />
+    <Compile Include="FlightRouteDetails.cs" />
+    <Compile Include="FlightPlan.cs" />
+    <Compile Include="DeadHeadResult.cs" />
+    <Compile Include="DeadHeadParameter.cs" />
+    <Compile Include="VDvsRCdata.cs" />
+    <Compile Include="VacationTrip.cs" />
+    <Compile Include="VacationDetails.cs" />
+    <Compile Include="VacationDutyPeriod.cs" />
+    <Compile Include="VacationFlight.cs" />
+    <Compile Include="VacationRig.cs" />
+    <Compile Include="VacationGrandTotal.cs" />
+    <Compile Include="RCtimes.cs" />
+    <Compile Include="TripMultiVacData.cs" />
+    <Compile Include="BlockSort.cs" />
+    <Compile Include="WBidStateCollection.cs" />
+    <Compile Include="Vacation.cs" />
+    <Compile Include="LineOrders.cs" />
+    <Compile Include="ForceLine.cs" />
+    <Compile Include="TagDetails.cs" />
+    <Compile Include="BindingManager.cs" />
+    <Compile Include="SplitPointCities.cs" />
+    <Compile Include="Vacation\FdpTable.cs" />
+    <Compile Include="Vacation\DutyDayTable.cs" />
+    <Compile Include="Vacation\MasterFdpTable.cs" />
+    <Compile Include="TripInfo.cs" />
+    <Compile Include="LineInfo.cs" />
+    <Compile Include="DateHelper.cs" />
+    <Compile Include="DayOfMonth.cs" />
+    <Compile Include="DaysOfMonthHelper.cs" />
+    <Compile Include="VAPHelper.cs" />
+    <Compile Include="TripMultiMILData.cs" />
+    <Compile Include="State\Constraints\FtCommutableLine.cs" />
+    <Compile Include="ColumnDefinitions.cs" />
+    <Compile Include="SenListFormat.cs" />
+    <Compile Include="FVVacationClass.cs" />
+    <Compile Include="Vacation\VacDpForRigDist.cs" />
+    <Compile Include="MissedTripResponseModel.cs" />
+    <Compile Include="MonthlyBidDetails.cs" />
+    <Compile Include="BidSubmittedData.cs" />
+    <Compile Include="PingResponseModel.cs" />
+    <Compile Include="SubmittedDataRaw.cs" />
+    <Compile Include="AwardDetails.cs" />
+    <Compile Include="UserBidDetails.cs" />
+    <Compile Include="BidDataFiles.cs" />
+    <Compile Include="BidDataFileResponse.cs" />
+    <Compile Include="BidDataRequestDTO.cs" />
+    <Compile Include="AppDataBidFileNames.cs" />
+    <Compile Include="Serializable.cs" />
+    <Compile Include="RecentFiles.cs" />
+    <Compile Include="WbidUser.cs" />
+    <Compile Include="VacFilesRequest.cs" />
+    <Compile Include="Weekday.cs" />
+    <Compile Include="HistoricalBidData.cs" />
+    <Compile Include="OldLine\OldLineInfo.cs" />
+    <Compile Include="OldLine\OldLine.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ThirdParty\" />
+    <Folder Include="OldLine\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>ThirdParty\protobuf-net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

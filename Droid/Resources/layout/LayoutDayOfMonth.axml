@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/BidToolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_above="@+id/lnBottomControll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="@dimen/p4dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1st touch" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/p4dp"
+                        android:background="@drawable/bidvalet_off_border_button"
+                        android:padding="@dimen/p4dp"
+                        android:gravity="center"
+                        android:minWidth="28dp"
+                        android:text="OFF" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="@dimen/p4dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2nd touch" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/p4dp"
+                        android:background="@drawable/bidvalet_work_border_button"
+                        android:padding="@dimen/p4dp"
+                        android:gravity="center"
+                        android:minWidth="28dp"
+                        android:text="Work" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/p4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3rd touch" />
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bidvalet_gray_border_button"
+                        android:padding="@dimen/p4dp"
+                        android:layout_margin="@dimen/p4dp"
+                        android:text="@string/space" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                style="@style/BidText"
+                android:gravity="center"
+                android:text="set days off or desired to work" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:textColor="@color/black"
+                    android:text="Su"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:textColor="@color/black"
+                    android:text="Mo"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:textColor="@color/black"
+                    android:text="Tu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:textColor="@color/black"
+                    android:text="We"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:textColor="@color/black"
+                    android:text="Th"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:text="Fr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Bidvalet.Droid.BidSquareTextView
+                    android:id="@+id/tvDayItem"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_sz_16sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/bidvalet_gray_border_oval"
+                    android:text="Sa"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMonthYear"
+                style="@style/BidHeader"
+                android:textStyle="bold" />
+            <GridView
+                android:id="@+id/grdCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:numColumns="7"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnBottomControll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/p10dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDone"
+                style="@style/BidButton"
+                android:layout_margin="@dimen/p10dp"
+                android:textColor="@color/white"
+                android:text="@string/button_done" />
+            <Button
+                android:id="@+id/btnClearAll"
+                style="@style/BidButton.Cancel"
+                android:layout_margin="@dimen/p10dp"
+                android:text="@string/button_clear_all" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/BidToolbar" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <TextView
+            style="@style/BidText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/label_title_single_sort"
+            android:id="@+id/tvScreenSort"
+            android:textSize="@dimen/text_sz_28sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                style="@style/BidButton"
+                android:id="@+id/btnStandardSort"
+                android:padding="@dimen/p8dp"
+                android:layout_width="@dimen/width_240dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bidvalet_button_standard_pressed"
+                android:text="@string/button_standard_sort"
+                android:textSize="@dimen/text_sz_28sp" />
+            <Button
+                style="@style/BidButton"
+                android:layout_width="@dimen/width_240dp"
+                android:id="@+id/btnBlockSort"
+                android:textColor="@color/colorHomeButton"
+                android:background="@drawable/bidvalet_button_block_normal"
+                android:padding="@dimen/p8dp"
+                android:text="@string/button_block_sort"
+                android:textSize="@dimen/text_sz_28sp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlViewSort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/LayoutSingleSort" />
+            <include
+                layout="@layout/LayoutBlockSort" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

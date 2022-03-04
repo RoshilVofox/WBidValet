@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{0F0E5489-2FEE-42D3-901E-3B0F89D7D209}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Bidvalet.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\ModifiedSeniorityListParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SWA\SWAAuthentication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SWA\DownloadBid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SWA\SWAConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\WBidUpdateParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\FASecondRoundParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\CoverLetterParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\SeniorityListParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\BidLineParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parser\TripTtpParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SWA\SWASubmitBid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\XmlHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SWA\DownloadAward.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Utility\" />
+  </ItemGroup>
+</Project>

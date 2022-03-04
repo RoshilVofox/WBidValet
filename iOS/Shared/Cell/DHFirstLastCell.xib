@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="cxk-wN-pdQ" customClass="DHFirstLastCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="29.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOS-y9-d4a">
+                        <rect key="frame" x="0.0" y="5" width="408" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DH First - Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GP-gV-7rY">
+                                <rect key="frame" x="36" y="2" width="93" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="pwF-S3-6oe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-WZ-XV3">
+                                <rect key="frame" x="218" y="0.0" width="61" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="LC5-uq-qQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Less than">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnLessthanEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="HgY-n8-h5R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU8-cU-oGf">
+                                <rect key="frame" x="287" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="kHR-n6-uSq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnDHValueEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="Wqg-Sm-xS8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-aw-5nH">
+                                <rect key="frame" x="30" y="0.0" width="1" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="pWO-AW-3s5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssH-U9-GEE">
+                                <rect key="frame" x="5" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="8nW-xb-Yul"/>
+                                    <constraint firstAttribute="height" constant="25" id="PzD-YU-dPy"/>
+                                </constraints>
+                                <state key="normal" image="X_icon.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnDeleteEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="btT-7f-p2b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gif-dk-uh8">
+                                <rect key="frame" x="131" y="0.0" width="55" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="ZOm-xV-hXs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="first">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnDHConstraintEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="Efa-Uk-3gN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qpQ-aw-5nH" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" id="30g-bH-9ur"/>
+                            <constraint firstItem="Gif-dk-uh8" firstAttribute="centerY" secondItem="WOS-y9-d4a" secondAttribute="centerY" id="40e-fx-D9f"/>
+                            <constraint firstItem="qpQ-aw-5nH" firstAttribute="leading" secondItem="ssH-U9-GEE" secondAttribute="trailing" id="62u-fr-N7p"/>
+                            <constraint firstItem="6GP-gV-7rY" firstAttribute="centerY" secondItem="WOS-y9-d4a" secondAttribute="centerY" id="7iO-Yj-cj1"/>
+                            <constraint firstItem="Dbn-WZ-XV3" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" id="DSh-4B-7kx"/>
+                            <constraint firstItem="pU8-cU-oGf" firstAttribute="leading" secondItem="Dbn-WZ-XV3" secondAttribute="trailing" constant="8" id="JYH-er-7TT"/>
+                            <constraint firstItem="Gif-dk-uh8" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" id="LpP-kT-GiE"/>
+                            <constraint firstItem="6GP-gV-7rY" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" constant="2" id="LuZ-5v-uLh"/>
+                            <constraint firstItem="ssH-U9-GEE" firstAttribute="leading" secondItem="WOS-y9-d4a" secondAttribute="leading" constant="5" id="OFJ-76-uOQ"/>
+                            <constraint firstItem="ssH-U9-GEE" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" id="QRj-xu-hfp"/>
+                            <constraint firstItem="pU8-cU-oGf" firstAttribute="centerY" secondItem="WOS-y9-d4a" secondAttribute="centerY" id="dHl-hT-W8x"/>
+                            <constraint firstAttribute="trailing" secondItem="pU8-cU-oGf" secondAttribute="trailing" constant="96" id="ePj-d6-i6D"/>
+                            <constraint firstItem="Gif-dk-uh8" firstAttribute="leading" secondItem="6GP-gV-7rY" secondAttribute="trailing" constant="2" id="rk5-BQ-9K2"/>
+                            <constraint firstItem="pU8-cU-oGf" firstAttribute="top" secondItem="WOS-y9-d4a" secondAttribute="top" id="rwC-F4-a7J"/>
+                            <constraint firstItem="Dbn-WZ-XV3" firstAttribute="centerY" secondItem="WOS-y9-d4a" secondAttribute="centerY" id="skK-iV-X7q"/>
+                            <constraint firstAttribute="bottom" secondItem="qpQ-aw-5nH" secondAttribute="bottom" id="wpb-xO-SG1"/>
+                            <constraint firstItem="6GP-gV-7rY" firstAttribute="leading" secondItem="qpQ-aw-5nH" secondAttribute="trailing" constant="5" id="yZJ-gJ-mMz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="WOS-y9-d4a" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="5" id="1vq-p6-0qZ"/>
+                    <constraint firstItem="WOS-y9-d4a" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="SEN-U6-8Ag"/>
+                    <constraint firstAttribute="bottom" secondItem="WOS-y9-d4a" secondAttribute="bottom" constant="-0.5" id="nkz-ea-FK6"/>
+                    <constraint firstAttribute="trailing" secondItem="WOS-y9-d4a" secondAttribute="trailing" constant="-88" id="poW-Dr-xXs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="btnDHConstraint" destination="Gif-dk-uh8" id="wom-pH-XMR"/>
+                <outlet property="btnDHValue" destination="pU8-cU-oGf" id="KN0-5g-nbJ"/>
+                <outlet property="btnDelete" destination="ssH-U9-GEE" id="SR0-tE-LvC"/>
+                <outlet property="btnLessthan" destination="Dbn-WZ-XV3" id="Iey-QY-b0x"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="X_icon.png" width="23" height="23"/>
+    </resources>
+</document>

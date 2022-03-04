@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewForLicence">
+            <connections>
+                <outlet property="ObjNavigationItem" destination="tvO-GV-FlD" id="yoV-PQ-izC"/>
+                <outlet property="WebView" destination="92l-Sj-C8y" id="4iU-Cl-hMt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92l-Sj-C8y">
+                    <rect key="frame" x="0.0" y="53" width="600" height="547"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9s-Zr-NLs">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <color key="barTintColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="tvO-GV-FlD">
+                            <barButtonItem key="rightBarButtonItem" title="Done" id="YNM-9T-ptI">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="btnDoneClicked:" destination="-1" id="BEU-9k-xCz"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="92l-Sj-C8y" secondAttribute="trailing" id="Mze-gb-Cyk"/>
+                <constraint firstItem="o9s-Zr-NLs" firstAttribute="leading" secondItem="92l-Sj-C8y" secondAttribute="leading" id="bcm-Ht-lTf"/>
+                <constraint firstItem="92l-Sj-C8y" firstAttribute="trailing" secondItem="o9s-Zr-NLs" secondAttribute="trailing" id="c7J-We-Kg2"/>
+                <constraint firstItem="92l-Sj-C8y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ccf-OR-7kj"/>
+                <constraint firstAttribute="bottom" secondItem="92l-Sj-C8y" secondAttribute="bottom" id="ci3-mI-xC3"/>
+                <constraint firstItem="92l-Sj-C8y" firstAttribute="top" secondItem="o9s-Zr-NLs" secondAttribute="bottom" constant="9" id="u8E-QC-bH6"/>
+                <constraint firstItem="o9s-Zr-NLs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zrQ-Ac-HNB"/>
+            </constraints>
+            <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="305" y="447"/>
+        </view>
+    </objects>
+</document>

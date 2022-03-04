@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9B94CF10-5D02-478D-A539-9D12859605BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bidvalet.Droid</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AssemblyName>Bidvalet.Droid</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Adapters\SelectBaseAdapter.cs" />
+    <Compile Include="Screen\AuthorizedView\AuthorizeServicesActivity.cs" />
+    <Compile Include="Screen\AuthorizedView\AuthorizeStatusActivity.cs" />
+    <Compile Include="Screen\ConstraintView\ConstraintViewActivity.cs" />
+    <Compile Include="Screen\CreateAccount\CreateAccountActivity.cs" />
+    <Compile Include="Screen\ExpiredView\ExpriedSubscriptionActivity.cs" />
+    <Compile Include="Screen\HomeView\HomeActivity.cs" />
+    <Compile Include="Screen\LoginView\LoginViewActivity.cs" />
+    <Compile Include="Screen\SeatnRound\SeatAndRoundActivity.cs" />
+    <Compile Include="Screen\SelectBaseView\SelectBaseActivity.cs" />
+    <Compile Include="Screen\SplashScreen\SplashScreenActivity.cs" />
+    <Compile Include="Screen\BaseActivity\BaseActivity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen\ConstraintView\SubConstraint\DayOfMonthViewActivity.cs" />
+    <Compile Include="Adapters\ConstraintsAdapter.cs" />
+    <Compile Include="Screen\SortView\SortViewActivity.cs" />
+    <Compile Include="Screen\SortView\SubSortViewActivity.cs" />
+    <Compile Include="Adapters\BlockSortAdapter.cs" />
+    <Compile Include="Screen\Configs\BidEnum.cs" />
+    <Compile Include="Screen\Configs\BidApp.cs" />
+    <Compile Include="Screen\SubmitalView\SubmitalChoicesActivity.cs" />
+    <Compile Include="Screen\SubmitalView\SubmitalPositionActivity.cs" />
+    <Compile Include="Screen\SubmitalView\SubmitalPriorityActivity.cs" />
+    <Compile Include="BidValetRenderer\BidToolbarEvent.cs" />
+    <Compile Include="Screen\Calculate\CalculateBidViewActivity.cs" />
+    <Compile Include="Screen\Calculate\LoginSubmitAcitivity.cs" />
+    <Compile Include="Screen\Calculate\BidReceiptActivity.cs" />
+    <Compile Include="Screen\Calculate\EmailSentViewActivity.cs" />
+    <Compile Include="Screen\SortView\DraggableListView.cs" />
+    <Compile Include="Screen\SortView\IDraggableListAdapter.cs" />
+    <Compile Include="Adapters\DeleteEventHandler.cs" />
+    <Compile Include="Screen\ConstraintView\SubConstraint\CommuteInforActivity.cs" />
+    <Compile Include="Screen\ConstraintView\SubConstraint\CitiesViewActivity.cs" />
+    <Compile Include="Adapters\CitiesAdapter.cs" />
+    <Compile Include="Screen\ConstraintView\SubConstraint\CityPickerActivity.cs" />
+    <Compile Include="Adapters\CitiesPickerAdapter.cs" />
+    <Compile Include="BidValetRenderer\CalendarButton.cs" />
+    <Compile Include="Adapters\CalendarAdapter.cs" />
+    <Compile Include="BidValetRenderer\BidSquareTextView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\rainDrops.jpg" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\layout\Home.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_buttoncolors.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_buttonpressed.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_buttonstates.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_homestart_roundedbutton.xml" />
+    <AndroidResource Include="Resources\layout\ExpiredSubscription.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Home.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Home.axml" />
+    <AndroidResource Include="Resources\layout-small-port\Home.axml" />
+    <AndroidResource Include="Resources\layout\BidToolbar.axml" />
+    <AndroidResource Include="Resources\values-v21\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_expired_roundedbutton.xml" />
+    <AndroidResource Include="Resources\layout-small-port\ExpiredSubscription.axml" />
+    <AndroidResource Include="Resources\layout-large-port\ExpiredSubscription.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\ExpiredSubscription.axml" />
+    <AndroidResource Include="Resources\layout\SelectBase.axml" />
+    <AndroidResource Include="Resources\layout\row_select_base.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_arrow_right.png" />
+    <AndroidResource Include="Resources\layout\LayoutSeatAndRound.axml" />
+    <AndroidResource Include="Resources\layout-small-port\SelectBase.axml" />
+    <AndroidResource Include="Resources\layout-large-port\SelectBase.axml" />
+    <AndroidResource Include="Resources\layout-small-port\row_select_base.axml" />
+    <AndroidResource Include="Resources\layout-large-port\row_select_base.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\row_select_base.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\SelectBase.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSeatAndRound.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSeatAndRound.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSeatAndRound.axml" />
+    <AndroidResource Include="Resources\layout\LayoutLoginView.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_arrow_left.png" />
+    <AndroidResource Include="Resources\drawable\bidvalet_login_roundededittext.xml" />
+    <AndroidResource Include="Resources\layout\LayoutAuthorizeServices.axml" />
+    <AndroidResource Include="Resources\layout\row_select_author.axml" />
+    <AndroidResource Include="Resources\layout\DialogAuthorizeServices.axml" />
+    <AndroidResource Include="Resources\layout\LayoutAuthorizeStatus.axml" />
+    <AndroidResource Include="Resources\layout\LayoutCreateAccount.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_cancel_roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_setcarrier_roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_create_roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_pilot_normal.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_pilot_pressed.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_selector_pilot_button.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_fitart_normal.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_fitart_pressed.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_selector_fitart_button.xml" />
+    <AndroidResource Include="Resources\layout\LayoutConstraintView.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_plus.png" />
+    <AndroidResource Include="Resources\layout\DialogConstraints.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSortView.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSingleSort.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_standard_normal.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_standard_pressed.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_block_normal.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_button_block_pressed.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_sort_roundedbutton.xml" />
+    <AndroidResource Include="Resources\layout\LayoutBlockSort.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSubSortView.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSubmitalChoices.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSubmitalPosition.axml" />
+    <AndroidResource Include="Resources\layout\LayoutSubmitalPriority.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_submital_green_rectangebutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_submital_orange_rectangebutton.xml" />
+    <AndroidResource Include="Resources\layout\LayoutCalculateBidView.axml" />
+    <AndroidResource Include="Resources\layout\LayoutLoginSubmitView.axml" />
+    <AndroidResource Include="Resources\layout\LayoutBidReceiptView.axml" />
+    <AndroidResource Include="Resources\layout\LayoutEmailSentView.axml" />
+    <AndroidResource Include="Resources\drawable\bid_progress_background.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_email_roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_print_roundedbutton.xml" />
+    <AndroidResource Include="Resources\layout-small-port\BidToolbar.axml" />
+    <AndroidResource Include="Resources\layout-large-port\BidToolbar.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\BidToolbar.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutAuthorizeStatus.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutAuthorizeStatus.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutAuthorizeStatus.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutBidReceiptView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutBidReceiptView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutBidReceiptView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutBlockSort.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutBlockSort.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutBlockSort.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutCalculateBidView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutCalculateBidView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutCalculateBidView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutEmailSentView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutEmailSentView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutEmailSentView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutLoginSubmitView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutLoginSubmitView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutLoginSubmitView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutLoginView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutLoginView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutLoginView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSingleSort.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSingleSort.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSingleSort.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSortView.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSortView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSortView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSubmitalChoices.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSubmitalChoices.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSubmitalChoices.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSubmitalPosition.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSubmitalPosition.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSubmitalPosition.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSubmitalPriority.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSubmitalPriority.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSubmitalPriority.axml" />
+    <AndroidResource Include="Resources\layout-large-port\LayoutSubSortView.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\LayoutSubSortView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\LayoutSubSortView.axml" />
+    <AndroidResource Include="Resources\layout-small-port\row_select_author.axml" />
+    <AndroidResource Include="Resources\layout-large-port\row_select_author.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\row_select_author.axml" />
+    <AndroidResource Include="Resources\layout\Cell_Block_Sort.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_minus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_menu.jpg" />
+    <AndroidResource Include="Resources\drawable\bidvalet_background_row.xml" />
+    <AndroidResource Include="Resources\layout-large-port\Main.axml" />
+    <AndroidResource Include="Resources\layout-small-port\Main.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Main.axml" />
+    <AndroidResource Include="Resources\layout\CellCommutableLines.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete.png" />
+    <AndroidResource Include="Resources\layout\CellAmPm.axml" />
+    <AndroidResource Include="Resources\layout\CellDayOfMonth.axml" />
+    <AndroidResource Include="Resources\layout\CellDayWeekAll.axml" />
+    <AndroidResource Include="Resources\layout\CellDayWeekSome.axml" />
+    <AndroidResource Include="Resources\layout\CellDHFirstLast.axml" />
+    <AndroidResource Include="Resources\layout\CellEquipment.axml" />
+    <AndroidResource Include="Resources\layout\CellLineType.axml" />
+    <AndroidResource Include="Resources\layout\CellOvernightCity.axml" />
+    <AndroidResource Include="Resources\layout\CellRest.axml" />
+    <AndroidResource Include="Resources\layout\CellStartDayWeek.axml" />
+    <AndroidResource Include="Resources\layout\CellTripBlockLength.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_small_menu.png" />
+    <AndroidResource Include="Resources\layout\LayoutCommuteInformation.axml" />
+    <AndroidResource Include="Resources\layout\LayoutDayOfMonth.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\info.png" />
+    <AndroidResource Include="Resources\drawable\bidvalet_commute_black.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_view_commute_time.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_done_setting_commute.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_green_border_button.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_white_border_button.xml" />
+    <AndroidResource Include="Resources\layout\DialogMessage.axml" />
+    <AndroidResource Include="Resources\layout\LayoutCitiesView.axml" />
+    <AndroidResource Include="Resources\layout\CityItem.axml" />
+    <AndroidResource Include="Resources\layout\LayoutPickerCity.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_off_border_button.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_work_border_button.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_gray_border_button.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_gray_border_oval.xml" />
+    <AndroidResource Include="Resources\layout\DayItem.axml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_white_border_oval.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_green_border_oval.xml" />
+    <AndroidResource Include="Resources\drawable\bidvalet_red_border_oval.xml" />
+    <AndroidResource Include="Resources\layout\RowConstraint.axml" />
+  </ItemGroup>
+  <Import Project="..\Bidvalet\Bidvalet.projitems" Label="Shared" Condition="Exists('..\Bidvalet\Bidvalet.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="BidValetRenderer\" />
+    <Folder Include="Resources\values-v21\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Screen\" />
+    <Folder Include="Screen\AuthorizedView\" />
+    <Folder Include="Screen\ConstraintView\" />
+    <Folder Include="Screen\CreateAccount\" />
+    <Folder Include="Screen\ExpiredView\" />
+    <Folder Include="Screen\HomeView\" />
+    <Folder Include="Screen\LoginView\" />
+    <Folder Include="Screen\SeatnRound\" />
+    <Folder Include="Screen\SelectBaseView\" />
+    <Folder Include="Screen\SplashScreen\" />
+    <Folder Include="Screen\BaseActivity\" />
+    <Folder Include="Screen\ConstraintView\SubConstraint\" />
+    <Folder Include="Screen\SortView\" />
+    <Folder Include="Screen\Configs\" />
+    <Folder Include="Screen\SubmitalView\" />
+    <Folder Include="Screen\Calculate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7recyclerview">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\courier.ttf" />
+    <AndroidAsset Include="Assets\Fonts\ZapfinoExtraLT-One.otf" />
+    <AndroidAsset Include="Assets\Fonts\AvenirNextLTPro-Bold.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bidvalet.Model\Bidvalet.Model.csproj">
+      <Project>{B77DC3AF-47FE-415F-A61C-6DDEF6BBA9CF}</Project>
+      <Name>Bidvalet.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

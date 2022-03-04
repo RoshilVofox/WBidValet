@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetailsView">
+            <connections>
+                <outlet property="TripTableView" destination="lTx-4n-FCl" id="Bb7-6R-N6n"/>
+                <outlet property="btnArrowDown" destination="VLM-yA-De6" id="uW6-II-dgC"/>
+                <outlet property="btnArrowUp" destination="ZvJ-dJ-VDe" id="aaG-oD-aVw"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTx-4n-FCl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="513"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Dh5-C5-TW2"/>
+                        <outlet property="delegate" destination="-1" id="0mY-Rw-SmO"/>
+                    </connections>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQI-Qa-qRp">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <items>
+                        <barButtonItem image="arrowUp.png" id="ZvJ-dJ-VDe">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="UpArrowclicked:" destination="-1" id="uL4-JI-1UC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QC7-F9-UmW"/>
+                        <barButtonItem image="arrowDown.png" id="VLM-yA-De6">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="DownArrowClicked:" destination="-1" id="lUA-da-Pta"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aQI-Qa-qRp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GLI-4G-ghh"/>
+                <constraint firstAttribute="trailing" secondItem="aQI-Qa-qRp" secondAttribute="trailing" id="JOo-ru-isO"/>
+                <constraint firstAttribute="trailing" secondItem="lTx-4n-FCl" secondAttribute="trailing" id="VnA-3a-5Vs"/>
+                <constraint firstAttribute="bottom" secondItem="lTx-4n-FCl" secondAttribute="bottom" constant="55" id="W7I-uh-gKV"/>
+                <constraint firstItem="lTx-4n-FCl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bqo-Yp-rCo"/>
+                <constraint firstAttribute="bottom" secondItem="aQI-Qa-qRp" secondAttribute="bottom" id="fR9-Ga-PCj"/>
+                <constraint firstItem="lTx-4n-FCl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ijK-Ss-qpt"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowDown.png" width="30" height="30"/>
+        <image name="arrowUp.png" width="30" height="30"/>
+    </resources>
+</document>

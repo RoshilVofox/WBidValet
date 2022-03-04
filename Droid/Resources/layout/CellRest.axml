@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/btnDrag"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/height_30dp"
+            android:layout_height="@dimen/height_30dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/btnRemove"
+            android:padding="@dimen/p4dp"
+            android:background="@color/transparent"
+            android:src="@drawable/delete" />
+        <TextView
+            android:layout_width="@dimen/width_120dp"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/tvEquipmentTitle"
+            android:text="Rest"
+            android:textSize="@dimen/text_sz_12sp"
+            android:layout_toRightOf="@+id/btnRemove"
+            android:layout_centerVertical="true"
+            style="@style/BidText.CellConstraint" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:maxWidth="@dimen/width_80dp"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/tvRestValue"
+                android:text="inDom"
+                android:textSize="@dimen/text_sz_12sp"
+                android:layout_centerVertical="true"
+                style="@style/BidText.CellConstraint" />
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/tvValue"
+                android:layout_toRightOf="@+id/tvRestValue"
+                android:id="@+id/tvMoreLess"
+                android:text="Less than"
+                android:textColor="@color/BidRed"
+                android:textSize="@dimen/text_sz_12sp"
+                android:layout_centerVertical="true"
+                style="@style/BidText.CellConstraint" />
+            <TextView
+                android:layout_width="@dimen/height_30dp"
+                android:layout_height="@dimen/height_30dp"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvValue"
+                android:gravity="center"
+                android:text="12"
+                android:textSize="@dimen/text_sz_12sp"
+                android:layout_centerVertical="true"
+                style="@style/BidText.CellConstraint" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/height_30dp"
+        android:layout_height="@dimen/height_30dp"
+        android:src="@drawable/icon_menu"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnDrag"
+        android:background="@color/transparent" />
+</RelativeLayout>

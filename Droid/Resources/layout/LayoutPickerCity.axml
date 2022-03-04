@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/BidToolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/BidText"
+            android:text="Touch to pick a city"
+            android:gravity="center" />
+        <GridView
+            android:id="@+id/grdCityPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="10"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

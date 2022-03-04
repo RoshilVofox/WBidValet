@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/p10dp"
+    android:layout_width="match_parent"
+    android:id="@+id/scrStandardSort"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/lnSingleSort"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p40dp"
+                android:text="@string/button_pay"
+                android:id="@+id/btnSinglePay"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <TextView
+                style="@style/BidText"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tvMostSortPay"
+                android:layout_margin="@dimen/p40dp"
+                android:text="@string/label_single_standard_sort"
+                android:layout_marginRight="0.0dp"
+                android:textSize="@dimen/text_sz_28sp" />
+        </LinearLayout>
+        <Switch
+            style="@style/BidText"
+            android:text="@string/button_advanced"
+            android:id="@+id/switchAdvance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textOn="ON"
+            android:layoutDirection="rtl"
+            android:textOff="OFF"
+            android:padding="@dimen/p8dp"
+            android:textSize="@dimen/text_sz_28sp" />
+        <LinearLayout
+            android:id="@+id/lnAdvanceSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay"
+                android:id="@+id/btnAdvancePay"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay_day"
+                android:id="@+id/btnAdvancePayDay"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay_dutty"
+                android:id="@+id/btnAdvancePayDutty"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay_block"
+                android:id="@+id/btnAdvancePayBlock"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay_fdp"
+                android:id="@+id/btnAdvancePayFDP"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+            <Button
+                style="@style/BidButton.Sort"
+                android:layout_marginTop="@dimen/p20dp"
+                android:text="@string/button_pay_tafb"
+                android:id="@+id/btnAdvancePayTAFB"
+                android:textSize="@dimen/text_sz_28sp"
+                android:layout_width="@dimen/width_180dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

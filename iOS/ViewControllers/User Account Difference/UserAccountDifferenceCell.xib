@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="VGx-R4-R9Y" customClass="UserAccountDifferenceCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VGx-R4-R9Y" id="gCc-zc-qV3">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csF-ID-LEL">
+                        <rect key="frame" x="12" y="11" width="173" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="06i-9t-SDe"/>
+                            <constraint firstAttribute="width" constant="173" id="fH4-IG-dhd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Fz-Vs-F3b">
+                        <rect key="frame" x="12" y="40" width="300" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="YSq-LM-N7j"/>
+                        </constraints>
+                        <segments>
+                            <segment title="First"/>
+                            <segment title="Second"/>
+                        </segments>
+                        <connections>
+                            <action selector="SegmentButtonClicked:" destination="VGx-R4-R9Y" eventType="valueChanged" id="qEJ-E9-7ys"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="5Fz-Vs-F3b" firstAttribute="leading" secondItem="gCc-zc-qV3" secondAttribute="leadingMargin" constant="4" id="R8d-5P-7Og"/>
+                    <constraint firstItem="5Fz-Vs-F3b" firstAttribute="trailing" secondItem="gCc-zc-qV3" secondAttribute="trailingMargin" id="VJO-Hp-dH5"/>
+                    <constraint firstItem="csF-ID-LEL" firstAttribute="leading" secondItem="gCc-zc-qV3" secondAttribute="leadingMargin" constant="4" id="fhq-XE-gkD"/>
+                    <constraint firstItem="csF-ID-LEL" firstAttribute="top" secondItem="gCc-zc-qV3" secondAttribute="topMargin" constant="3" id="mHe-Bt-Tu8"/>
+                    <constraint firstItem="5Fz-Vs-F3b" firstAttribute="top" secondItem="csF-ID-LEL" secondAttribute="bottom" constant="8" id="scN-sy-INI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="SegSelection" destination="5Fz-Vs-F3b" id="Ybg-N2-uCA"/>
+                <outlet property="lblEmployeeDetails" destination="csF-ID-LEL" id="bB3-Hx-y5p"/>
+            </connections>
+            <point key="canvasLocation" x="322" y="347"/>
+        </tableViewCell>
+    </objects>
+</document>

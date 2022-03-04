@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" shouldIndentWhileEditing="NO" rowHeight="49" id="cxk-wN-pdQ" customClass="LineViewControllerCell">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5k-XJ-K2Y">
+                        <rect key="frame" x="4" y="7" width="31" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="rKH-ra-yD5"/>
+                            <constraint firstAttribute="width" constant="31" id="wfR-si-cRO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="222211" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhe-d5-Ln4">
+                        <rect key="frame" x="3" y="23" width="39" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="FDx-M8-jPj"/>
+                            <constraint firstAttribute="width" constant="39" id="spF-aT-ny2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7TM-JC-vNd">
+                        <rect key="frame" x="43" y="7" width="53" height="40"/>
+                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="3yo-AR-9l0"/>
+                            <constraint firstAttribute="height" constant="40" id="sqj-PT-rRT"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="d1r-md-FZa">
+                            <size key="itemSize" width="7" height="4"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="2" minY="1" maxX="2" maxY="1"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-g9-HjM">
+                        <rect key="frame" x="95" y="7" width="165" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="GzR-VI-Mdg"/>
+                            <constraint firstAttribute="width" constant="165" id="wNg-zi-Czx"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uXf-cb-JUs">
+                            <size key="itemSize" width="40" height="40"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="2" minY="1" maxX="2" maxY="1"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG5-EC-A6p">
+                        <rect key="frame" x="260" y="17" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="RdB-fB-tz5"/>
+                            <constraint firstAttribute="width" constant="20" id="i3B-PL-vSB"/>
+                        </constraints>
+                        <state key="normal" image="CellSelectionCircle-off.png"/>
+                        <state key="selected" image="CellSelectionCircle-on.png"/>
+                        <state key="highlighted" image="CellSelectionCircle-on.png"/>
+                        <connections>
+                            <action selector="btnSelectionClicked:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="3sl-BU-P5V"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mhe-d5-Ln4" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="12" id="1gR-5Q-nOo"/>
+                    <constraint firstItem="QG5-EC-A6p" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="6" id="38X-oP-NqZ"/>
+                    <constraint firstItem="ddc-g9-HjM" firstAttribute="leading" secondItem="7TM-JC-vNd" secondAttribute="trailing" constant="-1" id="3Tz-T1-jKZ"/>
+                    <constraint firstItem="ddc-g9-HjM" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="-4" id="3xm-me-BaM"/>
+                    <constraint firstItem="z5k-XJ-K2Y" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="-4" id="8Av-fF-4Oa"/>
+                    <constraint firstItem="QG5-EC-A6p" firstAttribute="leading" secondItem="ddc-g9-HjM" secondAttribute="trailing" id="Nyl-ny-adl"/>
+                    <constraint firstItem="mhe-d5-Ln4" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="3" id="S3i-eN-CIP"/>
+                    <constraint firstItem="z5k-XJ-K2Y" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="-12" id="a1F-7w-mw7"/>
+                    <constraint firstItem="mhe-d5-Ln4" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="-13" id="hIH-Mh-Gjb"/>
+                    <constraint firstItem="7TM-JC-vNd" firstAttribute="leading" secondItem="mhe-d5-Ln4" secondAttribute="trailing" constant="1" id="hld-qQ-gng"/>
+                    <constraint firstItem="z5k-XJ-K2Y" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="4" id="m6I-ii-cGa"/>
+                    <constraint firstItem="7TM-JC-vNd" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="-4" id="x7x-Z1-zN9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="LinePropertyCollection" destination="ddc-g9-HjM" id="8WD-cD-yXM"/>
+                <outlet property="MiniCalenderCollectionView" destination="7TM-JC-vNd" id="Fb8-S1-RjR"/>
+                <outlet property="btnSelection" destination="QG5-EC-A6p" id="tfS-tP-jX4"/>
+                <outlet property="lblCellNumber" destination="z5k-XJ-K2Y" id="Fzs-ty-Stb"/>
+                <outlet property="lblLineNumber" destination="mhe-d5-Ln4" id="w2U-Gz-jXE"/>
+            </connections>
+            <point key="canvasLocation" x="376.80000000000001" y="243.32833583208398"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CellSelectionCircle-off.png" width="22" height="22"/>
+        <image name="CellSelectionCircle-on.png" width="22" height="22"/>
+    </resources>
+</document>

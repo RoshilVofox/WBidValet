@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="cxk-wN-pdQ" customClass="StartDayOfWeekCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="29.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFc-NQ-E5R">
+                        <rect key="frame" x="0.0" y="5" width="408" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2a-Vz-Exv">
+                                <rect key="frame" x="36" y="2" width="74" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m2a-Vz-Exv" secondAttribute="height" multiplier="74:21" id="npO-fO-YNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTn-5Q-94j">
+                                <rect key="frame" x="145" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Ltz-yK-DAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Mo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnMonButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHv-19-FKA">
+                                <rect key="frame" x="175" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="W6P-1I-M7t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Tu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnTueButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCH-Ol-f8S">
+                                <rect key="frame" x="235" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="4Wn-ck-cLE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Th">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnThuButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlk-EE-X3q">
+                                <rect key="frame" x="265" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Xdz-Yu-GXn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Fr">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnFriButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGL-dV-uor">
+                                <rect key="frame" x="295" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="nyW-LL-xV1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Sa">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnSatButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnc-HD-5rx">
+                                <rect key="frame" x="30" y="0.0" width="1" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="7Sd-xC-sZb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L84-Au-qk5">
+                                <rect key="frame" x="5" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="TLa-8R-N9R"/>
+                                    <constraint firstAttribute="width" constant="25" id="ZZC-uf-KbA"/>
+                                </constraints>
+                                <state key="normal" image="X_icon.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnDeleteEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-Ba-guh">
+                                <rect key="frame" x="115" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.28235294119999998" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="enO-Qx-veF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Su">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnSunButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-ad-CnL">
+                                <rect key="frame" x="205" y="0.0" width="25" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="5jk-dH-ZtR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="We">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnWedButtonEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ya-Ba-guh" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="0cy-CT-PgU"/>
+                            <constraint firstItem="cCH-Ol-f8S" firstAttribute="leading" secondItem="jKv-ad-CnL" secondAttribute="trailing" constant="5" id="2O8-uk-G10"/>
+                            <constraint firstItem="uHv-19-FKA" firstAttribute="leading" secondItem="RTn-5Q-94j" secondAttribute="trailing" constant="5" id="4dX-Hw-NX0"/>
+                            <constraint firstItem="L84-Au-qk5" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="5b3-9O-Mt9"/>
+                            <constraint firstAttribute="trailing" secondItem="RGL-dV-uor" secondAttribute="trailing" constant="88" id="6ND-vn-7QU"/>
+                            <constraint firstItem="jKv-ad-CnL" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="8Ir-cW-Y83"/>
+                            <constraint firstItem="RTn-5Q-94j" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="BYg-QJ-Nur"/>
+                            <constraint firstItem="jKv-ad-CnL" firstAttribute="leading" secondItem="uHv-19-FKA" secondAttribute="trailing" constant="5" id="GUY-Np-h3k"/>
+                            <constraint firstItem="nlk-EE-X3q" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="Jj8-WR-FSA"/>
+                            <constraint firstItem="nlk-EE-X3q" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="M46-OC-3dE"/>
+                            <constraint firstItem="RTn-5Q-94j" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="MIu-P0-I1R"/>
+                            <constraint firstItem="jKv-ad-CnL" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="QGi-hg-sUS"/>
+                            <constraint firstItem="m2a-Vz-Exv" firstAttribute="leading" secondItem="Cnc-HD-5rx" secondAttribute="trailing" constant="5" id="Srh-b4-HpQ"/>
+                            <constraint firstItem="cCH-Ol-f8S" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="T4H-DJ-B3d"/>
+                            <constraint firstItem="RGL-dV-uor" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="ULo-N0-1bs"/>
+                            <constraint firstItem="1ya-Ba-guh" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="fdw-63-9Ng"/>
+                            <constraint firstItem="RGL-dV-uor" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="fyv-k1-Gte"/>
+                            <constraint firstItem="nlk-EE-X3q" firstAttribute="leading" secondItem="cCH-Ol-f8S" secondAttribute="trailing" constant="5" id="ivS-FR-iXD"/>
+                            <constraint firstItem="Cnc-HD-5rx" firstAttribute="leading" secondItem="L84-Au-qk5" secondAttribute="trailing" id="jdO-sw-nfn"/>
+                            <constraint firstAttribute="bottom" secondItem="Cnc-HD-5rx" secondAttribute="bottom" id="lRW-4s-o73"/>
+                            <constraint firstItem="m2a-Vz-Exv" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="oMl-0w-YVa"/>
+                            <constraint firstItem="L84-Au-qk5" firstAttribute="leading" secondItem="XFc-NQ-E5R" secondAttribute="leading" constant="5" id="qnK-Te-W1P"/>
+                            <constraint firstItem="RTn-5Q-94j" firstAttribute="leading" secondItem="1ya-Ba-guh" secondAttribute="trailing" constant="5" id="rA9-8s-rSw"/>
+                            <constraint firstItem="uHv-19-FKA" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="sih-Zt-1Qx"/>
+                            <constraint firstItem="RGL-dV-uor" firstAttribute="leading" secondItem="nlk-EE-X3q" secondAttribute="trailing" constant="5" id="u1j-Vi-CiP"/>
+                            <constraint firstItem="1ya-Ba-guh" firstAttribute="leading" secondItem="m2a-Vz-Exv" secondAttribute="trailing" constant="5" id="voX-If-Ish"/>
+                            <constraint firstItem="Cnc-HD-5rx" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="xht-Cz-Yot"/>
+                            <constraint firstItem="uHv-19-FKA" firstAttribute="centerY" secondItem="XFc-NQ-E5R" secondAttribute="centerY" id="ymN-ok-iRw"/>
+                            <constraint firstItem="cCH-Ol-f8S" firstAttribute="top" secondItem="XFc-NQ-E5R" secondAttribute="top" id="zTR-IY-r1Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="XFc-NQ-E5R" secondAttribute="bottom" constant="-0.5" id="7NE-fl-As2"/>
+                    <constraint firstAttribute="trailing" secondItem="XFc-NQ-E5R" secondAttribute="trailing" constant="-88" id="8eO-4t-g0U"/>
+                    <constraint firstItem="XFc-NQ-E5R" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="Fe0-IF-UBc"/>
+                    <constraint firstItem="XFc-NQ-E5R" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="5" id="jHh-oI-jJ7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="btnDelete" destination="L84-Au-qk5" id="bSJ-3Y-tF5"/>
+                <outlet property="btnFri" destination="nlk-EE-X3q" id="a8U-6e-P4n"/>
+                <outlet property="btnMon" destination="RTn-5Q-94j" id="88R-IO-hA3"/>
+                <outlet property="btnSat" destination="RGL-dV-uor" id="GQR-dS-6gj"/>
+                <outlet property="btnSun" destination="1ya-Ba-guh" id="iRJ-EX-2kS"/>
+                <outlet property="btnThu" destination="cCH-Ol-f8S" id="oQZ-dh-twk"/>
+                <outlet property="btnTue" destination="uHv-19-FKA" id="nsi-7h-bcV"/>
+                <outlet property="btnWed" destination="jKv-ad-CnL" id="jqt-GM-kEF"/>
+                <outlet property="lbStartDayOfWeek" destination="m2a-Vz-Exv" id="Nsc-AF-5OD"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="X_icon.png" width="23" height="23"/>
+    </resources>
+</document>

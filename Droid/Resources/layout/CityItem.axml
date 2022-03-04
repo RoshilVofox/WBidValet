@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tile_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/p4dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tile_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="AUS"
+        android:textSize="@dimen/text_sz_10sp"
+        android:singleLine="true"
+        android:textColor="#000000" />
+</RelativeLayout>

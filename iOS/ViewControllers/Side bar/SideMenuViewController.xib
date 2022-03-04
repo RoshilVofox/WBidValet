@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenuViewController">
+            <connections>
+                <outlet property="ViewDismiss" destination="Uk3-1C-6rn" id="vMO-fM-qAU"/>
+                <outlet property="tableView" destination="hvl-it-A7s" id="roh-R9-d8a"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odg-gm-bdl">
+                    <rect key="frame" x="88" y="0.0" width="232" height="568"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WBidValet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-WZ-4oH">
+                            <rect key="frame" x="10" y="20" width="146" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="146" id="gvY-pl-gao"/>
+                                <constraint firstAttribute="height" constant="24" id="qE9-JG-x5o"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvl-it-A7s">
+                            <rect key="frame" x="0.0" y="62" width="231" height="498"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="PaE-L4-XLR"/>
+                                <outlet property="delegate" destination="-1" id="Pu3-Te-8A6"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hvl-it-A7s" firstAttribute="top" secondItem="FEZ-WZ-4oH" secondAttribute="bottom" constant="18" id="IUI-RM-btK"/>
+                        <constraint firstItem="FEZ-WZ-4oH" firstAttribute="leading" secondItem="odg-gm-bdl" secondAttribute="leading" constant="10" id="JgE-Rn-au8"/>
+                        <constraint firstItem="FEZ-WZ-4oH" firstAttribute="top" secondItem="odg-gm-bdl" secondAttribute="top" constant="20" id="Kvj-Uj-G2v"/>
+                        <constraint firstAttribute="bottom" secondItem="hvl-it-A7s" secondAttribute="bottom" constant="8" id="Qu5-w6-isp"/>
+                        <constraint firstItem="hvl-it-A7s" firstAttribute="leading" secondItem="odg-gm-bdl" secondAttribute="leading" id="Wh5-cl-rOP"/>
+                        <constraint firstAttribute="width" constant="232" id="b4n-P7-9Is"/>
+                        <constraint firstAttribute="trailing" secondItem="hvl-it-A7s" secondAttribute="trailing" constant="1" id="qnn-Ys-a8B"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uk3-1C-6rn">
+                    <rect key="frame" x="0.0" y="0.0" width="89" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="odg-gm-bdl" secondAttribute="bottom" id="Ayf-Wc-LJG"/>
+                <constraint firstItem="odg-gm-bdl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hz8-Ga-tKw"/>
+                <constraint firstAttribute="trailing" secondItem="odg-gm-bdl" secondAttribute="trailing" id="NM1-ve-wH7"/>
+                <constraint firstItem="Uk3-1C-6rn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UoX-8J-bNw"/>
+                <constraint firstItem="Uk3-1C-6rn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ylc-iP-e9t"/>
+                <constraint firstAttribute="trailing" secondItem="Uk3-1C-6rn" secondAttribute="trailing" constant="231" id="Z6L-Zu-97K"/>
+                <constraint firstItem="odg-gm-bdl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="88" id="dO4-3m-RKT"/>
+                <constraint firstAttribute="bottom" secondItem="Uk3-1C-6rn" secondAttribute="bottom" id="f7w-QC-mKH"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

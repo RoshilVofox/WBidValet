@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="cZE-iV-UFb" customClass="BidDataHomeCell">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="191" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lC-wn-dL5">
+                        <rect key="frame" x="10" y="5" width="171" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="e0h-cO-W3H"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlU-dq-iLa">
+                        <rect key="frame" x="10" y="34" width="171" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="YH5-nu-AhH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85o-WB-MNc">
+                        <rect key="frame" x="167" y="0.0" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="SUf-vf-8gt"/>
+                            <constraint firstAttribute="width" constant="24" id="aIz-X4-TFD"/>
+                        </constraints>
+                        <state key="normal" image="uncheck-new"/>
+                        <connections>
+                            <action selector="btnDeleteTapped:" destination="cZE-iV-UFb" eventType="touchUpInside" id="BM8-CW-wzP"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9lC-wn-dL5" secondAttribute="trailing" constant="10" id="0eO-hd-6JS"/>
+                <constraint firstAttribute="trailing" secondItem="dlU-dq-iLa" secondAttribute="trailing" constant="10" id="1kA-qb-5TX"/>
+                <constraint firstItem="9lC-wn-dL5" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="5" id="4LG-RM-Crj"/>
+                <constraint firstAttribute="trailing" secondItem="85o-WB-MNc" secondAttribute="trailing" id="5Eg-v2-e8o"/>
+                <constraint firstItem="9lC-wn-dL5" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="10" id="Wi9-Ca-jOs"/>
+                <constraint firstItem="dlU-dq-iLa" firstAttribute="top" secondItem="9lC-wn-dL5" secondAttribute="bottom" constant="7" id="iQq-5E-VxS"/>
+                <constraint firstItem="dlU-dq-iLa" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="10" id="pHd-cC-ou8"/>
+                <constraint firstItem="85o-WB-MNc" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="riX-6o-pd8"/>
+            </constraints>
+            <size key="customSize" width="191" height="61"/>
+            <connections>
+                <outlet property="btnDelete" destination="85o-WB-MNc" id="2af-id-pYv"/>
+                <outlet property="lblSubTitle" destination="dlU-dq-iLa" id="umF-NB-ziY"/>
+                <outlet property="lblTitle" destination="9lC-wn-dL5" id="oEi-FK-HcW"/>
+            </connections>
+            <point key="canvasLocation" x="-34.057971014492757" y="4.3526785714285712"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="uncheck-new" width="32" height="32"/>
+    </resources>
+</document>
