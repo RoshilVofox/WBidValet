@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zxd-pE-QDb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zxd-pE-QDb">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SO-E7-kwN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="-1"/>
+            <point key="canvasLocation" x="140" y="-56"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CcM-ev-8qP">
@@ -106,7 +106,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbx-5Y-EYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="527" y="-6"/>
+            <point key="canvasLocation" x="-1551" y="-56"/>
         </scene>
         <!--Sub Scription View Controller-->
         <scene sceneID="2YT-qL-zYR">
@@ -363,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZT-0A-aKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080.8" y="-79.064039408867004"/>
+            <point key="canvasLocation" x="-727" y="-56"/>
         </scene>
         <!--Authorization Test Case View Controller-->
         <scene sceneID="7dr-OS-kyv">
@@ -458,7 +458,7 @@ Or you can go to www.swabidvalet.com for additional account options.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovd-XM-TPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2687" y="56"/>
+            <point key="canvasLocation" x="2721" y="-56"/>
         </scene>
         <!--Start Expired View Controller-->
         <scene sceneID="rDc-au-CMl">
@@ -620,7 +620,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKb-TE-ylD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="663"/>
+            <point key="canvasLocation" x="-1551" y="662"/>
         </scene>
         <!--Select Base View Controller-->
         <scene sceneID="fY8-Jp-kxj">
@@ -657,7 +657,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfR-Hn-Kz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="662.06899999999996"/>
+            <point key="canvasLocation" x="-636" y="661"/>
         </scene>
         <!--Select Seat And Round View Controller-->
         <scene sceneID="jot-vL-Q1a">
@@ -671,12 +671,9 @@ for a single month</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Egj-ux-FyH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Egj-ux-FyH">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Egj-ux-FyH" secondAttribute="height" multiplier="40:71" id="g4d-Yp-YyZ"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="8Y1-Gz-a3C" id="D6d-77-nWn"/>
                                     <outlet property="delegate" destination="8Y1-Gz-a3C" id="QeG-DN-IJC"/>
@@ -685,9 +682,10 @@ for a single month</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Egj-ux-FyH" firstAttribute="leading" secondItem="lhf-0w-Lbj" secondAttribute="leading" id="DqZ-Pe-aeQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Egj-ux-FyH" secondAttribute="trailing" id="Jkh-3d-ZCW"/>
-                            <constraint firstItem="Egj-ux-FyH" firstAttribute="top" secondItem="lhf-0w-Lbj" secondAttribute="top" id="XJJ-tK-IqQ"/>
+                            <constraint firstItem="shJ-Q1-DPj" firstAttribute="top" secondItem="Egj-ux-FyH" secondAttribute="bottom" id="A71-oK-3FL"/>
+                            <constraint firstItem="Egj-ux-FyH" firstAttribute="leading" secondItem="lhf-0w-Lbj" secondAttribute="leading" id="GCh-27-sAT"/>
+                            <constraint firstItem="Egj-ux-FyH" firstAttribute="top" secondItem="Ekd-Of-FrL" secondAttribute="bottom" id="Hgh-gL-1FH"/>
+                            <constraint firstAttribute="trailing" secondItem="Egj-ux-FyH" secondAttribute="trailing" id="Yn1-H9-0a2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -696,7 +694,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEB-GQ-DSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="663"/>
+            <point key="canvasLocation" x="282" y="661"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Wk3-9D-UtY">
@@ -802,7 +800,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXO-2N-JIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824" y="663"/>
+            <point key="canvasLocation" x="1140" y="661"/>
         </scene>
         <!--Authorization Service View Controller-->
         <scene sceneID="sQb-CB-ajF">
@@ -829,7 +827,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cef-9D-ttg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2301" y="56"/>
+            <point key="canvasLocation" x="1870" y="-56"/>
         </scene>
         <!--Download Bid Data View Controller-->
         <scene sceneID="1Uf-fk-j54">
@@ -843,16 +841,6 @@ for a single month</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqi-j3-dw0">
-                                <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.89411764709999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zTw-7E-RKr"/>
-                                </items>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="1" green="0.89411764709999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </toolbar>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BLT-Dx-WfB">
                                 <rect key="frame" x="62" y="406" width="251" height="2.6666666666666856"/>
                                 <color key="progressTintColor" red="0.52156862749999999" green="0.7725490196" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -954,6 +942,16 @@ for a single month</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqi-j3-dw0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.89411764709999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zTw-7E-RKr"/>
+                                </items>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="1" green="0.89411764709999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.8784313725490196" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -994,7 +992,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RW7-BU-32Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946" y="44"/>
+            <point key="canvasLocation" x="1015" y="-56"/>
         </scene>
         <!--User Account Difference Screen-->
         <scene sceneID="4LF-yY-u0Z">
@@ -1111,7 +1109,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5T-kM-pJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="703"/>
+            <point key="canvasLocation" x="4290" y="-37"/>
         </scene>
         <!--No ConstraintVC-->
         <scene sceneID="0yL-rO-Fup">
@@ -1153,7 +1151,7 @@ You can use the        icon to drag a line up or down in the order.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGn-kt-1ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="934"/>
+            <point key="canvasLocation" x="1916" y="661"/>
         </scene>
         <!--Create Account Table View Controller-->
         <scene sceneID="Jsn-Lm-quf">
@@ -1167,7 +1165,7 @@ You can use the        icon to drag a line up or down in the order.</string>
                             <tableViewSection id="IUc-xh-tL4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="691" id="ZM4-th-X5a">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="691"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="320" height="691"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="scaleToFill" tableViewCell="ZM4-th-X5a" id="drC-T3-Wvd">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="691"/>
@@ -1743,7 +1741,7 @@ Fill in the following form.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0F-zr-Qwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="764"/>
+            <point key="canvasLocation" x="3458" y="-56"/>
         </scene>
         <!--Sort View Controller-->
         <scene sceneID="KG5-FD-UO0">
@@ -1757,10 +1755,11 @@ Fill in the following form.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-Aa-auA">
-                                <rect key="frame" x="20" y="28" width="280" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-Aa-auA">
+                                <rect key="frame" x="20" y="35" width="335" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="eN5-De-f6H"/>
+                                    <constraint firstAttribute="height" constant="45" id="jfy-tB-1Va"/>
+                                    <constraint firstAttribute="width" constant="335" id="jiB-Kg-IiA"/>
                                 </constraints>
                                 <string key="text">OK, select your sort method. 
 You can use a Standard Sort, or create your own Block Sort.</string>
@@ -1768,11 +1767,11 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C6G-7V-vrF">
-                                <rect key="frame" x="36" y="84" width="248" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C6G-7V-vrF">
+                                <rect key="frame" x="82" y="85" width="211" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="CFK-DB-Cok"/>
-                                    <constraint firstAttribute="width" constant="248" id="R14-ZK-PYl"/>
+                                    <constraint firstAttribute="width" constant="211" id="8kN-ch-SjP"/>
+                                    <constraint firstAttribute="height" constant="31" id="Ml8-Wk-S8p"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Standard Sort"/>
@@ -1782,24 +1781,20 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                     <action selector="OnSegSelectSortValueChange:" destination="rDT-Gq-MDz" eventType="valueChanged" id="dyX-2g-hyY"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-g5-Jq9">
-                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-g5-Jq9">
+                                <rect key="frame" x="0.0" y="120" width="375" height="448"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Most users sort on pay. If you turn on the advanced switch you will see other standard SORT options." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-BN-ehy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Most users sort on pay. If you turn on the advanced switch you will see other standard SORT options." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-BN-ehy">
                                         <rect key="frame" x="36" y="108" width="248" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="65" id="580-MC-Xsx"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OJ-dE-Ky4">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OJ-dE-Ky4">
                                         <rect key="frame" x="110" y="32" width="100" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="6OJ-dE-Ky4" secondAttribute="height" multiplier="10:3" id="Pw9-6B-g6f"/>
-                                        </constraints>
                                         <state key="normal" title="Pay">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1807,71 +1802,52 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                             <action selector="OnPaySingleClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="XBc-mQ-01k"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5o-Ph-jGc">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5o-Ph-jGc">
                                         <rect key="frame" x="85" y="326" width="150" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Advanced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irP-DC-daJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advanced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irP-DC-daJ">
                                                 <rect key="frame" x="57" y="5" width="93" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="99U-Dz-wqg">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="99U-Dz-wqg">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="99U-Dz-wqg" secondAttribute="height" multiplier="49:31" id="9Zn-Xd-VhI"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="OnSingleAdvanceChangeValue:" destination="rDT-Gq-MDz" eventType="valueChanged" id="jP3-T3-fvT"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="99U-Dz-wqg" firstAttribute="leading" secondItem="M5o-Ph-jGc" secondAttribute="leading" id="6fx-mX-Bs5"/>
-                                            <constraint firstAttribute="bottom" secondItem="99U-Dz-wqg" secondAttribute="bottom" id="6rd-pL-0SL"/>
-                                            <constraint firstItem="99U-Dz-wqg" firstAttribute="top" secondItem="M5o-Ph-jGc" secondAttribute="top" id="K2N-x0-QIw"/>
-                                            <constraint firstItem="irP-DC-daJ" firstAttribute="leading" secondItem="99U-Dz-wqg" secondAttribute="trailing" constant="8" id="Ro7-iH-8eG"/>
-                                            <constraint firstItem="irP-DC-daJ" firstAttribute="top" secondItem="M5o-Ph-jGc" secondAttribute="top" constant="5" id="S5i-cH-yee"/>
-                                            <constraint firstAttribute="width" secondItem="M5o-Ph-jGc" secondAttribute="height" multiplier="150:31" id="VrB-np-FpZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="irP-DC-daJ" secondAttribute="trailing" id="gGJ-hH-MMC"/>
-                                            <constraint firstAttribute="bottom" secondItem="irP-DC-daJ" secondAttribute="bottom" constant="5" id="kF3-bj-HcN"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="2BF-BN-ehy" firstAttribute="leading" secondItem="A5s-g5-Jq9" secondAttribute="leading" constant="36" id="2Pw-2t-l3R"/>
-                                    <constraint firstAttribute="bottom" secondItem="M5o-Ph-jGc" secondAttribute="bottom" constant="91" id="6rO-2A-5KH"/>
-                                    <constraint firstItem="M5o-Ph-jGc" firstAttribute="centerX" secondItem="A5s-g5-Jq9" secondAttribute="centerX" id="BCJ-Tm-f6u"/>
-                                    <constraint firstItem="6OJ-dE-Ky4" firstAttribute="width" secondItem="A5s-g5-Jq9" secondAttribute="width" multiplier="100:320" id="M2x-Ic-yWF"/>
-                                    <constraint firstAttribute="trailing" secondItem="2BF-BN-ehy" secondAttribute="trailing" constant="36" id="ODh-1T-fBg"/>
-                                    <constraint firstItem="6OJ-dE-Ky4" firstAttribute="top" secondItem="A5s-g5-Jq9" secondAttribute="top" constant="32" id="TKh-jD-KZh"/>
-                                    <constraint firstItem="M5o-Ph-jGc" firstAttribute="width" secondItem="A5s-g5-Jq9" secondAttribute="width" multiplier="150:320" id="Vqo-cg-tQD"/>
-                                    <constraint firstItem="2BF-BN-ehy" firstAttribute="top" secondItem="6OJ-dE-Ky4" secondAttribute="bottom" constant="46" id="mNO-Fe-nwO"/>
-                                    <constraint firstItem="6OJ-dE-Ky4" firstAttribute="centerX" secondItem="A5s-g5-Jq9" secondAttribute="centerX" id="oum-wf-peE"/>
+                                    <constraint firstAttribute="height" constant="448" id="l9R-Kh-IYW"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-2L-n7u">
-                                <rect key="frame" x="0.0" y="125" width="320" height="443"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-2L-n7u">
+                                <rect key="frame" x="0.0" y="136" width="375" height="457"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLx-CJ-hXf">
-                                        <rect key="frame" x="0.0" y="-50" width="320" height="443"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dm-EW-MEa">
-                                                <rect key="frame" x="85" y="24" width="150" height="31"/>
+                                                <rect key="frame" x="112.66666666666669" y="10" width="150" height="31"/>
                                                 <subviews>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAY-ow-7qN">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAY-ow-7qN">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="yAY-ow-7qN" secondAttribute="height" multiplier="49:31" id="7iH-KV-yEx"/>
-                                                        </constraints>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
                                                             <action selector="OnSwitchAdvanceChangeValue:" destination="rDT-Gq-MDz" eventType="valueChanged" id="RQr-7J-ahH"/>
                                                         </connections>
                                                     </switch>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-7p-IHM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advanced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-7p-IHM">
                                                         <rect key="frame" x="57" y="5" width="93" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1879,141 +1855,113 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="QYl-7p-IHM" firstAttribute="leading" secondItem="yAY-ow-7qN" secondAttribute="trailing" constant="8" id="CHs-w4-f7I"/>
-                                                    <constraint firstItem="QYl-7p-IHM" firstAttribute="top" secondItem="3dm-EW-MEa" secondAttribute="top" constant="5" id="Jq8-0S-ES1"/>
-                                                    <constraint firstAttribute="bottom" secondItem="yAY-ow-7qN" secondAttribute="bottom" id="WR9-gZ-EG7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="QYl-7p-IHM" secondAttribute="trailing" id="Wh9-u5-bNS"/>
-                                                    <constraint firstItem="yAY-ow-7qN" firstAttribute="top" secondItem="3dm-EW-MEa" secondAttribute="top" id="a88-AY-vCL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="QYl-7p-IHM" secondAttribute="bottom" constant="5" id="eXr-rv-RHb"/>
-                                                    <constraint firstAttribute="width" secondItem="3dm-EW-MEa" secondAttribute="height" multiplier="150:31" id="gGK-d2-P52"/>
-                                                    <constraint firstItem="yAY-ow-7qN" firstAttribute="leading" secondItem="3dm-EW-MEa" secondAttribute="leading" id="wR8-hW-pJD"/>
+                                                    <constraint firstAttribute="width" constant="150" id="fFI-Av-MbE"/>
+                                                    <constraint firstAttribute="height" constant="31" id="ylE-r4-IRX"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-QE-OrY">
-                                                <rect key="frame" x="110" y="169" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Pay / Duty">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnAdvancePayDuttyClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="eED-Rr-gzb"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-JZ-Ian">
-                                                <rect key="frame" x="110" y="197" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Pay /Flt Hr">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnAdvancePayBlockClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ila-qZ-0aw"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bK-01-2fv">
-                                                <rect key="frame" x="110" y="264" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u9a-SU-UEx">
+                                                <rect key="frame" x="137.66666666666666" y="78.666666666666657" width="100" height="300"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-QE-OrY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="37.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Pay / Duty">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnAdvancePayDuttyClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="eED-Rr-gzb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-JZ-Ian">
+                                                        <rect key="frame" x="0.0" y="52.333333333333343" width="100" height="37.666666666666657"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Pay /Flt Hr">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnAdvancePayBlockClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ila-qZ-0aw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bK-01-2fv">
+                                                        <rect key="frame" x="0.0" y="105.00000000000003" width="100" height="37.333333333333343"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Pay / TAFB">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnAdvancePayTafbClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="lsD-80-gXX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68q-4x-ENH">
+                                                        <rect key="frame" x="0.0" y="157.33333333333334" width="100" height="37.666666666666657"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Pay / Day">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnAdvancePayPerDayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="Eod-mV-brW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSS-v0-TND">
+                                                        <rect key="frame" x="0.0" y="210.00000000000003" width="100" height="37.333333333333343"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Pay">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnAdvancePayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="udv-Fw-89H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4T-js-IaI">
+                                                        <rect key="frame" x="0.0" y="262.33333333333337" width="100" height="37.666666666666686"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                                        <state key="normal" title="Line Number">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="OnLineNumberClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ds3-cd-eff"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="4S9-aI-1dg"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="by0-Rd-3hO"/>
-                                                    <constraint firstAttribute="height" constant="35" id="uuA-Ql-ABR"/>
+                                                    <constraint firstAttribute="width" constant="100" id="LY2-0k-tsh"/>
+                                                    <constraint firstAttribute="height" constant="300" id="RmT-58-Ws8"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Pay / TAFB">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnAdvancePayTafbClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="lsD-80-gXX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68q-4x-ENH">
-                                                <rect key="frame" x="110" y="85" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Pay / Day">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnAdvancePayPerDayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="Eod-mV-brW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSS-v0-TND">
-                                                <rect key="frame" x="110" y="55" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="gSS-v0-TND" secondAttribute="height" multiplier="10:3" id="oxm-jf-8N2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Pay">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnAdvancePayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="udv-Fw-89H"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4T-js-IaI">
-                                                <rect key="frame" x="110" y="304" width="100" height="30"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.2901960784" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="4h9-IN-JVZ"/>
-                                                    <constraint firstAttribute="width" secondItem="t4T-js-IaI" secondAttribute="height" multiplier="10:3" id="mwR-14-Hsp"/>
-                                                    <constraint firstAttribute="width" constant="100" id="slB-6f-yf9"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                                <state key="normal" title="Line Number">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnLineNumberClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ds3-cd-eff"/>
-                                                </connections>
-                                            </button>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="gSS-v0-TND" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="0Tn-lE-n9b"/>
-                                            <constraint firstItem="YSe-QE-OrY" firstAttribute="top" secondItem="68q-4x-ENH" secondAttribute="bottom" constant="13" id="7ml-6g-lNr"/>
-                                            <constraint firstItem="t4T-js-IaI" firstAttribute="top" secondItem="9bK-01-2fv" secondAttribute="bottom" constant="13" id="BKw-qY-aqp"/>
-                                            <constraint firstItem="iXh-JZ-Ian" firstAttribute="width" secondItem="gSS-v0-TND" secondAttribute="width" id="D6K-vk-EeB"/>
-                                            <constraint firstItem="3dm-EW-MEa" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="EBh-R1-jHL"/>
-                                            <constraint firstItem="3dm-EW-MEa" firstAttribute="top" secondItem="KLx-CJ-hXf" secondAttribute="top" constant="24" id="FKC-G7-kET"/>
-                                            <constraint firstItem="iXh-JZ-Ian" firstAttribute="height" secondItem="gSS-v0-TND" secondAttribute="height" id="H9A-AT-RJK"/>
-                                            <constraint firstItem="YSe-QE-OrY" firstAttribute="width" secondItem="gSS-v0-TND" secondAttribute="width" id="Hju-Gb-rAx"/>
-                                            <constraint firstItem="t4T-js-IaI" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="Ia1-XQ-mjZ"/>
-                                            <constraint firstItem="3dm-EW-MEa" firstAttribute="width" secondItem="KLx-CJ-hXf" secondAttribute="width" multiplier="150:320" id="L9N-YF-SmC"/>
-                                            <constraint firstItem="iXh-JZ-Ian" firstAttribute="centerX" secondItem="YSe-QE-OrY" secondAttribute="centerX" id="X3g-wf-8yU"/>
-                                            <constraint firstItem="68q-4x-ENH" firstAttribute="height" secondItem="gSS-v0-TND" secondAttribute="height" id="YoO-3i-aNS"/>
-                                            <constraint firstAttribute="height" constant="443" id="ZHd-F6-5s1"/>
-                                            <constraint firstItem="YSe-QE-OrY" firstAttribute="height" secondItem="gSS-v0-TND" secondAttribute="height" id="dZX-yA-cGp"/>
-                                            <constraint firstItem="9bK-01-2fv" firstAttribute="trailing" secondItem="iXh-JZ-Ian" secondAttribute="trailing" id="dh0-Bj-HKJ"/>
-                                            <constraint firstItem="68q-4x-ENH" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="eCk-zm-2C0"/>
-                                            <constraint firstItem="9bK-01-2fv" firstAttribute="leading" secondItem="iXh-JZ-Ian" secondAttribute="leading" id="gTz-Q0-Zf7"/>
-                                            <constraint firstItem="gSS-v0-TND" firstAttribute="top" secondItem="3dm-EW-MEa" secondAttribute="bottom" constant="13" id="iVL-dD-2g5"/>
-                                            <constraint firstItem="68q-4x-ENH" firstAttribute="top" secondItem="gSS-v0-TND" secondAttribute="bottom" constant="13" id="lUe-Ek-pTJ"/>
-                                            <constraint firstItem="gSS-v0-TND" firstAttribute="width" secondItem="KLx-CJ-hXf" secondAttribute="width" multiplier="100:320" id="mEz-CY-k2s"/>
-                                            <constraint firstItem="68q-4x-ENH" firstAttribute="width" secondItem="gSS-v0-TND" secondAttribute="width" id="ndg-4n-kT9"/>
-                                            <constraint firstItem="YSe-QE-OrY" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="obP-sB-W4F"/>
-                                            <constraint firstItem="iXh-JZ-Ian" firstAttribute="top" secondItem="YSe-QE-OrY" secondAttribute="bottom" constant="13" id="vCS-Ri-Fs0"/>
-                                            <constraint firstItem="9bK-01-2fv" firstAttribute="top" secondItem="iXh-JZ-Ian" secondAttribute="bottom" constant="13" id="yjV-lj-qvf"/>
+                                            <constraint firstItem="3dm-EW-MEa" firstAttribute="top" secondItem="KLx-CJ-hXf" secondAttribute="top" constant="10" id="NEM-HU-bU1"/>
+                                            <constraint firstItem="3dm-EW-MEa" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="ieG-HK-HbI"/>
+                                            <constraint firstItem="u9a-SU-UEx" firstAttribute="centerY" secondItem="KLx-CJ-hXf" secondAttribute="centerY" id="lQj-Ga-EYL"/>
+                                            <constraint firstAttribute="height" constant="457" id="sIY-aT-ZaI"/>
+                                            <constraint firstItem="u9a-SU-UEx" firstAttribute="centerX" secondItem="KLx-CJ-hXf" secondAttribute="centerX" id="utw-av-lwP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="centerX" secondItem="iJt-2L-n7u" secondAttribute="centerX" id="4F0-bO-dDQ"/>
-                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="top" secondItem="iJt-2L-n7u" secondAttribute="top" constant="-50" id="7QH-pD-Dbd"/>
-                                    <constraint firstAttribute="trailing" secondItem="KLx-CJ-hXf" secondAttribute="trailing" id="SKr-hK-S6w"/>
-                                    <constraint firstAttribute="bottom" secondItem="KLx-CJ-hXf" secondAttribute="bottom" constant="50" id="WTg-gC-1WZ"/>
-                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="leading" secondItem="iJt-2L-n7u" secondAttribute="leading" id="haz-kC-IuY"/>
+                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="leading" secondItem="iJt-2L-n7u" secondAttribute="leading" id="3ZI-ll-4iY"/>
+                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="top" secondItem="iJt-2L-n7u" secondAttribute="top" id="FoG-pa-BhT"/>
+                                    <constraint firstAttribute="trailing" secondItem="KLx-CJ-hXf" secondAttribute="trailing" id="Lqf-bg-sn5"/>
+                                    <constraint firstAttribute="bottom" secondItem="KLx-CJ-hXf" secondAttribute="bottom" id="gqY-3C-har"/>
+                                    <constraint firstAttribute="height" constant="457" id="j1v-xy-9Zu"/>
+                                    <constraint firstItem="KLx-CJ-hXf" firstAttribute="centerX" secondItem="iJt-2L-n7u" secondAttribute="centerX" id="y2S-QX-WEQ"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-G8-BKS">
-                                <rect key="frame" x="0.0" y="125" width="320" height="443"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-G8-BKS">
+                                <rect key="frame" x="0.0" y="136" width="375" height="642"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-wE-lap">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-qs-fvd">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="29"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-Sb-56m">
-                                                <rect key="frame" x="0.0" y="3" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-Sb-56m">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.28627450980392155" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="AM-PM">
@@ -2023,12 +1971,9 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockAmPmClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="34E-hx-Qcc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKw-po-3Rg">
-                                                <rect key="frame" x="163" y="3" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKw-po-3Rg">
+                                                <rect key="frame" x="88.666666666666671" y="0.0" width="69.000000000000014" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="pKw-po-3Rg" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="O8n-hE-dcs"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Pay">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2037,12 +1982,9 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockPayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="A6y-qi-5MP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJs-IE-XnL">
-                                                <rect key="frame" x="245" y="3" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJs-IE-XnL">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="68.666666666666657" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="aJs-IE-XnL" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="3XU-Xq-9wb"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Pay / Duty">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2051,8 +1993,24 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockPayDuttyClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="SOU-dK-IuX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-TO-eyU">
-                                                <rect key="frame" x="0.0" y="37" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-BZ-e4c">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="68.666666666666686" height="29"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Days Off">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="OnBlockDaysOffClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ke5-Mu-6zG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-FV-rts">
+                                        <rect key="frame" x="20" y="49" width="335" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-TO-eyU">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Per Diem">
@@ -2062,12 +2020,9 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockPerDiemClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="pI3-wZ-Ldf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-rh-TmN">
-                                                <rect key="frame" x="81" y="37" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-rh-TmN">
+                                                <rect key="frame" x="88.666666666666671" y="0.0" width="69.000000000000014" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="riS-rh-TmN" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="U12-Ag-nsf"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="PM-AM">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2076,12 +2031,9 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockPmAmClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="IeG-Cs-wh9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4j-3b-ZHT">
-                                                <rect key="frame" x="163" y="37" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4j-3b-ZHT">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="68.666666666666657" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="L4j-3b-ZHT" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="eOW-m8-aCH"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Vac Pay">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2090,12 +2042,9 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockVacPayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="0ZP-bh-nJh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxV-6v-AZN">
-                                                <rect key="frame" x="245" y="37" width="75" height="27"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxV-6v-AZN">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="68.666666666666686" height="29"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="KxV-6v-AZN" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="yKN-Oy-UcH"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Weekday">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2104,23 +2053,13 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                     <action selector="OnBlockWeekdayClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="hua-WY-olQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-BZ-e4c">
-                                                <rect key="frame" x="81" y="3" width="75" height="27"/>
-                                                <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="qzJ-BZ-e4c" secondAttribute="height" multiplier="25:11" constant="13.636363636363633" id="Jo6-oU-116"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Days Off">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="OnBlockDaysOffClickEvent:" destination="rDT-Gq-MDz" eventType="touchUpInside" id="ke5-Mu-6zG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-Kr-hML">
-                                                <rect key="frame" x="123" y="69" width="75" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbH-k5-C6r">
+                                        <rect key="frame" x="147.66666666666666" y="98" width="80" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-Kr-hML">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.28627450980000002" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="ETOPS">
@@ -2131,46 +2070,20 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="aJs-IE-XnL" firstAttribute="width" secondItem="pKw-po-3Rg" secondAttribute="width" id="5IJ-na-P1r"/>
-                                            <constraint firstItem="pKw-po-3Rg" firstAttribute="leading" secondItem="qzJ-BZ-e4c" secondAttribute="trailing" constant="7" id="6XZ-sX-RNz"/>
-                                            <constraint firstItem="h8u-Sb-56m" firstAttribute="leading" secondItem="JkW-wE-lap" secondAttribute="leading" id="7tG-mf-jJu"/>
-                                            <constraint firstItem="qzJ-BZ-e4c" firstAttribute="height" secondItem="h8u-Sb-56m" secondAttribute="height" id="7vB-SI-A59"/>
-                                            <constraint firstItem="pKw-po-3Rg" firstAttribute="top" secondItem="JkW-wE-lap" secondAttribute="top" constant="3" id="89o-xJ-XSz"/>
-                                            <constraint firstItem="JqB-TO-eyU" firstAttribute="top" secondItem="h8u-Sb-56m" secondAttribute="bottom" constant="7" id="9VL-dq-chp"/>
-                                            <constraint firstItem="KxV-6v-AZN" firstAttribute="width" secondItem="L4j-3b-ZHT" secondAttribute="width" id="9ki-hI-Vga"/>
-                                            <constraint firstAttribute="trailing" secondItem="aJs-IE-XnL" secondAttribute="trailing" id="AYB-No-vS1"/>
-                                            <constraint firstItem="aJs-IE-XnL" firstAttribute="leading" secondItem="pKw-po-3Rg" secondAttribute="trailing" constant="7" id="B4H-kC-lST"/>
-                                            <constraint firstItem="KxV-6v-AZN" firstAttribute="leading" secondItem="L4j-3b-ZHT" secondAttribute="trailing" constant="7" id="BLV-aB-YPD"/>
-                                            <constraint firstItem="riS-rh-TmN" firstAttribute="height" secondItem="JqB-TO-eyU" secondAttribute="height" id="BlB-mw-xNt"/>
-                                            <constraint firstItem="pKw-po-3Rg" firstAttribute="width" secondItem="qzJ-BZ-e4c" secondAttribute="width" id="CbF-Hg-vcZ"/>
-                                            <constraint firstItem="KxV-6v-AZN" firstAttribute="top" secondItem="aJs-IE-XnL" secondAttribute="bottom" constant="7" id="KRm-dy-DEj"/>
-                                            <constraint firstAttribute="width" secondItem="JkW-wE-lap" secondAttribute="height" multiplier="64:19" id="Mn3-4r-ubP"/>
-                                            <constraint firstItem="L4j-3b-ZHT" firstAttribute="width" secondItem="riS-rh-TmN" secondAttribute="width" id="Ogd-ha-J0z"/>
-                                            <constraint firstAttribute="trailing" secondItem="KxV-6v-AZN" secondAttribute="trailing" id="Onh-H5-EO6"/>
-                                            <constraint firstItem="KxV-6v-AZN" firstAttribute="width" secondItem="JkW-wE-lap" secondAttribute="width" multiplier="75:320" id="SmV-mM-6VO"/>
-                                            <constraint firstItem="qzJ-BZ-e4c" firstAttribute="leading" secondItem="h8u-Sb-56m" secondAttribute="trailing" constant="6" id="TEY-0T-InS"/>
-                                            <constraint firstItem="JqB-TO-eyU" firstAttribute="leading" secondItem="JkW-wE-lap" secondAttribute="leading" id="TKJ-UM-X0V"/>
-                                            <constraint firstItem="qzJ-BZ-e4c" firstAttribute="top" secondItem="JkW-wE-lap" secondAttribute="top" constant="3" id="cBY-SA-1gU"/>
-                                            <constraint firstItem="L4j-3b-ZHT" firstAttribute="top" secondItem="pKw-po-3Rg" secondAttribute="bottom" constant="7" id="cFI-oK-Pqb"/>
-                                            <constraint firstItem="riS-rh-TmN" firstAttribute="leading" secondItem="JqB-TO-eyU" secondAttribute="trailing" constant="6" id="iX4-At-r9X"/>
-                                            <constraint firstItem="aJs-IE-XnL" firstAttribute="top" secondItem="JkW-wE-lap" secondAttribute="top" constant="3" id="nWf-U6-6Mb"/>
-                                            <constraint firstItem="aJs-IE-XnL" firstAttribute="width" secondItem="JkW-wE-lap" secondAttribute="width" multiplier="75:320" id="pXP-id-tAy"/>
-                                            <constraint firstItem="riS-rh-TmN" firstAttribute="top" secondItem="qzJ-BZ-e4c" secondAttribute="bottom" constant="7" id="si5-RH-rMT"/>
-                                            <constraint firstItem="L4j-3b-ZHT" firstAttribute="leading" secondItem="riS-rh-TmN" secondAttribute="trailing" constant="7" id="vXd-Rf-U9X"/>
-                                            <constraint firstItem="h8u-Sb-56m" firstAttribute="top" secondItem="JkW-wE-lap" secondAttribute="top" constant="3" id="xaD-Ny-yWP"/>
+                                            <constraint firstAttribute="height" constant="30" id="UbX-Fm-ED9"/>
+                                            <constraint firstAttribute="width" constant="80" id="t4g-Ec-h3h"/>
                                         </constraints>
-                                    </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OHy-Vo-QEj">
-                                        <rect key="frame" x="0.0" y="103" width="320" height="280"/>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OHy-Vo-QEj">
+                                        <rect key="frame" x="20" y="150" width="335" height="425"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLT-oU-KmC">
-                                        <rect key="frame" x="20" y="391" width="280" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLT-oU-KmC">
+                                        <rect key="frame" x="47.666666666666657" y="585" width="280" height="45"/>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.52156862749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="MLT-oU-KmC" secondAttribute="height" multiplier="10:1" constant="-120" id="g1U-eB-ZlK"/>
+                                            <constraint firstAttribute="height" constant="45" id="RRE-KJ-Fx4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Done">
@@ -2183,38 +2096,40 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="JkW-wE-lap" secondAttribute="trailing" id="05I-mn-uVh"/>
-                                    <constraint firstItem="OHy-Vo-QEj" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" id="0b4-yT-Awv"/>
-                                    <constraint firstItem="OHy-Vo-QEj" firstAttribute="top" secondItem="JkW-wE-lap" secondAttribute="bottom" constant="8" id="0ov-XB-5QA"/>
-                                    <constraint firstAttribute="bottom" secondItem="MLT-oU-KmC" secondAttribute="bottom" constant="12" id="Egy-TM-6zZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="MLT-oU-KmC" secondAttribute="trailing" constant="20" id="HCD-3b-PTQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="OHy-Vo-QEj" secondAttribute="trailing" id="QBB-tx-UJw"/>
-                                    <constraint firstItem="JkW-wE-lap" firstAttribute="top" secondItem="Ehz-G8-BKS" secondAttribute="top" id="Vzy-er-C7m"/>
-                                    <constraint firstItem="JkW-wE-lap" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" id="anG-16-ycM"/>
-                                    <constraint firstItem="MLT-oU-KmC" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" constant="20" id="fXr-IF-r6y"/>
-                                    <constraint firstItem="MLT-oU-KmC" firstAttribute="top" secondItem="OHy-Vo-QEj" secondAttribute="bottom" constant="8" id="yOL-7w-4Xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="OHy-Vo-QEj" secondAttribute="trailing" constant="20" symbolic="YES" id="7Ea-H5-ofX"/>
+                                    <constraint firstItem="Lfg-qs-fvd" firstAttribute="top" secondItem="Ehz-G8-BKS" secondAttribute="top" id="82K-8w-OJM"/>
+                                    <constraint firstItem="OHy-Vo-QEj" firstAttribute="top" secondItem="wbH-k5-C6r" secondAttribute="bottom" constant="22" id="JKw-fG-zDe"/>
+                                    <constraint firstAttribute="bottom" secondItem="MLT-oU-KmC" secondAttribute="bottom" constant="12" id="NVS-YY-Kwl"/>
+                                    <constraint firstItem="MLT-oU-KmC" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" constant="47.670000000000002" id="ROV-AG-zKZ"/>
+                                    <constraint firstItem="wbH-k5-C6r" firstAttribute="top" secondItem="HKz-FV-rts" secondAttribute="bottom" constant="20" id="RlZ-ml-jac"/>
+                                    <constraint firstItem="MLT-oU-KmC" firstAttribute="top" secondItem="OHy-Vo-QEj" secondAttribute="bottom" constant="10" id="X5I-n0-3Fs"/>
+                                    <constraint firstItem="HKz-FV-rts" firstAttribute="top" secondItem="Lfg-qs-fvd" secondAttribute="bottom" constant="20" id="a8i-FO-Coi"/>
+                                    <constraint firstItem="Lfg-qs-fvd" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" constant="20" id="bKd-3T-Eyk"/>
+                                    <constraint firstItem="wbH-k5-C6r" firstAttribute="centerX" secondItem="Ehz-G8-BKS" secondAttribute="centerX" id="fmg-W1-cc6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lfg-qs-fvd" secondAttribute="trailing" constant="20" id="fpZ-6p-1oG"/>
+                                    <constraint firstItem="OHy-Vo-QEj" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" constant="20" symbolic="YES" id="iB6-Ax-nf0"/>
+                                    <constraint firstAttribute="trailing" secondItem="HKz-FV-rts" secondAttribute="trailing" constant="20" id="p7d-8V-4Os"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLT-oU-KmC" secondAttribute="trailing" constant="47.329999999999998" id="pIW-Bp-l0z"/>
+                                    <constraint firstItem="HKz-FV-rts" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" constant="20" id="vsm-y1-FsS"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.89411764709999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="A5s-g5-Jq9" firstAttribute="leading" secondItem="HgJ-oB-8Ky" secondAttribute="leading" id="3UM-Vb-fmL"/>
-                            <constraint firstAttribute="trailing" secondItem="Ehz-G8-BKS" secondAttribute="trailing" id="7pm-3b-cyg"/>
-                            <constraint firstItem="TvC-zF-ySB" firstAttribute="top" secondItem="Ehz-G8-BKS" secondAttribute="bottom" id="MBx-EY-reh"/>
-                            <constraint firstItem="Ehz-G8-BKS" firstAttribute="top" secondItem="C6G-7V-vrF" secondAttribute="bottom" constant="13" id="RxQ-Wu-Tkg"/>
-                            <constraint firstItem="C6G-7V-vrF" firstAttribute="centerX" secondItem="HgJ-oB-8Ky" secondAttribute="centerX" id="TQB-LJ-WOo"/>
-                            <constraint firstItem="A5s-g5-Jq9" firstAttribute="top" secondItem="C6G-7V-vrF" secondAttribute="bottom" constant="8" id="U1d-m5-9b1"/>
-                            <constraint firstItem="iJt-2L-n7u" firstAttribute="top" secondItem="C6G-7V-vrF" secondAttribute="bottom" constant="13" id="YbA-hi-cxi"/>
-                            <constraint firstAttribute="trailing" secondItem="iJt-2L-n7u" secondAttribute="trailing" id="d3l-rv-WbB"/>
-                            <constraint firstItem="TvC-zF-ySB" firstAttribute="top" secondItem="iJt-2L-n7u" secondAttribute="bottom" id="eFY-p0-TLh"/>
-                            <constraint firstAttribute="trailing" secondItem="EBh-Aa-auA" secondAttribute="trailing" constant="20" id="inT-3V-tqB"/>
-                            <constraint firstItem="iJt-2L-n7u" firstAttribute="leading" secondItem="HgJ-oB-8Ky" secondAttribute="leading" id="nSf-bf-lfu"/>
-                            <constraint firstItem="C6G-7V-vrF" firstAttribute="top" secondItem="EBh-Aa-auA" secondAttribute="bottom" constant="11" id="r9L-CG-jC2"/>
-                            <constraint firstItem="Ehz-G8-BKS" firstAttribute="leading" secondItem="HgJ-oB-8Ky" secondAttribute="leading" id="sdJ-Dw-h4c"/>
-                            <constraint firstItem="TvC-zF-ySB" firstAttribute="top" secondItem="A5s-g5-Jq9" secondAttribute="bottom" id="t2z-zJ-JfM"/>
-                            <constraint firstItem="EBh-Aa-auA" firstAttribute="leading" secondItem="HgJ-oB-8Ky" secondAttribute="leading" constant="20" id="tei-4C-Goz"/>
-                            <constraint firstItem="EBh-Aa-auA" firstAttribute="top" secondItem="omQ-Me-1PP" secondAttribute="bottom" constant="8" id="uVa-2o-f2t"/>
-                            <constraint firstAttribute="trailing" secondItem="A5s-g5-Jq9" secondAttribute="trailing" id="wFc-cg-70y"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="top" secondItem="Ehz-G8-BKS" secondAttribute="top" id="7ZZ-Pg-oAM"/>
+                            <constraint firstItem="TvC-zF-ySB" firstAttribute="top" secondItem="Ehz-G8-BKS" secondAttribute="bottom" id="9gq-ma-SJ9"/>
+                            <constraint firstItem="C6G-7V-vrF" firstAttribute="centerX" secondItem="HgJ-oB-8Ky" secondAttribute="centerX" id="ACS-7f-Wwn"/>
+                            <constraint firstItem="A5s-g5-Jq9" firstAttribute="top" secondItem="C6G-7V-vrF" secondAttribute="bottom" constant="4" id="CrK-Xb-OOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="iJt-2L-n7u" secondAttribute="trailing" id="EKQ-kK-tr1"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="leading" secondItem="HgJ-oB-8Ky" secondAttribute="leading" id="GGg-VX-U7m"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="leading" secondItem="A5s-g5-Jq9" secondAttribute="leading" id="ISo-2O-Tvu"/>
+                            <constraint firstAttribute="trailing" secondItem="A5s-g5-Jq9" secondAttribute="trailing" id="Iy5-Zz-Dzt"/>
+                            <constraint firstItem="EBh-Aa-auA" firstAttribute="centerX" secondItem="HgJ-oB-8Ky" secondAttribute="centerX" id="JGL-qc-T1a"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="top" secondItem="C6G-7V-vrF" secondAttribute="bottom" constant="20" id="Jzm-2t-Kq6"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="trailing" secondItem="Ehz-G8-BKS" secondAttribute="trailing" id="Tlb-X2-OAT"/>
+                            <constraint firstItem="EBh-Aa-auA" firstAttribute="top" secondItem="HgJ-oB-8Ky" secondAttribute="top" constant="35" id="VBJ-bb-X6M"/>
+                            <constraint firstItem="C6G-7V-vrF" firstAttribute="top" secondItem="EBh-Aa-auA" secondAttribute="bottom" constant="5" id="Xqv-jx-LvE"/>
+                            <constraint firstItem="iJt-2L-n7u" firstAttribute="leading" secondItem="Ehz-G8-BKS" secondAttribute="leading" id="d4c-cM-t8r"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2246,7 +2161,7 @@ You can use a Standard Sort, or create your own Block Sort.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svs-74-0G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3811" y="703"/>
+            <point key="canvasLocation" x="2784.8000000000002" y="660.59113300492618"/>
         </scene>
         <!--Sub Sort View Controller-->
         <scene sceneID="W2m-YV-Ixh">
@@ -2471,7 +2386,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvd-sS-tOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4174" y="703"/>
+            <point key="canvasLocation" x="3562" y="661"/>
         </scene>
         <!--Bid Choices View Controller-->
         <scene sceneID="iyl-Mq-h4f">
@@ -2585,7 +2500,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOd-XW-wmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4547" y="703"/>
+            <point key="canvasLocation" x="4214" y="661"/>
         </scene>
         <!--Positions Avoidance View Controller-->
         <scene sceneID="fKf-zv-Wlt">
@@ -2812,7 +2727,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5v-Pv-75I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4925" y="703"/>
+            <point key="canvasLocation" x="5007" y="678"/>
         </scene>
         <!--Postions Priorities View Controller-->
         <scene sceneID="3fI-LJ-MHQ">
@@ -3221,7 +3136,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ec5-Bj-Vfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5292" y="703"/>
+            <point key="canvasLocation" x="5790" y="661"/>
         </scene>
         <!--Calculate Bid View Controller-->
         <scene sceneID="ugY-nh-QkA">
@@ -3318,7 +3233,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0O-y0-9Gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5646" y="703"/>
+            <point key="canvasLocation" x="5841" y="-38"/>
         </scene>
         <!--Submit Bid View Controller-->
         <scene sceneID="Dlg-up-N5L">
@@ -3460,7 +3375,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdB-aY-Suh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5992" y="703"/>
+            <point key="canvasLocation" x="6559" y="661"/>
         </scene>
         <!--Bid Receipt View Controller-->
         <scene sceneID="Ufl-c1-Pad">
@@ -3576,7 +3491,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOp-6L-ghf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6344" y="703"/>
+            <point key="canvasLocation" x="7303" y="661"/>
         </scene>
         <!--Email Sent View Controller-->
         <scene sceneID="8ND-RF-GJa">
@@ -3662,7 +3577,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zB-oy-yFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6691" y="703"/>
+            <point key="canvasLocation" x="8065" y="661"/>
         </scene>
         <!--Commutable Time View Controller-->
         <scene sceneID="fI7-4H-HqZ">
@@ -3775,7 +3690,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCA-Pb-0ln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3502" y="-560"/>
+            <point key="canvasLocation" x="670" y="-805"/>
         </scene>
         <!--Commute Lines View Controller-->
         <scene sceneID="PMK-d1-C3D">
@@ -4048,7 +3963,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USc-Bj-opq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3847" y="-560"/>
+            <point key="canvasLocation" x="1404" y="-805"/>
         </scene>
         <!--Cities Overnights View Controller-->
         <scene sceneID="iY7-bW-hDW">
@@ -4165,7 +4080,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avK-cN-EAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4215" y="-560"/>
+            <point key="canvasLocation" x="2166" y="-788"/>
         </scene>
         <!--Cities PickerVC-->
         <scene sceneID="Hnt-7r-iop">
@@ -4236,7 +4151,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cc2-5r-Lr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4560" y="-560"/>
+            <point key="canvasLocation" x="2974" y="-788"/>
         </scene>
         <!--Constraint Days Month View Controller-->
         <scene sceneID="wSH-F7-cdL">
@@ -4408,7 +4323,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwl-qH-2hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5656" y="72"/>
+            <point key="canvasLocation" x="5060" y="-38"/>
         </scene>
         <!--Constraints Change View Controller-->
         <scene sceneID="p2R-YH-TZM">
@@ -4427,7 +4342,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6f-3s-5yV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5992" y="-627"/>
+            <point key="canvasLocation" x="3806" y="-788"/>
         </scene>
     </scenes>
     <resources>

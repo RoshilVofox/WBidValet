@@ -1,34 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="cxk-wN-pdQ" customClass="CommutableLinesCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="cxk-wN-pdQ" customClass="CommutableLinesCell">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="79"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-D3-vgh">
-                        <rect key="frame" x="0.0" y="5" width="360" height="25"/>
+                        <rect key="frame" x="0.0" y="5" width="420" height="74.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cmut Lines (AUS)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-GE-I2g">
-                                <rect key="frame" x="32" y="2" width="81" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="fh1-1r-FqD"/>
-                                </constraints>
+                                <rect key="frame" x="32" y="2" width="178" height="70.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYX-xV-hiD">
-                                <rect key="frame" x="30" y="0.0" width="1" height="25"/>
-                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="30" y="0.0" width="1" height="74.5"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="7VZ-0n-rhd"/>
                                 </constraints>
@@ -40,58 +39,57 @@
                                     <constraint firstAttribute="width" constant="25" id="f2r-9v-ZwP"/>
                                 </constraints>
                                 <state key="normal" image="X_icon.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="OnDeleteEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="87i-tH-WRx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6B-IU-uFr">
-                                <rect key="frame" x="284" y="0.0" width="37" height="25"/>
-                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6B-IU-uFr">
+                                <rect key="frame" x="344" y="0.0" width="37" height="74.5"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="1" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="kLw-Xs-bY4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="to home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="OnHomeEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="PzP-xC-vGf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJD-b8-Pkh">
-                                <rect key="frame" x="112" y="0.0" width="88" height="25"/>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.29803921570000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJD-b8-Pkh">
+                                <rect key="frame" x="209" y="0.0" width="88" height="74.5"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.29803921570000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="2sZ-hd-hzs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="No nights in middle">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="NoNightInMiddieClicked:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="yT2-bR-9mC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-Mp-3tD">
-                                <rect key="frame" x="245" y="0.0" width="37" height="25"/>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.29803921570000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-Mp-3tD">
+                                <rect key="frame" x="302" y="0.0" width="37" height="74.5"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.29803921570000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="hH4-YX-Ja4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="to work">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="OnWorkEvent:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="1xB-ET-si5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-yd-M6L">
-                                <rect key="frame" x="30" y="0.0" width="80" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-yd-M6L">
+                                <rect key="frame" x="30" y="0.0" width="177" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="97I-y4-YgP"/>
                                     <constraint firstAttribute="height" constant="25" id="ChG-hD-AxQ"/>
                                 </constraints>
                                 <connections>
@@ -99,7 +97,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QXT-GE-I2g" firstAttribute="top" secondItem="Ga3-D3-vgh" secondAttribute="top" constant="2" id="2p8-oD-dOV"/>
                             <constraint firstItem="QXT-GE-I2g" firstAttribute="centerY" secondItem="Ga3-D3-vgh" secondAttribute="centerY" id="69R-ix-vyV"/>
@@ -118,14 +116,15 @@
                             <constraint firstItem="RJD-b8-Pkh" firstAttribute="top" secondItem="Ga3-D3-vgh" secondAttribute="top" id="jgb-Xe-LFN"/>
                             <constraint firstItem="RJD-b8-Pkh" firstAttribute="leading" secondItem="QXT-GE-I2g" secondAttribute="trailing" constant="-1" id="kx3-JC-SvZ"/>
                             <constraint firstItem="RJD-b8-Pkh" firstAttribute="centerY" secondItem="Ga3-D3-vgh" secondAttribute="centerY" id="oxJ-6a-gCO"/>
-                            <constraint firstItem="j6B-IU-uFr" firstAttribute="leading" secondItem="cz4-Mp-3tD" secondAttribute="trailing" constant="2" id="xar-dY-szp"/>
+                            <constraint firstItem="cz4-Mp-3tD" firstAttribute="leading" secondItem="RJD-b8-Pkh" secondAttribute="trailing" constant="5" id="qsy-GX-wV1"/>
+                            <constraint firstItem="j6B-IU-uFr" firstAttribute="leading" secondItem="cz4-Mp-3tD" secondAttribute="trailing" constant="5" id="xar-dY-szp"/>
                             <constraint firstItem="lYX-xV-hiD" firstAttribute="top" secondItem="Ga3-D3-vgh" secondAttribute="top" id="z5R-gd-urE"/>
                             <constraint firstItem="lYX-xV-hiD" firstAttribute="leading" secondItem="2Bg-I0-xiC" secondAttribute="trailing" id="zEb-2B-ZST"/>
                             <constraint firstItem="cz4-Mp-3tD" firstAttribute="centerY" secondItem="Ga3-D3-vgh" secondAttribute="centerY" id="zIf-3y-pdB"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Ga3-D3-vgh" secondAttribute="bottom" constant="-0.5" id="06F-SE-e9n"/>
                     <constraint firstItem="Ga3-D3-vgh" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="5" id="BDa-IX-VSL"/>
@@ -133,7 +132,7 @@
                     <constraint firstAttribute="trailing" secondItem="Ga3-D3-vgh" secondAttribute="trailing" constant="-40" id="pTM-Xc-0hA"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="btnCommuteLine" destination="Whz-yd-M6L" id="HzN-Ug-K5b"/>
                 <outlet property="btnDelete" destination="2Bg-I0-xiC" id="wPS-d2-ego"/>
@@ -142,10 +141,10 @@
                 <outlet property="btnWork" destination="cz4-Mp-3tD" id="6gd-pn-EuA"/>
                 <outlet property="lbCommuteName" destination="QXT-GE-I2g" id="UhC-sj-qo7"/>
             </connections>
-            <point key="canvasLocation" x="367" y="268"/>
+            <point key="canvasLocation" x="410.14492753623193" y="284.26339285714283"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="X_icon.png" width="23" height="23"/>
+        <image name="X_icon.png" width="22.5" height="22.5"/>
     </resources>
 </document>
