@@ -177,8 +177,12 @@ namespace Bidvalet.iOS
        {
             base.ViewDidLoad();
 
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
 
-            
             //Submit Button 
             var bidStuffBtn = new UIBarButtonItem();
             var icoFontAttribute = new UITextAttributes { Font = UIFont.BoldSystemFontOfSize(16) };

@@ -23,6 +23,12 @@ namespace Bidvalet.iOS
 			NavigationController.NavigationBar.BarTintColor = UIColor.White;
 			NavigationController.NavigationBar.Translucent = false;
 			NavigationItem.BackBarButtonItem = new UIBarButtonItem ("Back", UIBarButtonItemStyle.Plain,null);
+			var appearance = new UINavigationBarAppearance();
+			appearance.ConfigureWithOpaqueBackground();
+			appearance.BackgroundColor = UIColor.White;
+			this.NavigationItem.StandardAppearance = appearance;
+			this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
+
 		}
 		public void ShowPopUpInfo(string title, string message){
 			new UIAlertView(title, message, null, Constants.OK, null).Show();

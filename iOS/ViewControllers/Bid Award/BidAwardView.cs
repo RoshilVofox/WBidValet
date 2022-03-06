@@ -21,7 +21,12 @@ namespace Bidvalet.iOS
 		{
 			base.ViewDidAppear(animated);
 			this.NavigationController.NavigationBarHidden = false;
-            this.Title = "Bid Awards";
+			var appearance = new UINavigationBarAppearance();
+			appearance.ConfigureWithOpaqueBackground();
+			appearance.BackgroundColor = UIColor.White;
+			this.NavigationItem.StandardAppearance = appearance;
+			this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
+			this.Title = "Bid Awards";
 			collectionviewAwards.Source = new BidAwardSource(GetAvailableAwardfile(), this);
 			
 		}

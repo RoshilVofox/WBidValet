@@ -27,6 +27,11 @@ namespace Bidvalet.iOS
             base.ViewDidLoad();
             LoadDefaultOrExistingFilters();
             Title = "Filters";
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
 
             if (needTobyPassingScreen == true)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using Foundation;
 using UIKit;
 using Bidvalet.Model;
@@ -46,7 +47,7 @@ namespace Bidvalet.iOS
             this.View.Layer.CornerRadius = 3;
             deleteIndexList = new List<int>();
             deletedBidIndexList = new List<int>();
-
+            
         }
 
         public override UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)

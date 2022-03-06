@@ -19,7 +19,7 @@
   <ColumnDefinition Id="21"  Width="50" DisplayName="CO" DataPropertyName="CarryOverTfp" IsRequied="false" />
   <ColumnDefinition Id="22"  Width="50" DisplayName="DP" DataPropertyName="TotDutyPds" IsRequied="false" />
   <ColumnDefinition Id="23"  Width="50" DisplayName="DPinBP" DataPropertyName="TotDutyPdsInBp" IsRequied="false" />
-  <ColumnDefinition Id="24"  Width="50" DisplayName="EDomPush" DataPropertyName="EDomPush" IsRequied="false" />
+  <ColumnDefinition Id="24"  Width="50" DisplayName="EDomPsh" DataPropertyName="EDomPush" IsRequied="false" />
   <ColumnDefinition Id="25"  Width="50" DisplayName="EPush" DataPropertyName="EPush" IsRequied="false" />
   <ColumnDefinition Id="26"  Width="50" DisplayName="FA Posn" DataPropertyName="FAPositions" IsRequied="false" />
   <ColumnDefinition Id="27"  Width="50" DisplayName="Flt" DataPropertyName="BlkHrsInBp" IsRequied="false" />

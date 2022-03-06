@@ -28,7 +28,13 @@ namespace Bidvalet.iOS
           
             this.Title = "Bid Data Home";
             observeNotifications();
-            
+
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
+
 
 
             //collectionBids.Source = new BidDataHomeSouce(GetAllDownloadedBids(), this);
@@ -55,6 +61,11 @@ namespace Bidvalet.iOS
             //this.collectionVw.Layout.layo = this.View.SafeAreaLayoutGuide
             this.NavigationController.NavigationBarHidden = false;
 
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
             //var barbtnreterive = new UIBarButtonItem("Retrieve", UIBarButtonItemStyle.Plain, delegate
             //{
 
