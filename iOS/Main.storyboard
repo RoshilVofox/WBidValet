@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zxd-pE-QDb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zxd-pE-QDb">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -620,7 +620,7 @@ for a single month</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKb-TE-ylD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1551" y="662"/>
+            <point key="canvasLocation" x="-1332" y="751"/>
         </scene>
         <!--Select Base View Controller-->
         <scene sceneID="fY8-Jp-kxj">
@@ -3873,6 +3873,23 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                                             <action selector="OnInfoCommuteCityEvent:" destination="ivb-HR-IFT" eventType="touchUpInside" id="aYX-ws-eGs"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ug-nw-pUF">
+                                        <rect key="frame" x="101" y="35" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="uncheck"/>
+                                        <state key="selected" image="Check"/>
+                                        <connections>
+                                            <action selector="btnNonStopClick:" destination="ivb-HR-IFT" eventType="touchUpInside" id="JNA-7h-u0B"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Non-Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-jE-wvB">
+                                        <rect key="frame" x="153" y="42" width="59" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -3956,6 +3973,7 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
                         <outlet property="btnBackToBase" destination="vjo-AO-cYS" id="fcu-jj-KCn"/>
                         <outlet property="btnCityName" destination="rl7-NS-0VT" id="gjq-Bo-tVu"/>
                         <outlet property="btnDoneSetting" destination="0GO-E5-BjW" id="BfJ-ub-ahw"/>
+                        <outlet property="btnNonStop" destination="0ug-nw-pUF" id="iVj-YG-qf8"/>
                         <outlet property="btnTimeCheckIn" destination="lJd-ni-xBn" id="ol6-FA-xNm"/>
                         <outlet property="btnTimeConnect" destination="mPM-7X-Bm1" id="nTH-a2-blQ"/>
                         <outlet property="btnViewCommuteTime" destination="NRG-1p-guY" id="o5h-rN-kMI"/>
@@ -4346,9 +4364,11 @@ You can leave the Blank and Reserve lines mixed in with the other lines or you c
         </scene>
     </scenes>
     <resources>
+        <image name="Check" width="24" height="24"/>
         <image name="Check.png" width="128" height="128"/>
         <image name="ic_drag.png" width="24" height="24"/>
         <image name="info_icon.png" width="1024" height="1024"/>
+        <image name="uncheck" width="24" height="24"/>
         <image name="uncheck.png" width="128" height="128"/>
     </resources>
 </document>

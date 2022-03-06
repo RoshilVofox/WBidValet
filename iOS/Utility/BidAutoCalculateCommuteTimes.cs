@@ -79,7 +79,7 @@ namespace Bidvalet.iOS.Utility
             }
         }
 
-        public  void CalculateDailyCommutableTimes(string cityName)
+        public  void CalculateDailyCommutableTimes(string cityName, bool isNonStop)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace Bidvalet.iOS.Utility
 
                 if (_flightRouteDetails != null)
                 {
-                    CalculateCommutableTimes(cityName);
+                    CalculateCommutableTimes(cityName,isNonStop);
 
                 }
                 else
@@ -209,7 +209,7 @@ namespace Bidvalet.iOS.Utility
             //----------------------------------------------------------------------------------------
         }
 
-        private void CalculateCommutableTimes(string commuteCity)
+        private void CalculateCommutableTimes(string commuteCity, bool IsNonStopOnly)
         {
             string domicile = GlobalSettings.CurrentBidDetails.Domicile;
 
@@ -243,9 +243,12 @@ namespace Bidvalet.iOS.Utility
                 //------------------------------------------------------------------------
                 var nonConnectFlights = GetNonConnectFlights(commuteCity, domicile, date);
 
-                var oneConnectFlights = GetOneConnectFlights(commuteCity, domicile, date);
-
-                var oneAndZeroConnectFlights = nonConnectFlights.Union(oneConnectFlights).ToList();
+                var oneAndZeroConnectFlights = nonConnectFlights;
+                if (IsNonStopOnly != true)
+                {
+                    var oneConnectFlights = GetOneConnectFlights(commuteCity, domicile, date);
+                    oneAndZeroConnectFlights = nonConnectFlights.Union(oneConnectFlights).ToList();
+                }
 
 
                 if (oneAndZeroConnectFlights != null && oneAndZeroConnectFlights.Count > 0)
@@ -272,9 +275,12 @@ namespace Bidvalet.iOS.Utility
                 //------------------------------------------------------------------------
                 nonConnectFlights = GetNonConnectFlights(domicile, commuteCity, date);
 
-                oneConnectFlights = GetOneConnectFlights(domicile, commuteCity, date);
-
-                oneAndZeroConnectFlights = nonConnectFlights.Union(oneConnectFlights).ToList();
+                oneAndZeroConnectFlights = nonConnectFlights;
+                if (IsNonStopOnly != true)
+                {
+                    var oneConnectFlights = GetOneConnectFlights(domicile, commuteCity, date);
+                    oneAndZeroConnectFlights = nonConnectFlights.Union(oneConnectFlights).ToList();
+                }
 
 
                 if (oneAndZeroConnectFlights != null && oneAndZeroConnectFlights.Count > 0)

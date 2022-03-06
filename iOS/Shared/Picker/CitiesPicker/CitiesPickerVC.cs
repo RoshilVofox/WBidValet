@@ -12,9 +12,9 @@ namespace Bidvalet.iOS
 	{
 		public delegate void ItemSelectedEventHandler(string value);
 		public event ItemSelectedEventHandler PickedItem;
-        LoadingOverlay loadingOverlay; 
-
-		public CitiesPickerVC (IntPtr handle) : base (handle)
+        LoadingOverlay loadingOverlay;
+        public bool isNonStop = false;
+        public CitiesPickerVC (IntPtr handle) : base (handle)
 		{
 		}
 
@@ -42,7 +42,7 @@ namespace Bidvalet.iOS
                     {
 
                         BidAutoCalculateCommuteTimes bidAutoCalculateCommuteTimes = new BidAutoCalculateCommuteTimes();
-                        bidAutoCalculateCommuteTimes.CalculateDailyCommutableTimes(value);
+                        bidAutoCalculateCommuteTimes.CalculateDailyCommutableTimes(value, isNonStop);
 
                         InvokeOnMainThread(() =>
                         {

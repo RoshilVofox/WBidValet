@@ -279,8 +279,9 @@ namespace Bidvalet.Business
                     ConnectTime = ftCommutableLine.ConnectTime,
                     NoNights = ftCommutableLine.NoNights,
                     ToHome = ftCommutableLine.ToHome,
-                    ToWork = ftCommutableLine.ToWork
-
+                    ToWork = ftCommutableLine.ToWork,
+                    isNonStop=ftCommutableLine.isNonStop
+                    
 
                 }
             };

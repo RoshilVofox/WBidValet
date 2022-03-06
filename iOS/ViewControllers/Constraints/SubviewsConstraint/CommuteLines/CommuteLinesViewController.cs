@@ -2,6 +2,9 @@
 using UIKit;
 using Bidvalet.Model;
 using System.Linq;
+using Foundation;
+using Bidvalet.iOS.Utility;
+
 namespace Bidvalet.iOS
 {
 	public partial class CommuteLinesViewController : BaseViewController
@@ -9,6 +12,8 @@ namespace Bidvalet.iOS
 
         bool _isFirstTime;
 	    private string _cityName;
+		LoadingOverlay loadingOverlay;
+		bool isNonStopSelected = false;
 		public FtCommutableLine data {
 			get;
 			set;
@@ -21,6 +26,7 @@ namespace Bidvalet.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			btnNonStop.Selected = data.isNonStop;
 			// Perform any additional setup after loading the view, typically from a nib.
 			ShowNavigationBar();
 			Title = Constants.CONSTRAINTS;
@@ -43,27 +49,49 @@ namespace Bidvalet.iOS
 			}
 
 			if (data.ConnectTime < 1) {
-				data.ConnectTime = 30;
+				data.ConnectTime = btnNonStop.Selected ? 0 : 30;
+				
 			}
 			if (data.CheckInTime < 1) {
 				data.CheckInTime = 60;
 			}
+			
+			
 			SetTitleForButton (data.BaseTime, btnBackToBase);
 			SetTitleForButton (data.ConnectTime, btnTimeConnect);
 			SetTitleForButton (data.CheckInTime, btnTimeCheckIn);
 
 
 		}
-
+		
 		void SetTitleForButton (double minutes, UIButton btn)
 		{
-			int hour = (int)minutes/60;
-			int mins = (int)minutes%60;
-			string minStr = mins.ToString();
-			if (mins < 10) {
-				minStr = string.Format("0{0}",mins);
+			//int hour = (int)minutes/60;
+			//int mins = (int)minutes%60;
+			//string minStr = mins.ToString();
+			//if (mins < 10) {
+			//	minStr = string.Format("0{0}",mins);
+			//}
+			//btn.SetTitle(string.Format("{0}:{1}", hour , minStr), UIControlState.Normal);
+
+
+			int hour = (int)minutes / 60;
+			int mins = (int)minutes % 60;
+			string minStr = mins.ToString("00");
+			string hourStr = hour.ToString("00");
+
+			if (mins < 10 && minutes > 0)
+			{
+				minStr = string.Format("0{0}", mins);
 			}
-			btn.SetTitle(string.Format("{0}:{1}", hour , minStr), UIControlState.Normal);
+			else if (minutes == 0)
+			{
+				hourStr = "--";
+				minStr = "--";
+
+			}
+
+			btn.SetTitle(string.Format("{0}:{1}", hourStr, minStr), UIControlState.Normal);
 		}
 
 	    public override void ViewWillAppear(bool animated)
@@ -96,8 +124,63 @@ namespace Bidvalet.iOS
 
           
 	    }
+        partial void btnNonStopClick(UIButton sender)
+        {
+			btnNonStop.Selected = this.data.isNonStop = !sender.Selected;
+			isNonStopSelected = btnNonStop.Selected;
+			data.ConnectTime = btnNonStop.Selected ? 0 : 30;
+			SetTitleForButton(data.ConnectTime, btnTimeConnect);
+			if (_cityName != null && _cityName != "Select")
+			{
 
-	
+				calculateDialyCommuteLines();
+
+			}
+		}
+        
+		public void calculateDialyCommuteLines()
+		{
+			
+
+				loadingOverlay = new LoadingOverlay(new CoreGraphics.CGRect(View.Bounds.X, 1, View.Bounds.Width, View.Bounds.Height), "Loading...");
+				View.Add(loadingOverlay);
+
+				InvokeInBackground(() =>
+				{
+
+					BidAutoCalculateCommuteTimes bidAutoCalculateCommuteTimes = new BidAutoCalculateCommuteTimes();
+					bidAutoCalculateCommuteTimes.CalculateDailyCommutableTimes(_cityName, isNonStopSelected);
+
+					InvokeOnMainThread(() => {
+
+						if (bidAutoCalculateCommuteTimes == null) return;
+
+						if (bidAutoCalculateCommuteTimes.ErrorMessage != string.Empty)
+						{
+							DisplayAlertView("WBidMax", bidAutoCalculateCommuteTimes.ErrorMessage);
+						}
+
+						loadingOverlay.Hide();
+
+					});
+				});
+			
+		}
+
+		private void DisplayAlertView(string caption, string message)
+		{
+			loadingOverlay.Hide();
+
+			UIWindow WindowAlert = new UIWindow(UIScreen.MainScreen.Bounds);
+			WindowAlert.RootViewController = new UIViewController();
+			UIAlertController okAlertController = UIAlertController.Create(caption, message, UIAlertControllerStyle.Alert);
+			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, (actionOK) => { WindowAlert.Dispose(); }));
+			WindowAlert.MakeKeyAndVisible();
+			WindowAlert.RootViewController.PresentViewController(okAlertController, true, null);
+			//WindowAlert.Dispose();
+
+
+		}
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
@@ -149,14 +232,20 @@ namespace Bidvalet.iOS
 		CitiesPickerVC _picker;
 		partial void OnSetCityNameEvent (Foundation.NSObject sender){
 			// show picker
-			if (_picker == null) {
-				_picker = Storyboard.InstantiateViewController ("CitiesPickerVC")as CitiesPickerVC;
+			if (_picker == null)
+			{
+				_picker = Storyboard.InstantiateViewController("CitiesPickerVC") as CitiesPickerVC;
+				_picker.isNonStop = btnNonStop.Selected;
 				_picker.PickedItem += (string value) =>
 				{
-				    _cityName = value;
-				    //data.City = value;
-				    btnCityName.SetTitle(value,UIControlState.Normal);
+					_cityName = value;
+					//data.City = value;
+					btnCityName.SetTitle(value, UIControlState.Normal);
 				};
+			}
+			else
+			{
+				_picker.isNonStop = btnNonStop.Selected;
 			}
 			NavigationController.PushViewController (_picker, true);
 		}

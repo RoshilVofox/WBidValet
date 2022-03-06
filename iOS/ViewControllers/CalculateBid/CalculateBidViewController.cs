@@ -449,7 +449,8 @@ namespace Bidvalet.iOS
                             ConnectTime = ftCommutableLine.ConnectTime,
                             NoNights = ftCommutableLine.NoNights,
                             ToHome = ftCommutableLine.NoNights,
-                            ToWork = ftCommutableLine.ToWork
+                            ToWork = ftCommutableLine.ToWork,
+                            isNonStop= ftCommutableLine.isNonStop
                         };
                         calculatedItem.BidAutoObject = calculateFtCommutableLine;
                         break;
