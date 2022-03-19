@@ -51,6 +51,11 @@ namespace Bidvalet.iOS.ViewControllers.HistoryBidData
             collectionView.RegisterNibForCell(HistoryCell.Nib, HistoryCell.Key);
             monthCollectionView.RegisterNibForCell(HistoryCell.Nib, HistoryCell.Key);
             //ResetButtons();
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
             setUIData();
 
 

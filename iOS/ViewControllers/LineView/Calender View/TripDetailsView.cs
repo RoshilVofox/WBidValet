@@ -66,6 +66,11 @@ namespace Bidvalet.iOS
                  this.NavigationController.PopViewController(true);
              };
              this.NavigationItem.LeftBarButtonItem = BackButton;
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
             BindTrip();
 
             // Perform any additional setup after loading the view, typically from a nib.

@@ -1128,7 +1128,7 @@ for a single month</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP7-RV-A8E">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="257"/>
+                                        <rect key="frame" x="0.0" y="17" width="240" height="257"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Touch the + sign top left to add your filters.     
                                                                                                                                                   Most filters can be added multiple times.Be sure to put your most important filters at the top.
@@ -1139,7 +1139,7 @@ You can use the        icon to drag a line up or down in the order.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_drag.png" translatesAutoresizingMaskIntoConstraints="NO" id="LHu-A5-aja">
-                                        <rect key="frame" x="108" y="163" width="20" height="20"/>
+                                        <rect key="frame" x="108" y="186" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>

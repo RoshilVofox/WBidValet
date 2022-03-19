@@ -32,6 +32,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array/>
@@ -41,9 +42,9 @@
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please enable Location policy to detect the app using in airplanes.</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>UIUserInterfaceStyle</key>
-	<string>LIght</string>
+	<string>Light</string>
+	<key>CFBundleVersion</key>
+	<string>3</string>
 </dict>
 </plist>

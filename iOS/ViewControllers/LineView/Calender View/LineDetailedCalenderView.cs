@@ -86,8 +86,14 @@ namespace Bidvalet.iOS
             CalenderColletionView.SetCollectionViewLayout(layout, true);
 
             BindCalendar();
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
+
+            var appearance = new UINavigationBarAppearance();
+            appearance.ConfigureWithOpaqueBackground();
+            appearance.BackgroundColor = UIColor.White;
+            this.NavigationItem.StandardAppearance = appearance;
+            this.NavigationItem.ScrollEdgeAppearance = this.NavigationItem.StandardAppearance;
+            // Perform any additional setup after loading the view, typically from a nib.
+        }
 
         private void BindCalendar()
         {

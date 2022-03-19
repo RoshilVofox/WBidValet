@@ -45,13 +45,14 @@
     </IpaPackageName>
     <MtouchI18n>west</MtouchI18n>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <MtouchI18n>west</MtouchI18n>
@@ -78,6 +79,7 @@
     <MtouchI18n>west</MtouchI18n>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
 <MtouchSdkVersion>15.0</MtouchSdkVersion>
+<MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
     <Optimize>false</Optimize>
@@ -86,6 +88,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

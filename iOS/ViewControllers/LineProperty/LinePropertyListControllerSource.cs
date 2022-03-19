@@ -50,7 +50,7 @@ namespace Bidvalet.iOS
 			string disp = GlobalSettings.ColumnDefinition [indexPath.Row].DisplayName;
 			if (disp == "StartDOW")
 				disp = "SDOW";
-			if (disp == "EDomPush")
+			if (disp == "EDomPsh")
 				disp = "EDOM";
 			if (disp == "FA Posn")
 				disp = "FaPos";

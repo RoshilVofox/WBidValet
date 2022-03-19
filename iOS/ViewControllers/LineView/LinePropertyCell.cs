@@ -113,7 +113,7 @@ namespace Bidvalet.iOS
             {
                 return line.TotDutyPdsInBp.ToString();
             }
-            else if (displayName == "EDomPush")
+            else if (displayName == "EDomPsh")
             {
                 return (line.EDomPush != null) ? line.EDomPush : string.Empty;
             }
