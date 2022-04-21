@@ -406,6 +406,8 @@
     <InterfaceDefinition Include="Resources\HistoryBidDomicilesCell.xib" />
     <InterfaceDefinition Include="ViewControllers\HistoryBidData\HistoryBidDataRetrieve.xib" />
     <InterfaceDefinition Include="ViewControllers\HistoryBidData\HistoryCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\VacationDifference\VacationDifferenceViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\VacationDifference\VacDiffCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist">
@@ -761,6 +763,14 @@
     <Compile Include="ViewControllers\HistoryBidData\HistoryBidDataSource.cs" />
     <Compile Include="ViewControllers\HistoryBidData\HistoryMonthSource.cs" />
     <Compile Include="PushService.cs" />
+    <Compile Include="ViewControllers\VacationDifference\VacationDifferenceViewController.cs" />
+    <Compile Include="ViewControllers\VacationDifference\VacationDifferenceViewController.designer.cs">
+      <DependentUpon>VacationDifferenceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\VacationDifference\VacDiffCell.cs" />
+    <Compile Include="ViewControllers\VacationDifference\VacDiffCell.designer.cs">
+      <DependentUpon>VacDiffCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\Bidvalet.Shared\Bidvalet.Shared.projitems" Label="Shared" Condition="Exists('..\Bidvalet.Shared\Bidvalet.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -772,6 +782,7 @@
     <Folder Include="ViewControllers\DownloadedBidDataView\" />
     <Folder Include="ViewControllers\BidDataHomePage\" />
     <Folder Include="ViewControllers\HistoryBidData\" />
+    <Folder Include="ViewControllers\VacationDifference\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Drawable\info.png" />
