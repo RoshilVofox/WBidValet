@@ -37,7 +37,7 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array/>
 	<key>XSAppIconAssets</key>
-	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
+	<string>Resources/Images.xcassets/AppIcon.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -45,6 +45,6 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>5</string>
 </dict>
 </plist>

@@ -47,8 +47,13 @@ namespace Bidvalet.iOS
 			}
 			return 0;
 		}
+        public override void WillDisplayHeaderView(UITableView tableView, UIView headerView, nint section)
+        {
+          //  base.WillDisplayHeaderView(tableView, headerView, section);
+			((UITableViewHeaderFooterView)headerView).TextLabel.TextColor = UIColor.Yellow;
 
-		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+		}
+        public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			
 			tableView.RegisterNibForCellReuse (UINib.FromName ("HelpCell", NSBundle.MainBundle), "HelpCell");

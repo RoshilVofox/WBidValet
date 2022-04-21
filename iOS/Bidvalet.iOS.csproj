@@ -37,7 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: WBID, LLC (44J23FC632)</CodesignKey>
     <BuildIpa>true</BuildIpa>
@@ -46,6 +46,7 @@
     <MtouchI18n>west</MtouchI18n>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchSdkVersion>15.2</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <Optimize>true</Optimize>
@@ -311,6 +312,39 @@
     <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\checkbox-1.png" />
     <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\check-new.imageset\checkbox.png" />
+    <ImageAsset Include="Resources\Images.xcassets\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\88.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\1024.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\48.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\216.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\64.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\172.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\128.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\512.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\16.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\256.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\20.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\32.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\55.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\196.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\152.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\ITunesArtwork" />
@@ -385,6 +419,7 @@
     <BundleResource Include="Resources\down-arrow.png" />
     <BundleResource Include="Resources\up-arrow.png" />
     <BundleResource Include="Resources\Bidvalet.iOS.entitlements" />
+    <BundleResource Include="Resources\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
