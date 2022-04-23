@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +49,7 @@
                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyx-EY-2jj">
-                        <rect key="frame" x="344" y="12.5" width="40" height="27"/>
+                        <rect key="frame" x="276" y="12.5" width="40" height="27"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="Tcy-6N-4Ux"/>
@@ -65,7 +65,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-hV-PKF">
-                        <rect key="frame" x="276" y="12.5" width="60" height="27"/>
+                        <rect key="frame" x="324" y="12.5" width="60" height="27"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="OcQ-tk-wdk"/>
@@ -85,18 +85,18 @@
                 <constraints>
                     <constraint firstItem="6S5-KG-Nkq" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="5de-DX-fnR"/>
                     <constraint firstAttribute="bottom" secondItem="puZ-9i-J39" secondAttribute="bottom" id="BBf-cR-hZZ"/>
-                    <constraint firstItem="Xyx-EY-2jj" firstAttribute="leading" secondItem="AaK-hV-PKF" secondAttribute="trailing" constant="8" id="Bjn-zL-0VR"/>
+                    <constraint firstItem="1v7-W6-vAD" firstAttribute="leading" secondItem="AaK-hV-PKF" secondAttribute="trailing" constant="8" id="DU3-OO-8Kd"/>
                     <constraint firstItem="puZ-9i-J39" firstAttribute="top" secondItem="6S5-KG-Nkq" secondAttribute="bottom" constant="7" id="GJ0-dW-mH2"/>
                     <constraint firstAttribute="trailing" secondItem="puZ-9i-J39" secondAttribute="trailing" constant="8" id="L3d-KB-kd6"/>
-                    <constraint firstItem="1v7-W6-vAD" firstAttribute="leading" secondItem="Xyx-EY-2jj" secondAttribute="trailing" constant="8" id="L9M-dy-Sgw"/>
                     <constraint firstAttribute="trailing" secondItem="1v7-W6-vAD" secondAttribute="trailing" constant="8" id="LwI-11-YOF"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="bottom" secondItem="6S5-KG-Nkq" secondAttribute="bottom" id="OAl-KQ-3mA"/>
                     <constraint firstItem="Xyx-EY-2jj" firstAttribute="centerY" secondItem="erq-1P-FKi" secondAttribute="centerY" id="Zsc-rp-sIr"/>
-                    <constraint firstItem="AaK-hV-PKF" firstAttribute="leading" secondItem="erq-1P-FKi" secondAttribute="trailing" constant="8" id="aJ9-Qt-k2f"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="top" secondItem="6S5-KG-Nkq" secondAttribute="top" id="bqE-yL-ZlZ"/>
                     <constraint firstItem="puZ-9i-J39" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="eOM-Ix-BPB"/>
                     <constraint firstItem="1v7-W6-vAD" firstAttribute="top" secondItem="erq-1P-FKi" secondAttribute="top" id="ePW-8E-Vcg"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="leading" secondItem="6S5-KG-Nkq" secondAttribute="trailing" constant="8" id="idt-mk-ChV"/>
+                    <constraint firstItem="Xyx-EY-2jj" firstAttribute="leading" secondItem="erq-1P-FKi" secondAttribute="trailing" constant="8" id="pEh-Ch-QMb"/>
+                    <constraint firstItem="AaK-hV-PKF" firstAttribute="leading" secondItem="Xyx-EY-2jj" secondAttribute="trailing" constant="8" id="rDm-V6-ZDb"/>
                     <constraint firstItem="AaK-hV-PKF" firstAttribute="centerY" secondItem="Xyx-EY-2jj" secondAttribute="centerY" id="sYb-22-GsI"/>
                 </constraints>
             </tableViewCellContentView>
