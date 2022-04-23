@@ -209,6 +209,8 @@
     <Compile Include="FlightDataChangeVacValues.cs" />
     <Compile Include="VacationValueDifferenceInputDTO.cs" />
     <Compile Include="VacationInfo.cs" />
+    <Compile Include="ApplicationLoadData.cs" />
+    <Compile Include="ApplicationData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

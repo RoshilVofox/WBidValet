@@ -102,7 +102,10 @@ namespace Bidvalet.iOS
                     GlobalSettings.WBidAuthenticationServiceUrl = GlobalSettings.VofoxAuthenticationServiceUrl;
 
                 }
-
+                InvokeInBackground(() =>
+                {
+                    GetApplicaitonLoadData();
+                });
 
                 //startupWork.ContinueWith(t =>
                 //{
@@ -128,7 +131,21 @@ namespace Bidvalet.iOS
 
             return true;
         }
-
+        private void GetApplicaitonLoadData()
+        {
+            try
+            {
+                ApplicationData appdata = new ApplicationData();
+                appdata.FromApp = 3;
+                var jsonData = SerializeHelper.JsonObjectToStringSerializerMethod<ApplicationData>(appdata);
+                StreamReader dr = ServiceUtility.GetRestData("GetApplicationLoadDatas", jsonData);
+                var appLoadData = SerializeHelper.ConvertJSonStringToObject<ApplicationLoadData>(dr.ReadToEnd());
+                GlobalSettings.IsNeedToEnableVacDiffButton = appLoadData.IsNeedtoEnableVacationDifference;
+            }
+            catch (Exception ex)
+            {
+            }
+        }
         public override void OnResignActivation(UIApplication application)
         {
             // Invoked when the application is about to move from active to inactive state.
@@ -170,6 +187,11 @@ namespace Bidvalet.iOS
                 {
                     SendOfflinePayments();
                 });
+                InvokeInBackground(() =>
+                {
+                    GetApplicaitonLoadData();
+                });
+
             }
             catch (Exception ex)
             {

@@ -213,8 +213,7 @@ namespace Bidvalet.iOS
                             "Submit Bid",
                             // "Redownload Vacation"
                             "Redownload Bid Data",
-                             "Vacation Difference"
-                        };
+                            };
                 //}
                 try
                 {
@@ -261,6 +260,7 @@ namespace Bidvalet.iOS
             NavigationItem.RightBarButtonItem = bidStuffBtn;
             LoadTableView();
             ShowMonthToMonthVacationAlert();
+            
         }
         public void handleBidStuffTap(object sender, UIButtonEventArgs e)
         {
@@ -310,11 +310,7 @@ namespace Bidvalet.iOS
                 RedownloadBidData();
 
             }
-            else if (e.ButtonIndex == 2)
-            {
-
-                DisplayVacationDifferenceData();
-            }
+            
 
 
 
@@ -370,7 +366,7 @@ namespace Bidvalet.iOS
             StreamReader dr = ServiceUtility.GetRestData("GetVacationDifferenceData", jsonData);
             var biddataresponse = SerializeHelper.ConvertJSonStringToObject<List<VacationValueDifferenceOutputDTO>>(dr.ReadToEnd()).FirstOrDefault();
 
-            if (biddataresponse.lstFlightDataChangeVacValues.Count >0)
+            if (biddataresponse!=null && biddataresponse.lstFlightDataChangeVacValues.Count >0)
             {
                
                 var objvacdiff = new VacationDifferenceViewController();
@@ -745,7 +741,10 @@ namespace Bidvalet.iOS
 
 
         }
-
+        public void btnVacDifftap()
+        {
+            DisplayVacationDifferenceData();
+        }
         public void btnVacCorrectTap(UIKit.UIButton sender, UIKit.UIButton btnEom)
         {
             try

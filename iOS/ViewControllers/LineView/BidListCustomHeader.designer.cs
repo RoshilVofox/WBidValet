@@ -25,19 +25,46 @@ namespace Bidvalet.iOS
 		UIKit.UIButton btnVAC { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnVacDiff { get; set; }
+
+		[Outlet]
+		UIKit.NSLayoutConstraint btnVacWidth { get; set; }
+
+		[Outlet]
 		UIKit.UITextField SearchBar { get; set; }
+
+		[Outlet]
+		UIKit.UITextField txtSearch { get; set; }
 
 		[Action ("btnEOMTapped:")]
 		partial void btnEOMTapped (UIKit.UIButton sender);
+
+		[Action ("btnVacDiffClick:")]
+		partial void btnVacDiffClick (Foundation.NSObject sender);
 
 		[Action ("btnVACTapped:")]
 		partial void btnVACTapped (UIKit.UIButton sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnVacWidth != null) {
+				btnVacWidth.Dispose ();
+				btnVacWidth = null;
+			}
+
+			if (btnVacDiff != null) {
+				btnVacDiff.Dispose ();
+				btnVacDiff = null;
+			}
+
 			if (btnDownScroll != null) {
 				btnDownScroll.Dispose ();
 				btnDownScroll = null;
+			}
+
+			if (btnEOM != null) {
+				btnEOM.Dispose ();
+				btnEOM = null;
 			}
 
 			if (btnUpScroll != null) {
@@ -45,19 +72,19 @@ namespace Bidvalet.iOS
 				btnUpScroll = null;
 			}
 
-			if (SearchBar != null) {
-				SearchBar.Dispose ();
-				SearchBar = null;
-			}
-
 			if (btnVAC != null) {
 				btnVAC.Dispose ();
 				btnVAC = null;
 			}
 
-			if (btnEOM != null) {
-				btnEOM.Dispose ();
-				btnEOM = null;
+			if (SearchBar != null) {
+				SearchBar.Dispose ();
+				SearchBar = null;
+			}
+
+			if (txtSearch != null) {
+				txtSearch.Dispose ();
+				txtSearch = null;
 			}
 		}
 	}

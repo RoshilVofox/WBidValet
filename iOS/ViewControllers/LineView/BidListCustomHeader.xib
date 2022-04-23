@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,13 +43,13 @@
                         </constraints>
                     </view>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="erq-1P-FKi">
-                        <rect key="frame" x="46" y="11" width="174" height="30"/>
+                        <rect key="frame" x="46" y="11" width="222" height="30"/>
                         <color key="backgroundColor" red="0.95795981344950842" green="0.95795981344950842" blue="0.95795981344950842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyx-EY-2jj">
-                        <rect key="frame" x="296" y="12.5" width="40" height="27"/>
+                        <rect key="frame" x="344" y="12.5" width="40" height="27"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="Tcy-6N-4Ux"/>
@@ -64,23 +64,8 @@
                             <action selector="btnVACTapped:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="gD2-YY-Fqz"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNS-CD-RAr">
-                        <rect key="frame" x="344" y="12.5" width="40" height="27"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Yx9-xK-NBX"/>
-                            <constraint firstAttribute="height" constant="27" id="s42-g8-1SK"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="EOM">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="btnEOMTapped:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="b3L-gk-FOk"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-hV-PKF">
-                        <rect key="frame" x="228" y="12.5" width="60" height="27"/>
+                        <rect key="frame" x="276" y="12.5" width="60" height="27"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="OcQ-tk-wdk"/>
@@ -91,6 +76,9 @@
                         <state key="normal" title="VAC DIFF">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="btnVacDiffClick:" destination="cxk-wN-pdQ" eventType="touchUpInside" id="XaG-jd-Q6Q"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,28 +86,28 @@
                     <constraint firstItem="6S5-KG-Nkq" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="5de-DX-fnR"/>
                     <constraint firstAttribute="bottom" secondItem="puZ-9i-J39" secondAttribute="bottom" id="BBf-cR-hZZ"/>
                     <constraint firstItem="Xyx-EY-2jj" firstAttribute="leading" secondItem="AaK-hV-PKF" secondAttribute="trailing" constant="8" id="Bjn-zL-0VR"/>
-                    <constraint firstItem="NNS-CD-RAr" firstAttribute="centerY" secondItem="Xyx-EY-2jj" secondAttribute="centerY" id="Dt4-RA-GZ0"/>
                     <constraint firstItem="puZ-9i-J39" firstAttribute="top" secondItem="6S5-KG-Nkq" secondAttribute="bottom" constant="7" id="GJ0-dW-mH2"/>
                     <constraint firstAttribute="trailing" secondItem="puZ-9i-J39" secondAttribute="trailing" constant="8" id="L3d-KB-kd6"/>
+                    <constraint firstItem="1v7-W6-vAD" firstAttribute="leading" secondItem="Xyx-EY-2jj" secondAttribute="trailing" constant="8" id="L9M-dy-Sgw"/>
                     <constraint firstAttribute="trailing" secondItem="1v7-W6-vAD" secondAttribute="trailing" constant="8" id="LwI-11-YOF"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="bottom" secondItem="6S5-KG-Nkq" secondAttribute="bottom" id="OAl-KQ-3mA"/>
-                    <constraint firstItem="NNS-CD-RAr" firstAttribute="leading" secondItem="Xyx-EY-2jj" secondAttribute="trailing" constant="8" id="Xtn-hE-hAZ"/>
                     <constraint firstItem="Xyx-EY-2jj" firstAttribute="centerY" secondItem="erq-1P-FKi" secondAttribute="centerY" id="Zsc-rp-sIr"/>
                     <constraint firstItem="AaK-hV-PKF" firstAttribute="leading" secondItem="erq-1P-FKi" secondAttribute="trailing" constant="8" id="aJ9-Qt-k2f"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="top" secondItem="6S5-KG-Nkq" secondAttribute="top" id="bqE-yL-ZlZ"/>
                     <constraint firstItem="puZ-9i-J39" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="eOM-Ix-BPB"/>
                     <constraint firstItem="1v7-W6-vAD" firstAttribute="top" secondItem="erq-1P-FKi" secondAttribute="top" id="ePW-8E-Vcg"/>
                     <constraint firstItem="erq-1P-FKi" firstAttribute="leading" secondItem="6S5-KG-Nkq" secondAttribute="trailing" constant="8" id="idt-mk-ChV"/>
-                    <constraint firstItem="1v7-W6-vAD" firstAttribute="leading" secondItem="NNS-CD-RAr" secondAttribute="trailing" constant="8" id="oYG-hQ-GTy"/>
                     <constraint firstItem="AaK-hV-PKF" firstAttribute="centerY" secondItem="Xyx-EY-2jj" secondAttribute="centerY" id="sYb-22-GsI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="SearchBar" destination="erq-1P-FKi" id="yr7-5V-WDM"/>
                 <outlet property="btnDownScroll" destination="1v7-W6-vAD" id="GT5-t9-FYx"/>
-                <outlet property="btnEOM" destination="NNS-CD-RAr" id="b8R-w1-uxL"/>
                 <outlet property="btnUpScroll" destination="6S5-KG-Nkq" id="1rw-5G-Wnv"/>
                 <outlet property="btnVAC" destination="Xyx-EY-2jj" id="Qnu-NG-8k1"/>
+                <outlet property="btnVacDiff" destination="AaK-hV-PKF" id="7TV-xa-i1J"/>
+                <outlet property="btnVacWidth" destination="OcQ-tk-wdk" id="OgO-Ti-0dI"/>
+                <outlet property="txtSearch" destination="erq-1P-FKi" id="d2Y-RV-Izj"/>
             </connections>
             <point key="canvasLocation" x="227.536231884058" y="111.49553571428571"/>
         </tableViewCell>

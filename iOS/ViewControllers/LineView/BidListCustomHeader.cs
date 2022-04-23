@@ -29,7 +29,7 @@ namespace Bidvalet.iOS
 
             //	SearchBar.SearchButtonClicked+= SearchBar_SearchButtonClicked;
 
-
+            
             SearchBar.ShouldChangeCharacters = (textField, range, replacement) =>
             {
                 string text = textField.Text;
@@ -122,6 +122,12 @@ namespace Bidvalet.iOS
             btnDownScroll.AddGestureRecognizer(DownDoubleTap);
 
             DownsingleTap.RequireGestureRecognizerToFail(DownDoubleTap);
+            btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
+            if (btnVacDiff.Hidden)
+            {
+                btnVacWidth.Constant = 0;
+                SearchBar.LayoutIfNeeded();
+            }
         }
 
         //void SearchBar_SearchButtonClicked (object sender, EventArgs e)
@@ -135,6 +141,12 @@ namespace Bidvalet.iOS
         
         public override void AwakeFromNib()
         {
+            btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
+            if (btnVacDiff.Hidden)
+            {
+                btnVacWidth.Constant = 0;
+                SearchBar.LayoutIfNeeded();
+            }
             //NSNotificationCenter.DefaultCenter.RemoveObserver(;
             //_nsObserver = NSNotificationCenter.DefaultCenter.AddObserver(new Foundation.NSString("setButtonStates"), setVACButtonStates);
         }
@@ -184,6 +196,10 @@ namespace Bidvalet.iOS
 
         }
 
+        partial void btnVacDiffClick(NSObject sender)
+        {
+            _parent.btnVacDifftap();
+        }
 
         partial void btnVACTapped(UIKit.UIButton sender)
         {
@@ -191,7 +207,7 @@ namespace Bidvalet.iOS
         }
         partial void btnEOMTapped(UIKit.UIButton sender)
         {
-            //_parent.btnEOMTapped(sender,btnVAC);
+            _parent.btnEOMTapped(sender,btnVAC);
         }
         public void setVACButtonStates(NSNotification n)
         {

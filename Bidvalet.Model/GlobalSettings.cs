@@ -270,6 +270,8 @@ namespace Bidvalet
         public static bool IsFVVacation { get; set; }
 		public static bool iSNeedToShowMonthtoMonthAlert = false;
 
+
+		public static bool IsNeedToEnableVacDiffButton = false;
 	}
 }
 
