@@ -1,21 +1,37 @@
-﻿// WARNING
+// WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Bidvalet.iOS.ViewControllers.VacationDifference
 {
-    [Register("VacationDifferenceViewController")]
-    partial class VacationDifferenceViewController
-    {
-        void ReleaseDesignerOutlets()
-        {
-        }
-    }
+	[Register ("VacationDifferenceViewController")]
+	partial class VacationDifferenceViewController
+	{
+		[Outlet]
+		UIKit.UIButton btnOk { get; set; }
+
+		[Outlet]
+		UIKit.UITableView tblVacDifference { get; set; }
+
+		[Action ("btnOkClick:")]
+		partial void btnOkClick (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (tblVacDifference != null) {
+				tblVacDifference.Dispose ();
+				tblVacDifference = null;
+			}
+
+			if (btnOk != null) {
+				btnOk.Dispose ();
+				btnOk = null;
+			}
+		}
+	}
 }

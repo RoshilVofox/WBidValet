@@ -13,6 +13,8 @@ using CoreGraphics;
 using Bidvalet.iOS.Utility;
 using Bidvalet.iOS.ViewControllers;
 using System.Globalization;
+using System.IO;
+using Bidvalet.iOS.ViewControllers.VacationDifference;
 
 
 #endregion
@@ -210,7 +212,8 @@ namespace Bidvalet.iOS
                     arr = new string[] {
                             "Submit Bid",
                             // "Redownload Vacation"
-                            "Redownload Bid Data"
+                            "Redownload Bid Data",
+                             "Vacation Difference"
                         };
                 //}
                 try
@@ -307,11 +310,97 @@ namespace Bidvalet.iOS
                 RedownloadBidData();
 
             }
+            else if (e.ButtonIndex == 2)
+            {
+
+                DisplayVacationDifferenceData();
+            }
 
 
 
             UIActionSheet obj = (UIActionSheet)sender;
             obj.Dispose();
+        }
+        private void DisplayVacationDifferenceData()
+        {
+            VacationValueDifferenceInputDTO input = new VacationValueDifferenceInputDTO();
+
+
+
+            input.BidDetails = new UserBidDetails();
+            input.BidDetails.Domicile = GlobalSettings.CurrentBidDetails.Domicile;
+            input.BidDetails.Position = GlobalSettings.CurrentBidDetails.Postion;
+            input.BidDetails.Round = GlobalSettings.CurrentBidDetails.Round == "M" ? 1 : 2;
+            input.BidDetails.Year = GlobalSettings.CurrentBidDetails.Year;
+            input.BidDetails.Month = GlobalSettings.CurrentBidDetails.Month;
+
+
+            input.IsDrop = true;
+            input.IsEOM = GlobalSettings.MenuBarButtonStatus.IsEOM;
+            input.IsVAC = GlobalSettings.MenuBarButtonStatus.IsVacationCorrection;
+            input.FAEOMStartDate = GlobalSettings.FAEOMStartDate.Date.Day;
+            input.FromApp = 3;
+            input.lstVacation = new List<VacationInfo>();
+
+
+            var vavacation = GlobalSettings.WBidStateCollection.Vacation;
+            if (vavacation != null && vavacation.Count > 0)
+            {
+                foreach (var item in vavacation)
+                {
+
+                    var startdate = DateTime.Parse(item.StartDate, CultureInfo.InvariantCulture);
+                    var enddate = DateTime.Parse(item.EndDate, CultureInfo.InvariantCulture);
+                    var vacationstring = startdate.Month + "/" + startdate.Day + "-" + enddate.Month + "/" + enddate.Day;
+                    input.lstVacation.Add(new VacationInfo { Type = "VA", VacDate = vacationstring });
+
+                }
+            }
+            var Fvvavacation = GlobalSettings.WBidStateCollection.FVVacation;
+            if (Fvvavacation != null && Fvvavacation.Count > 0)
+            {
+                foreach (var item in Fvvavacation)
+                {
+                    var vacationstring = item.StartAbsenceDate.Month + "/" + item.StartAbsenceDate.Day + "-" + item.EndAbsenceDate.Month + "/" + item.EndAbsenceDate.Day;
+                    input.lstVacation.Add(new VacationInfo { Type = item.AbsenceType, VacDate = vacationstring });
+                }
+            }
+
+            var jsonData = SerializeHelper.JsonObjectToStringSerializerMethod<VacationValueDifferenceInputDTO>(input);
+            StreamReader dr = ServiceUtility.GetRestData("GetVacationDifferenceData", jsonData);
+            var biddataresponse = SerializeHelper.ConvertJSonStringToObject<List<VacationValueDifferenceOutputDTO>>(dr.ReadToEnd()).FirstOrDefault();
+
+            if (biddataresponse.lstFlightDataChangeVacValues.Count >0)
+            {
+               
+                var objvacdiff = new VacationDifferenceViewController();
+                objvacdiff.lstFlightDataChangevalues = biddataresponse.lstFlightDataChangeVacValues;
+                NavigationController.PushViewController(objvacdiff, true);
+            }
+            else
+            {
+                InvokeOnMainThread(() => {
+                    //ActivityIndicator.Hide();
+                    string message = string.Empty;
+                    if (GlobalSettings.MenuBarButtonStatus.IsVacationCorrection || GlobalSettings.MenuBarButtonStatus.IsEOM)
+                    {
+                        message = "There are no differences in pay for your vacation with the new Flight Data.";
+                    }
+                    else
+                    {
+                        message = "There are no differences in pay with the new Flight Data. But if you have vacation, please turn ON vacation and check the vacation difference";
+                    }
+                    UIAlertController okAlertController = UIAlertController.Create("WBidMax", message, UIAlertControllerStyle.Alert);
+                    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, (actionOK) => {
+
+                        this.DismissViewController(true, null);
+                    }));
+                    this.PresentViewController(okAlertController, true, null);
+                });
+            }
+
+
+
         }
         public void observeNotification()
         {

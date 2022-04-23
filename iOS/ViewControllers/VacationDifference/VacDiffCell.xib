@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -83,6 +83,17 @@
                     <constraint firstItem="EBS-6K-7Wl" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="sIH-8h-K0b"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="lblLine" destination="h22-Qb-USN" id="Aat-GC-H0Y"/>
+                <outlet property="lblNewTotPay" destination="ACd-ff-153" id="oDC-BD-gev"/>
+                <outlet property="lblNewVpBo" destination="BjB-pg-hY3" id="4Te-WU-3Tf"/>
+                <outlet property="lblNewVpCu" destination="YvL-eZ-uxG" id="1E8-Md-3vG"/>
+                <outlet property="lblNewVpNe" destination="nRF-4t-hGg" id="LVn-8Q-u7p"/>
+                <outlet property="lblOldTotPay" destination="Nbj-rv-EKA" id="MqV-Kj-kYk"/>
+                <outlet property="lblOldVpBo" destination="q6Y-Vt-tA2" id="wEL-wo-q4k"/>
+                <outlet property="lblOldVpCu" destination="rIv-cC-ZLm" id="bxl-et-O9a"/>
+                <outlet property="lblOldVpNe" destination="BOh-L6-MzK" id="Jox-oN-Wkh"/>
+            </connections>
             <point key="canvasLocation" x="139.85507246376812" y="-25.111607142857142"/>
         </tableViewCell>
     </objects>

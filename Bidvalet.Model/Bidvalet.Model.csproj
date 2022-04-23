@@ -205,6 +205,10 @@
     <Compile Include="HistoricalBidData.cs" />
     <Compile Include="OldLine\OldLineInfo.cs" />
     <Compile Include="OldLine\OldLine.cs" />
+    <Compile Include="VacationValueDifferenceOutputDTO.cs" />
+    <Compile Include="FlightDataChangeVacValues.cs" />
+    <Compile Include="VacationValueDifferenceInputDTO.cs" />
+    <Compile Include="VacationInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
