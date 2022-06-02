@@ -406,8 +406,14 @@ namespace Bidvalet.iOS
 
                         File.Delete(path + "/" + file);
                     }
-
-                    CommonClass.SaveFormatBidReceipt(submitResult);
+                    if (GlobalSettings.CurrentBidDetails.Postion == "FA")
+                    {
+                        CommonClass.SaveFormatBidReceipt(submitResult);
+                    }
+                    else
+                    {
+                        CommonClass.SaveFormattedBidReceiptForPilot(submitResult);
+                    }
 
                     if (GlobalSettings.InternetType == (int)InternetType.Air)
                     {

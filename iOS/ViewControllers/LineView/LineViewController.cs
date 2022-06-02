@@ -743,8 +743,21 @@ namespace Bidvalet.iOS
         }
         public void btnVacDifftap()
         {
-            DisplayVacationDifferenceData();
+            int typeOfInternetConnection = InternetHelper.CheckInterNetConnection();
+            if (typeOfInternetConnection == (int)InternetType.NoInternet)
+            {
+                InvokeOnMainThread(() =>
+                {
+                    DisplayAlertView(GlobalSettings.ApplicationName, Constants.VPSDownAlert);
+                   
+                });
+            }
+            else if (typeOfInternetConnection == (int)InternetType.Ground || typeOfInternetConnection == (int)InternetType.AirPaid)
+            {
+                DisplayVacationDifferenceData();
+            }
         }
+        
         public void btnVacCorrectTap(UIKit.UIButton sender, UIKit.UIButton btnEom)
         {
             try
