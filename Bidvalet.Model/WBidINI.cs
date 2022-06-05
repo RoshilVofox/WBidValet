@@ -113,6 +113,9 @@ namespace Bidvalet.Model
 		//public List<int> BidLineVacationColumns { get; set; }
 		public List<DataColumn> SummaryVacationColumns { get; set; }
         public List<SenListFormat> SenioritylistFormat { get; set; }
+
+		public string LocalFlightDataVersion { get; set; }
+
 		#endregion
 	}
 }

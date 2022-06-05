@@ -141,6 +141,7 @@ namespace Bidvalet.iOS
                 StreamReader dr = ServiceUtility.GetRestData("GetApplicationLoadDatas", jsonData);
                 var appLoadData = SerializeHelper.ConvertJSonStringToObject<ApplicationLoadData>(dr.ReadToEnd());
                 GlobalSettings.IsNeedToEnableVacDiffButton = appLoadData.IsNeedtoEnableVacationDifference;
+                GlobalSettings.ServerFlightDataVersion = appLoadData.FlightDataVersion;
             }
             catch (Exception ex)
             {

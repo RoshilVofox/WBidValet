@@ -550,7 +550,7 @@ namespace Bidvalet.Business
             return lines;
 
         }
-
+        
         /// <summary>
         /// If any line contains a trip that has a true International property, then that line will have it’s International property set to true
         /// Similarly for the NonConus line

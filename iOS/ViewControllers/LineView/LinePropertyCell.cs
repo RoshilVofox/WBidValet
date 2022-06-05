@@ -327,6 +327,35 @@ namespace Bidvalet.iOS
             {
                 return line.ETOPSTripsCount.ToString();
             }
+            else if (displayName == "cmts")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.TotalCommutes, 2));
+            }
+            else if (displayName == "cmtFr")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.commutableFronts, 2));
+
+            }
+            else if (displayName == "cmtBa")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.CommutableBacks, 2));
+
+            }
+            else if (displayName == "cmt%Fr")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.CommutabilityFront, 2));
+
+            }
+            else if (displayName == "cmt%Ba")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.CommutabilityBack, 2));
+
+            }
+            else if (displayName == "cmt%Ov")
+            {
+                return string.Format("{0:0.00}", Decimal.Round(line.CommutabilityOverall, 2));
+
+            }
             else
             {
                 return "";

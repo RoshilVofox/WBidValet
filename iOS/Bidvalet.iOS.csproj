@@ -409,6 +409,8 @@
     <InterfaceDefinition Include="ViewControllers\VacationDifference\VacationDifferenceViewController.xib" />
     <InterfaceDefinition Include="ViewControllers\VacationDifference\VacDiffCell.xib" />
     <InterfaceDefinition Include="ViewControllers\VacationDifference\VacDiffTableViewControllerCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\CommuteDifference\CommuteDifferenceViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\CommuteDifference\ComuteDiffTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist">
@@ -777,6 +779,15 @@
       <DependentUpon>VacDiffTableViewControllerCell.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewControllers\VacationDifference\VacDiffTableViewControllerSource.cs" />
+    <Compile Include="Utility\CommuteCalculations.cs" />
+    <Compile Include="ViewControllers\CommuteDifference\CommuteDifferenceViewController.cs" />
+    <Compile Include="ViewControllers\CommuteDifference\CommuteDifferenceViewController.designer.cs">
+      <DependentUpon>CommuteDifferenceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\CommuteDifference\ComuteDiffTableViewCell.cs" />
+    <Compile Include="ViewControllers\CommuteDifference\ComuteDiffTableViewCell.designer.cs">
+      <DependentUpon>ComuteDiffTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\Bidvalet.Shared\Bidvalet.Shared.projitems" Label="Shared" Condition="Exists('..\Bidvalet.Shared\Bidvalet.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -789,6 +800,7 @@
     <Folder Include="ViewControllers\BidDataHomePage\" />
     <Folder Include="ViewControllers\HistoryBidData\" />
     <Folder Include="ViewControllers\VacationDifference\" />
+    <Folder Include="ViewControllers\CommuteDifference\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Drawable\info.png" />

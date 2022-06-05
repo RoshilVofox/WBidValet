@@ -85,8 +85,11 @@ namespace Bidvalet.iOS.Utility
 						CalculateOvernightFilterLineProperty(item);
 						break;
 					case "CL":
+							
+							CalculateCommuteLineProperties(item);
 						CalculateCommutableLineFilterLineProperty(item);
-						break;
+
+							break;
 
 					}
 
@@ -1197,8 +1200,87 @@ namespace Bidvalet.iOS.Utility
 
 
 		}
+        public void CalculateCommuteLineProperties(BidAutoItem item)
+        {
+			//Sate object for Commutable line filter
+			var ftCommutableLine = (FtCommutableLine)item.BidAutoObject;
 
-		private void CalculateCommutableLineFilterLineProperty(BidAutoItem item)
+			if (wBidStateContent.BidAuto.DailyCommuteTimes != null)
+            {
+                int checkinTime = 0;
+                int BaseTime = 0;
+                var lines = GlobalSettings.Lines.Where(x => x.BlankLine == false).ToList();
+                Trip trip;
+                foreach (var line in lines)
+                {
+                    line.CommutableBacks = 0;
+                    line.commutableFronts = 0;
+                    line.CommutabilityFront = 0;
+                    line.CommutabilityBack = 0;
+                    line.CommutabilityOverall = 0;
+                    DateTime tripStartDate = DateTime.MinValue;
+
+                    if (line.WorkBlockList != null)
+                    {
+                        bool isCommuteFrontEnd = false;
+                        bool isCommuteBackEnd = false;
+
+                        foreach (WorkBlockDetails workBlock in line.WorkBlockList)
+                        {
+                            //Checking the  corresponding Commute based on Workblock Start time
+                            CommuteTime commutTimes = wBidStateContent.BidAuto.DailyCommuteTimes.FirstOrDefault(x => x.BidDay.Date == workBlock.StartDateTime.Date);
+
+                            // if (commutTimes != null && StateContent.ToWork)
+                            if (commutTimes != null)
+                            {
+                                if (commutTimes.EarliestArrivel != DateTime.MinValue)
+                                {
+
+                                    double value = Convert.ToDouble(ftCommutableLine.CheckInTime);
+
+                                    isCommuteFrontEnd = ((commutTimes.EarliestArrivel.AddMinutes(value)) <= workBlock.StartDateTime);
+                                    if (isCommuteFrontEnd)
+                                    {
+                                        line.commutableFronts++;
+                                    }
+                                }
+                            }
+
+
+                            //Checking the  corresponding Commute based on Workblock End time
+                            //commutTimes = GlobalSettings.WBidStateContent.BidAuto.DailyCommuteTimes.FirstOrDefault(x => x.BidDay.Date == workBlock.EndDateTime.Date);
+                            // using EndDate to account for irregular datetimes in company time keeping method.
+                            commutTimes = wBidStateContent.BidAuto.DailyCommuteTimes.FirstOrDefault(x => x.BidDay.Date == workBlock.EndDate.Date);
+
+                            // if (commutTimes != null && StateContent.ToHome)
+                            if (commutTimes != null)
+                            {
+                                if (commutTimes.LatestDeparture != DateTime.MinValue)
+                                {
+                                    double value = Convert.ToDouble(ftCommutableLine.BaseTime);
+                                    isCommuteBackEnd = commutTimes.LatestDeparture.AddMinutes(-value) >= workBlock.EndDateTime;
+                                    if (isCommuteBackEnd)
+                                    {
+                                        line.CommutableBacks++;
+                                    }
+                                }
+                            }
+
+                        }
+
+                    }
+                    line.TotalCommutes = line.WorkBlockList.Count;
+                    if (line.TotalCommutes > 0)
+                    {
+                        line.CommutabilityFront = (line.commutableFronts / line.TotalCommutes) * 100;
+                        line.CommutabilityBack = (line.CommutableBacks / line.TotalCommutes) * 100;
+                        line.CommutabilityOverall = ((line.commutableFronts + line.CommutableBacks) / (2 * line.TotalCommutes)) * 100;
+                    }
+                }
+            }
+
+        }
+        private void CalculateCommutableLineFilterLineProperty(BidAutoItem item)
 		{
 			//Sate object for Commutable line filter
 			var ftCommutableLine = (FtCommutableLine)item.BidAutoObject;

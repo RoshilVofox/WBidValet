@@ -244,7 +244,7 @@ namespace Bidvalet.Business
         {
             return fileCL.City != stateCL.City || fileCL.BaseTime != stateCL.BaseTime || fileCL.CheckInTime != stateCL.CheckInTime
                 || fileCL.CommuteCity != stateCL.CommuteCity || fileCL.ConnectTime != stateCL.ConnectTime || fileCL.NoNights != stateCL.NoNights ||
-                 fileCL.ToHome != stateCL.ToHome ||  fileCL.ToWork != stateCL.ToWork || fileCL.isNonStop!=stateCL.isNonStop;
+                 fileCL.ToHome != stateCL.ToHome ||  fileCL.ToWork != stateCL.ToWork || fileCL.IsNonStopOnly != stateCL.IsNonStopOnly;
             
         }
 

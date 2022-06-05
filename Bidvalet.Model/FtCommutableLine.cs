@@ -34,8 +34,10 @@ namespace Bidvalet.Model
         [XmlAttribute("ToHome")]
         public bool ToHome { get; set; }
 
-        [XmlAttribute("isNonStop")]
-        public bool isNonStop { get; set; }
-        
+        //[XmlAttribute("isNonStop")]
+        //public bool isNonStop { get; set; }
+
+        [XmlAttribute("IsNonStopOnly")]
+        public bool IsNonStopOnly { get; set; }
     }
 }

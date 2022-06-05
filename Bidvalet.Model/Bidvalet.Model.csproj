@@ -211,6 +211,7 @@
     <Compile Include="VacationInfo.cs" />
     <Compile Include="ApplicationLoadData.cs" />
     <Compile Include="ApplicationData.cs" />
+    <Compile Include="CommuteFltChangeValues.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

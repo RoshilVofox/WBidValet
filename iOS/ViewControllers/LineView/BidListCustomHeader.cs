@@ -4,6 +4,7 @@ using System;
 using Foundation;
 using UIKit;
 using System.Drawing;
+using System.Linq;
 
 namespace Bidvalet.iOS
 {
@@ -122,7 +123,8 @@ namespace Bidvalet.iOS
             btnDownScroll.AddGestureRecognizer(DownDoubleTap);
 
             DownsingleTap.RequireGestureRecognizerToFail(DownDoubleTap);
-            btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
+            SetFlightDataDiffButton();
+            //btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
         }
 
         //void SearchBar_SearchButtonClicked (object sender, EventArgs e)
@@ -138,7 +140,8 @@ namespace Bidvalet.iOS
         {
             //NSNotificationCenter.DefaultCenter.RemoveObserver(;
             //_nsObserver = NSNotificationCenter.DefaultCenter.AddObserver(new Foundation.NSString("setButtonStates"), setVACButtonStates);
-            btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
+            //btnVacDiff.Hidden = !GlobalSettings.IsNeedToEnableVacDiffButton;
+            SetFlightDataDiffButton();
         }
         public void UpNavigation()
         {
@@ -187,7 +190,44 @@ namespace Bidvalet.iOS
 
         }
 
+        private bool IsCommuteAutoAvailable()
+        {
+            bool isCommuteAutoAvailable = false;
+            var wBidStateContent = GlobalSettings.WBidStateCollection.StateList.FirstOrDefault(x => x.StateName == GlobalSettings.WBidStateCollection.DefaultName);
+            if (wBidStateContent != null)
+            {
+                if (wBidStateContent.BidAuto.BAFilter.FirstOrDefault(x=>x.Name=="CL")!=null)
+                {
+                    isCommuteAutoAvailable = true;
+                }
+            }
+            return isCommuteAutoAvailable;
+        }
+        public void SetFlightDataDiffButton()
+        {
+            bool IsEnableFltDiff;
+            if (GlobalSettings.IsNeedToEnableVacDiffButton)
+            {
+                bool isCommuteAutoAvailable = IsCommuteAutoAvailable();
 
+
+
+                if (GlobalSettings.CurrentBidDetails != null && GlobalSettings.CurrentBidDetails.Postion == "FA")
+                {
+                    //For FA, the Flt difference button should be display only when user set any commutable line auto in constraints ,weights,sorts or in bid auto
+                    IsEnableFltDiff = isCommuteAutoAvailable && (GlobalSettings.ServerFlightDataVersion != GlobalSettings.WBidINIContent.LocalFlightDataVersion);
+                }
+                else
+                {
+                    IsEnableFltDiff = ((isCommuteAutoAvailable && (GlobalSettings.ServerFlightDataVersion != GlobalSettings.WBidINIContent.LocalFlightDataVersion)) || (btnVAC.Enabled));
+                }
+            }
+            else
+            {
+                IsEnableFltDiff = false;
+            }
+            btnVacDiff.Hidden = !IsEnableFltDiff;
+        }
         partial void btnVACTapped(UIKit.UIButton sender)
         {
             _parent.btnVacCorrectTap(sender,btnEOM);

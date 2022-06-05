@@ -827,10 +827,89 @@ namespace Bidvalet.Model
 		[ProtoMember(138)]
 		public decimal VAPbo { get; set; }
 
-		//[ProtoMember(132)]
-		//public List<string> CFVDates { get; set; }
+		private decimal _totalCommutes;
+		public decimal TotalCommutes
+		{
+			get
+			{
+				return _totalCommutes;
+			}
+			set
+			{
+				_totalCommutes = value;
 
-		[ProtoMember(139)]
+			}
+		}
+		private decimal _commutableFronts;
+		public decimal commutableFronts
+		{
+			get
+			{
+				return _commutableFronts;
+			}
+			set
+			{
+				_commutableFronts = value;
+
+			}
+		}
+		private decimal _commutableBacks;
+		public decimal CommutableBacks
+		{
+			get
+			{
+				return _commutableBacks;
+			}
+			set
+			{
+				_commutableBacks = value;
+
+			}
+		}
+		private decimal _commutabilityFront;
+		public decimal CommutabilityFront
+		{
+			get
+			{
+				return _commutabilityFront;
+			}
+			set
+			{
+				_commutabilityFront = value;
+
+			}
+		}
+		private decimal _commutabilityBack;
+		public decimal CommutabilityBack
+		{
+			get
+			{
+				return _commutabilityBack;
+			}
+			set
+			{
+				_commutabilityBack = value;
+
+			}
+		}
+		private decimal _commutabilityOverall;
+		public decimal CommutabilityOverall
+		{
+			get
+			{
+				return _commutabilityOverall;
+			}
+			set
+			{
+				_commutabilityOverall = value;
+
+			}
+		}
+
+			//[ProtoMember(132)]
+			//public List<string> CFVDates { get; set; }
+
+			[ProtoMember(139)]
 		public int ETOPSTripsCount { get; set; }
 
 

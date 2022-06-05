@@ -272,6 +272,9 @@ namespace Bidvalet
 
 
 		public static bool IsNeedToEnableVacDiffButton = false;
+
+		public static string ServerFlightDataVersion { get; set; }
+
 	}
 }
 

@@ -112,6 +112,20 @@ namespace Bidvalet.iOS
                 return GetAppDataPath() + "/" + GenerateFileNameUsingCurrentBidDetails() + ".MIL";
             }
         }
+        public static string WBidCommuteFilePath
+        {
+            get
+            {
+                return WBidHelper.GetAppDataPath() + "\\" + GetCommuteDifferenceFileName();
+            }
+        }
+        public static string GetCommuteDifferenceFileName()
+        {
+
+            //BWICP0122M
+            var fileName = (GlobalSettings.CurrentBidDetails == null) ? string.Empty : GlobalSettings.CurrentBidDetails.Domicile + GlobalSettings.CurrentBidDetails.Postion + GlobalSettings.CurrentBidDetails.Month.ToString("d2") + (GlobalSettings.CurrentBidDetails.Year - 2000).ToString() + GlobalSettings.CurrentBidDetails.Round + "Cmt.COM";
+            return fileName;
+        }
 
         /// <summary>
         /// Get the "Column defenition" path 
@@ -964,7 +978,7 @@ namespace Bidvalet.iOS
                             NoNights = ftCommutableLine.NoNights,
                             ToHome = ftCommutableLine.NoNights,
                             ToWork = ftCommutableLine.ToWork,
-                            isNonStop=ftCommutableLine.isNonStop
+                            IsNonStopOnly = ftCommutableLine.IsNonStopOnly
                         };
                         calculatedItem.BidAutoObject = calculateFtCommutableLine;
                         break;

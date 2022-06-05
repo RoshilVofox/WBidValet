@@ -280,8 +280,8 @@ namespace Bidvalet.Business
                     NoNights = ftCommutableLine.NoNights,
                     ToHome = ftCommutableLine.ToHome,
                     ToWork = ftCommutableLine.ToWork,
-                    isNonStop=ftCommutableLine.isNonStop
-                    
+                    IsNonStopOnly = ftCommutableLine.IsNonStopOnly
+
 
                 }
             };

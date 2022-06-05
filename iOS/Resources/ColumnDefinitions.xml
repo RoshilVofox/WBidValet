@@ -71,5 +71,11 @@
    <ColumnDefinition Id="73"  Width="50" DisplayName="VAPne" DataPropertyName="VAPne" IsRequied="false" />
   <ColumnDefinition Id="74"  Width="50" DisplayName="VAPbo" DataPropertyName="VAPbo" IsRequied="false" />
    <ColumnDefinition Id="75"  Width="50" DisplayName="Etrips" DataPropertyName="ETOPSTripsCount" IsRequied="false" />
+     <ColumnDefinition Id="76"  Width="50" DisplayName="cmts" DataPropertyName="TotalCommutes" IsRequied="false" />
+     <ColumnDefinition Id="77"  Width="50" DisplayName="cmtFr" DataPropertyName="commutableFronts" IsRequied="false" />
+      <ColumnDefinition Id="78"  Width="50" DisplayName="cmtBa" DataPropertyName="CommutableBacks" IsRequied="false" />
+       <ColumnDefinition Id="79"  Width="50" DisplayName="cmt%Fr" DataPropertyName="CommutabilityFront" IsRequied="false" />
+        <ColumnDefinition Id="80"  Width="50" DisplayName="cmt%Ba" DataPropertyName="CommutabilityBack" IsRequied="false" />
+         <ColumnDefinition Id="81"  Width="50" DisplayName="cmt%Ov" DataPropertyName="CommutabilityOverall" IsRequied="false" />
     
 </ColumnDefinitions>

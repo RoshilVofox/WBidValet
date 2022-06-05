@@ -26,7 +26,7 @@ namespace Bidvalet.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			btnNonStop.Selected = data.isNonStop;
+			btnNonStop.Selected = data.IsNonStopOnly;
 			// Perform any additional setup after loading the view, typically from a nib.
 			ShowNavigationBar();
 			Title = Constants.CONSTRAINTS;
@@ -126,7 +126,7 @@ namespace Bidvalet.iOS
 	    }
         partial void btnNonStopClick(UIButton sender)
         {
-			btnNonStop.Selected = this.data.isNonStop = !sender.Selected;
+			btnNonStop.Selected = this.data.IsNonStopOnly = !sender.Selected;
 			isNonStopSelected = btnNonStop.Selected;
 			data.ConnectTime = btnNonStop.Selected ? 0 : 30;
 			SetTitleForButton(data.ConnectTime, btnTimeConnect);

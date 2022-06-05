@@ -7,5 +7,6 @@ namespace Bidvalet.Model
         {
         }
         public bool IsNeedtoEnableVacationDifference { get; set; }
+        public string FlightDataVersion { get; set; }
     }
 }
