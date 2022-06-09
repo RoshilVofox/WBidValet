@@ -48,11 +48,10 @@ namespace Bidvalet.iOS.Utility
 		public static string JsonSerializer<T>(T t)
 		{
 			string jsonString = string.Empty;
-			
-			//DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
-			//MemoryStream ms = new MemoryStream();
-			//ser.WriteObject(ms, t);
-			//jsonString = Encoding.UTF8.GetString(ms.ToArray());
+			DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
+			MemoryStream ms = new MemoryStream();
+			ser.WriteObject(ms, t);
+			jsonString = Encoding.UTF8.GetString(ms.ToArray());
 			return jsonString;
 		}
 	}

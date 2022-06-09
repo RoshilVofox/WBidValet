@@ -819,6 +819,7 @@ namespace Bidvalet.iOS
 
                     //Delete Old formatted files
                     string fileName = domcile + position + bidperiod.ToString("d2") + (year - 2000) + (round == "1st Round" ? "M" : "S") ;
+                    string CmtfileName = domcile + position + bidperiod.ToString("d2") + (year - 2000) + (round == "1st Round" ? "M" : "S") + "Cmt.COM";
 
                     string folderName = WBidCollection.GetPositions().FirstOrDefault(x => x.LongStr == fileName.Substring(3, 2)).ShortStr + (round == "1st Round" ? "D" : "B") + fileName.Substring(0, 3) + WBidCollection.GetBidPeriods().FirstOrDefault(x => x.BidPeriodId == bidperiod).HexaValue;
                     //Delete WBL file
@@ -853,8 +854,13 @@ namespace Bidvalet.iOS
                     {
                         Directory.Delete(WBidHelper.GetAppDataPath() + "/" + folderName, true);
                     }
+
+                    if (File.Exists(WBidHelper.GetAppDataPath() + "/" + CmtfileName))
+                    {
+                        File.Delete(WBidHelper.GetAppDataPath() + "/" + CmtfileName);
+                    }
                     //NSNotificationCenter.DefaultCenter.PostNotificationName("HandleReload", null);
-                    
+
                     deletedBidIndexList.Add(deleteFileIndex);
                 }
             }

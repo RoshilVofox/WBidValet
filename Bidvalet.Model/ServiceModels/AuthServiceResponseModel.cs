@@ -47,6 +47,8 @@ namespace Bidvalet
 
         public bool IsNeedToDownloadSeniorityFromServer { get; set; }
 
+		public string FlightDataVersion { get; set; }
+
 	}
 }
 

@@ -15,6 +15,7 @@ using Bidvalet.iOS.ViewControllers;
 using System.Globalization;
 using System.IO;
 using Bidvalet.iOS.ViewControllers.VacationDifference;
+using Bidvalet.iOS.ViewControllers.CommuteDifference;
 
 
 #endregion
@@ -316,6 +317,19 @@ namespace Bidvalet.iOS
 
             UIActionSheet obj = (UIActionSheet)sender;
             obj.Dispose();
+        }
+        private bool IsCommuteAutoAvailable()
+        {
+            bool isCommuteAutoAvailable = false;
+            var wBidStateContent = GlobalSettings.WBidStateCollection.StateList.FirstOrDefault(x => x.StateName == GlobalSettings.WBidStateCollection.DefaultName);
+            if (wBidStateContent != null)
+            {
+                if (wBidStateContent.BidAuto.BAFilter.FirstOrDefault(x => x.Name == "CL") != null)
+                {
+                    isCommuteAutoAvailable = true;
+                }
+            }
+            return isCommuteAutoAvailable;
         }
         private void DisplayVacationDifferenceData()
         {
@@ -741,24 +755,84 @@ namespace Bidvalet.iOS
 
 
         }
-        public void btnVacDifftap()
+
+        public void btnVacDifftap(bool vacEnabled,bool eOMEnabled)
         {
-            int typeOfInternetConnection = InternetHelper.CheckInterNetConnection();
-            if (typeOfInternetConnection == (int)InternetType.NoInternet)
+
+
+
+
+            if (GlobalSettings.CurrentBidDetails.Postion == "FA")
             {
-                InvokeOnMainThread(() =>
-                {
-                    DisplayAlertView(GlobalSettings.ApplicationName, Constants.VPSDownAlert);
-                   
-                });
+                //only commut diff need to show
+                var objvacdiff = new CommuteDifferenceViewController();
+                NavigationController.PushViewController(objvacdiff, true);
             }
-            else if (typeOfInternetConnection == (int)InternetType.Ground || typeOfInternetConnection == (int)InternetType.AirPaid)
+            else
             {
-                DisplayVacationDifferenceData();
+                bool isCommuteAutoAvailable = IsCommuteAutoAvailable();
+                
+                if (((isCommuteAutoAvailable && (GlobalSettings.ServerFlightDataVersion != GlobalSettings.WBidINIContent.LocalFlightDataVersion)) && (vacEnabled || eOMEnabled)))
+                {
+                    //both commut diff and vac diff available
+
+                    UIAlertController alert = UIAlertController.Create("WBidMax", "You may have changes in commute and vacation due to new flight data. What would you like to Open ?", UIAlertControllerStyle.Alert);
+                    alert.AddAction(UIAlertAction.Create("View Commute Difference", UIAlertActionStyle.Default, (actionCancel) =>
+                    {
+                        var objvacdiff = new CommuteDifferenceViewController();
+                        NavigationController.PushViewController(objvacdiff, true);
+
+
+                    }));
+
+                    alert.AddAction(UIAlertAction.Create("View Vacation Difference", UIAlertActionStyle.Default, (actionOK) =>
+                    {
+                        int typeOfInternetConnection = InternetHelper.CheckInterNetConnection();
+                        if (typeOfInternetConnection == (int)InternetType.NoInternet)
+                        {
+                            InvokeOnMainThread(() =>
+                            {
+                                DisplayAlertView(GlobalSettings.ApplicationName, Constants.VPSDownAlert);
+
+                            });
+                        }
+                        else if (typeOfInternetConnection == (int)InternetType.Ground || typeOfInternetConnection == (int)InternetType.AirPaid)
+                        {
+                            DisplayVacationDifferenceData();
+                        }
+                    }));
+
+                    this.PresentViewController(alert, true, null);
+
+
+                }
+                else if ((isCommuteAutoAvailable && (GlobalSettings.ServerFlightDataVersion != GlobalSettings.WBidINIContent.LocalFlightDataVersion)))
+                {
+                    //only commut diff need to show
+                    var objvacdiff = new CommuteDifferenceViewController();
+                    NavigationController.PushViewController(objvacdiff, true);
+                }
+                else
+                {
+                    int typeOfInternetConnection = InternetHelper.CheckInterNetConnection();
+                    if (typeOfInternetConnection == (int)InternetType.NoInternet)
+                    {
+                        InvokeOnMainThread(() =>
+                        {
+                            DisplayAlertView(GlobalSettings.ApplicationName, Constants.VPSDownAlert);
+
+                        });
+                    }
+                    else if (typeOfInternetConnection == (int)InternetType.Ground || typeOfInternetConnection == (int)InternetType.AirPaid)
+                    {
+                        DisplayVacationDifferenceData();
+                    }
+                }
+
             }
         }
-        
-        public void btnVacCorrectTap(UIKit.UIButton sender, UIKit.UIButton btnEom)
+
+            public void btnVacCorrectTap(UIKit.UIButton sender, UIKit.UIButton btnEom)
         {
             try
             {

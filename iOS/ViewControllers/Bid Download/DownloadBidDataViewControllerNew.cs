@@ -317,6 +317,8 @@ namespace Bidvalet.iOS
 
                         DownloadFlightData();
                         ShowSeniorityListInformation();
+
+                        WBidHelper.SaveINIFile(GlobalSettings.WBidINIContent, WBidHelper.GetWBidINIFilePath());
                     }
                     else
                     {

@@ -243,7 +243,7 @@ namespace Bidvalet.iOS
         }
         partial void btnVacDiffClicked(UIButton sender)
         {
-            _parent.btnVacDifftap();
+            _parent.btnVacDifftap(btnVAC.Enabled,btnEOM.Enabled);
         }
         
         public void setButtonStates()

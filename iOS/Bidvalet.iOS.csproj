@@ -788,6 +788,7 @@
     <Compile Include="ViewControllers\CommuteDifference\ComuteDiffTableViewCell.designer.cs">
       <DependentUpon>ComuteDiffTableViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewControllers\CommuteDifference\CommuteDifferenceTableViewSource.cs" />
   </ItemGroup>
   <Import Project="..\Bidvalet.Shared\Bidvalet.Shared.projitems" Label="Shared" Condition="Exists('..\Bidvalet.Shared\Bidvalet.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

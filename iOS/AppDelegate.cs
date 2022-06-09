@@ -142,6 +142,7 @@ namespace Bidvalet.iOS
                 var appLoadData = SerializeHelper.ConvertJSonStringToObject<ApplicationLoadData>(dr.ReadToEnd());
                 GlobalSettings.IsNeedToEnableVacDiffButton = appLoadData.IsNeedtoEnableVacationDifference;
                 GlobalSettings.ServerFlightDataVersion = appLoadData.FlightDataVersion;
+                GlobalSettings.IsNeedToEnableVacDiffButton = true;
             }
             catch (Exception ex)
             {

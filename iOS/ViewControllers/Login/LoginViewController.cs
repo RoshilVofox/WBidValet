@@ -394,6 +394,7 @@ namespace Bidvalet.iOS
                     // responseModel.Type = "Invalid Account";
                     else if (responseModel.Type == "Success" || responseModel.Type == "TemporaryAuthenticate")
                     {
+                        GlobalSettings.WBidINIContent.LocalFlightDataVersion = responseModel.FlightDataVersion;
                         //if it is different user then we need to move to download process
                         if (GlobalSettings.UserInfo != null && GlobalSettings.UserInfo.EmpNo != _empNumber.ToLower().Replace("x", "").Replace("e", ""))
                         {
